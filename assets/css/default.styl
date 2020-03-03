@@ -1,0 +1,656 @@
+color-yellow = #F1CD3D
+color-red = #DD4E29
+color-green = #D8D933
+color-aqua = #6BBDAB
+color-gray = #58595B
+color-darkgray = #262626
+color-lightgray = #b2b2b2
+
+@font-face
+	font-family 'Roboto'
+	src url('../../../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype')
+	font-weight normal
+	font-style normal
+
+@font-face
+	font-family 'Brandon'
+	src url('../../../assets/fonts/brandon/Brandon_reg.ttf') format('truetype')
+	font-weight normal
+	font-style normal
+
+@font-face
+	font-family 'Brandon'
+	src url('../../../assets/fonts/brandon/Brandon_bld.otf') format('opentype')
+	font-weight bold
+	font-style normal
+
+@font-face
+	font-family 'pecc'
+	src url('../../../assets/fonts/pecc/pecc.ttf') format('truetype')
+	font-weight 400
+	font-style normal
+
+html, body
+	color color-gray
+	font-family 'Roboto', arial, tahoma, sans-serif
+	font-size 16px
+	font-weight normal
+	height 100%
+	overflow hidden
+	width 100%
+
+img
+	max-width 100%
+	
+button
+	background-color white
+	border thin solid color-gray
+	color color-gray
+	cursor pointer
+	font-size 14px
+	padding .5em 1em
+	transition all .3s ease
+	
+	&.with-icon:after
+		content '\f30b'
+		font-family 'Font Awesome 5 Free'
+		font-size 16px
+		font-style normal
+		font-weight bold
+		text-decoration inherit
+		margin-left 1em
+		
+	&:focus
+		outline 0
+		
+	&:hover
+		color white
+	
+	&.btn-yellow
+		&:hover
+			background-color color-yellow
+			border-color color-yellow
+		
+	&.btn-green
+		&:hover
+			background-color color-green
+			border-color color-green
+	
+	&.btn-red
+		&:hover
+			background-color color-red
+			border-color color-red
+	
+	&.btn-aqua
+		&:hover
+			background-color color-aqua
+			border-color color-aqua
+	
+	&.btn-gray
+		&:hover
+			background-color color-gray
+			border-color color-gray
+	
+	&.icon-popup
+		&:after
+			content '\f27a'
+	&.icon-angle-down
+		&:after
+			content '\f107'
+	&.icon-sound
+		&:after
+			content '\f027'
+	&.icon-check
+		&:after
+			content '\f14a'
+	&.icon-recycle
+		&:after
+			content '\f1b8'
+	&.icon-link
+		&:after
+			content '\f360'
+
+/* COLORS */
+.color-yellow
+	color color-yellow
+.color-red
+	color color-red
+.color-green
+	color color-green
+.color-aqua
+	color color-aqua
+.color-gray
+	color color-gray
+.color-darkgray
+	color color-darkgray
+.color-lightgray
+	color color-lightgray
+
+/* MENU */
+nav.unc-menu
+	background-color rgba(88,89,91,.90)
+	bottom 0
+	height calc(100% - 60px)
+	top auto
+	
+	header
+		background-color color-darkgray
+		background-size cover
+		height 220px
+		position relative
+		
+		&:before
+			content ''
+			height 100%
+			left 0
+			position absolute
+			top 0
+			width 100%
+
+		h4
+			color color-yellow
+			font-size 1.5em
+			font-weight bold
+			padding 1em
+			
+			small
+				color #777
+				
+			.unc-options
+				margin 0
+				label
+					color #777 !important
+					
+				button:after
+					content ''
+					font-size 0
+	.unc-menu-content
+		height calc(100% - 220px) !important
+
+		.unc-menu-unit
+			.unc-menu-timeline
+				.unc-circle
+					background-color color-gray
+					
+			.unc-menu-description
+				ul li
+					font-size initial
+					font-weight normal !important
+					margin 0 !important
+					width 95%
+					
+					span
+						color color-lightgray
+#unc-icon-menu
+	border none
+	font-family 'Font Awesome 5 Free'
+	font-weight bold
+	height 30px
+	left auto
+	margin 0
+	opacity .8
+	padding 15px
+	right 0
+	text-align center
+	transition .4s all linear
+	width 60px
+	
+	&:hover
+		opacity 1
+	
+	&:after
+		background-color transparent
+		color white
+		content '\f0c9'
+		font-family 'Font Awesome 5 Free'
+		font-size 1em
+		font-style normal
+		line-height 1em
+		position static
+		text-decoration inherit
+		transition .4s all linear
+
+/* NAV */
+.unc-nav-arrows
+	align-items center
+	color white
+	display flex
+	font-size 1.5em
+	justify-content center
+	height 60px
+	position absolute
+	right 60px
+	width 100px
+	z-index 1
+	
+	.far
+		cursor pointer
+		font-size 2em
+		opacity .8
+		margin 0 5px
+		
+		&:hover
+			opacity 1
+
+/* TOOLTIP */
+.unc-tooltip
+	background-color #fff !important
+	box-shadow 1px 1px 4px #555 !important
+	color color-gray !important
+	font-size 16px !important
+	text-align left !important
+	max-width 500px !important
+	
+	.bs-tooltip-left
+		.arrow
+			&:before
+				border-left-color #666
+	.bs-tooltip-right
+		.arrow
+			&:before
+				border-right-color #666
+	.bs-tooltip-top
+		.arrow
+			&:before
+				border-top-color #666
+	.bs-tooltip-bottom
+		.arrow
+			&:before
+				border-bottom-color #666
+	
+	ul
+		li
+			margin-top 1em
+.unc-tooltip-button
+	padding 1em
+	
+	button
+		background-color transparent
+		border 5px solid color-blue
+		border-radius 30px
+		color color-gray
+		padding 0
+		position relative
+		
+		&:after
+			content ''
+			margin 0
+		
+		&:hover
+			background-color transparent
+			transform scale(1.1)
+			
+		div
+			align-items center
+			background-color white
+			border 5px solid color-blue
+			border-radius 50%
+			display flex
+			font-size 3em
+			height 100px
+			justify-content center
+			left 50%
+			position absolute
+			transform translateX(-50%)
+			width 100px
+			
+			i
+				color color-blue		
+			
+		span
+			align-items center
+			background-color white
+			border-radius 30px
+			display flex
+			font-size 1.5em
+			height 3em
+			justify-content center
+			line-height 1em
+			width 200px
+		
+	&.icon-top
+		padding-top 90px
+		
+		button
+			div
+				top -90px
+	
+	&.icon-bottom
+		padding-bottom 90px
+		
+		button
+			div
+				top 55px
+	
+	&.icon-left
+		padding 25px 0
+		
+		button
+			div
+				left 0
+				top 0
+				transform translate(-50%, -20%)
+			span
+				margin-left 2em
+	
+	&.icon-right
+		padding 25px 0
+		
+		button
+			div
+				right 0
+				top 0
+				transform translate(70%, -20%)
+			span
+				margin-right 2em
+
+/* EXPANSION PANELS*/
+.unc-panel-heading
+	color color-gray
+	font-weight bold !important
+	font-size 1.1em !important
+.unc-panel-content
+	color color-gray
+	font-size 16px !important
+
+/* UNC-REACT-POPUP */
+.unc-popup-container
+	.unc-popup-btn-close
+		color white
+		box-shadow none
+
+	.unc-popup-header
+		border-bottom none !important
+		text-align center
+		padding 1em 1em 0em !important
+		
+		h4
+			border-bottom thin solid color-blue
+			color color-blue
+			display inline-block
+			padding 0 1em
+			text-align center
+		
+	.unc-popup-wrapper
+		width 700px
+		
+		.unc-popup-content
+			padding 0.9em !important
+
+			&.unc-popup-image
+				height 100%
+				
+				img
+					display block
+					margin 0 auto
+					width 90%
+			&.unc-height-100
+				height 100%
+		
+	.unc-popup-footer
+		justify-content center
+		
+		button
+			background-color color-blue !important
+			border none !important
+			border-radius 4px !important
+			color #fff !important
+			margin 0 .5em !important
+			
+			&:after
+				content ''
+				font-size 0
+
+/* UNC-REACT-CAPTIONS */
+.unc-captions
+	overflow hidden
+	
+	ul
+		margin-bottom 3rem
+		
+		li
+			margin-top 1em
+	audio
+		bottom 0
+		opacity .3
+		position absolute
+		right 0 
+		
+		&:hover
+			opacity 1
+
+/* FILTER */
+.unc-filter
+	&:before
+		background-color rgba(255, 255, 255, 0.65)
+		content ''
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		z-index -1
+
+/* VIDEO WRAPPER */
+.unc-video-wrapper
+	margin 1em 0 2em
+
+/* UNC-CAROUSEL */
+.unc-carousel
+	border thin solid #ccc
+	border-radius 5px
+	margin 1em 0 2em
+	
+	.unc-background
+		background-size contain
+		background-repeat no-repeat
+		min-height 350px
+		
+		&:after
+			background-color transparent
+
+/* Header */
+.unc-header
+	height 60px
+	
+	img.unc-logo
+		height 50px
+		margin 5px
+		
+	.unc-course-title
+		color white !important
+		float right !important
+		font-family 'Brandon', arial, tahoma, sans-serif
+		height 60px !important
+		max-width calc(100% - 410px) !important
+		overflow hidden !important
+		text-overflow ellipsis
+		white-space nowrap
+	
+	.unc-right
+		align-items center
+		border-left thin solid #ddd
+		cursor pointer
+		display flex
+		float right
+		height 50px
+		margin-top 5px
+		padding 0 .5em
+		width 160px
+
+/* Model Image */
+.unc-modal-image
+	img
+		cursor pointer
+		transition .2s all linear
+		width 720px !important
+		
+		&:hover
+			transform scale(0.98)
+
+/* BUTTON POPUP*/
+.unc-button-popup
+	background-color rgba(240,240,240,.8)
+	border thin solid #ddd
+	margin 1em auto
+	
+	img
+		margin auto !important
+		width 40px !important
+	
+	span
+		color color-gray
+		font-weight bold
+		margin-left 1em
+		text-align left
+		
+		.unc-title
+			font-size 1.2em
+			margin-bottom -10px
+
+		.unc-subtitle
+			font-size 2em
+		
+	.unc-action
+		color color-gray
+		margin-left 1em
+
+// IMAGE TEXT
+.unc-image-text
+	text-align center
+	margin 2em 0
+	
+	.unc-image-wrapper
+		display inline-block
+		position relative
+		width 100%
+	
+	img
+		margin 0 !important
+		width 100% !important
+	
+	.unc-image-content
+		align-items center
+		display flex
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		
+		&.top
+			align-items flex-start
+		&.bottom
+			align-items flex-end
+		&.left
+			justify-content flex-start
+		&.right
+			justify-content flex-end
+		
+		.unc-text
+			background rgba(255,255,255,0.7)
+			font-size 1.3em
+			font-weight bold
+			padding 1em
+			text-align center
+
+/* PAGE */
+.pt-page
+	background-size cover
+	
+	button.btn-next
+		display block;
+		margin-left auto
+		margin-right auto
+		
+		&:after
+			content '\f30b'
+			font-family 'Font Awesome 5 Free'
+			font-size 16px
+			font-style normal
+			font-weight bold
+			text-decoration inherit
+			margin-left 1em
+	
+	.unc-container
+		background-color #f7f7f7
+		height calc(100% - 60px)
+		transition .3s all ease-out
+		
+		.unc-card
+			background-color white
+			border thin solid #eee
+			border-radius 5px
+			margin 2em
+			padding 2em
+			
+			h1,h2,h3,h4,h5,h6
+				margin 1em 0
+			
+			img
+				display block
+				margin auto
+				width 300px
+			
+			.unc-tip
+				color color-red
+				font-style italic
+				text-align right
+				
+				&[class^='icon-'], &[class*=' icon-']
+					&:before
+						font-family 'Font Awesome 5 Free'
+						font-size 16px
+						font-style normal
+						font-weight bold
+						text-decoration inherit
+						margin-right 1em
+				
+				&.icon-video:before
+					content '\f03d'
+				
+				&.icon-carousel:before
+					content '\f5fd'
+				
+				&.icon-image:before
+					content '\f03e'
+				
+				&.icon-steps:before
+					content '\f142'
+
+	.unc-teacher-wrapper
+		.unc-card
+			text-align center
+			
+			img
+				margin 0 1em
+				width 200px
+
+		.unc-teacher-name
+			color color-red
+			margin 1em 0
+			
+			span
+				color color-gray
+				display block
+				font-family 'Source Sans Pro', arial, tahoma, sans-serif
+				font-size initial
+				font-weight bold
+				text-transform initial
+	
+	.fa-info-circle
+		cursor pointer
+		font-size 2em
+
+@media (max-width: 768px)
+	.unc-header
+		.unc-course-title
+			display none
+
+@keyframes popupShow
+	from
+		background-color transparent
+	to
+		background-color rgba(0,0,0,0.6)
+
+@import './pecc.styl';

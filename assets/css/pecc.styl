@@ -1,0 +1,2105 @@
+/**
+ * Variables
+ */
+m00 = rgb(4,77,181)
+m01 = rgb(51,0,105)
+m02 = rgb(154,16,178)
+m03 = rgb(157,24,68)
+m04 = rgb(114,114,245)
+m05 = rgb(0,96,124)
+m06 = rgb(11,124,110)
+
+m00a = rgb(3,53,124)
+m00b = rgb(65,121,200)
+m00c = rgb(253,158,40)
+
+m01a = rgb(35,2,73)
+m01b = rgb(55,197,206)
+m01c = rgb(163,196,51)
+
+m02a = rgb(33,183,227)
+m02b = rgb(7,85,134)
+m02c = rgb(50,198,197)
+
+m03a = rgb(124,18,54)
+m03b = rgb(200,92,128)
+m03c = rgb(123,194,67)
+
+m04a = rgb(5,182,194)
+m04b = rgb(89,255,160)
+m04c = rgb(108,179,43)
+
+m05a = rgb(8,135,68)
+m05b = rgb(102,204,153)
+m05c = rgb(253,158,40)
+
+m06a = rgb(33,183,227)
+m06b = rgb(7,85,134)
+m06c = rgb(212,64,211)
+
+
+
+lightgray = rgb(202,202,202)
+
+text = rgb(71,74,76)
+
+/**
+ * Font Icon PECC
+ */
+.unc-pecc-wrapper
+	[class^="pecc-"],
+	[class*=" pecc-"]
+		font-family: 'pecc'
+		speak: none
+		font-style: normal
+		font-weight: normal
+		font-variant: normal
+		text-transform: none
+		line-height: 1
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+	
+		&.unc-fill
+			background-color m00
+			border-radius 50%
+			color white
+			padding 2px
+			
+			&.unc-clickeable
+				cursor pointer
+				font-size 3em
+				position relative
+
+				&:after
+					border 2px solid m00
+					border-radius: 50%
+					content ''
+					display block
+					height 60px
+					left -4px
+					padding 2px
+					position absolute
+					top -4px
+					width 60px
+					z-index: 2
+	
+	.pecc-100:before
+		content "\e100"
+	.pecc-101:before
+		content "\e101"
+	.pecc-102:before
+		content "\e102"
+	.pecc-103:before
+		content "\e103"
+	.pecc-104:before
+		content "\e104"
+	.pecc-105:before
+		content "\e105"
+	.pecc-106:before
+		content "\e106"
+	.pecc-107:before
+		content "\e107"
+	.pecc-108:before
+		content "\e108"
+	.pecc-109:before
+		content "\e109"
+	.pecc-10a:before
+		content "\e10a"
+	.pecc-10b:before
+		content "\e10b"
+	.pecc-10c:before
+		content "\e10c"
+	.pecc-10d:before
+		content "\e10d"
+	.pecc-10e:before
+		content "\e10e"
+	.pecc-10f:before
+		content "\e10f"
+	.pecc-110:before
+		content "\e110"
+	.pecc-112:before
+		content "\e112"
+	.pecc-113:before
+		content "\e113"
+	.pecc-114:before
+		content "\e114"
+	.pecc-115:before
+		content "\e115"
+	.pecc-116:before
+		content "\e116"		
+	.pecc-117:before
+		content "\e117"
+	.pecc-118:before
+		content "\e118"
+	.pecc-119:before
+		content "\e119"
+	.pecc-120:before
+		content "\e120"
+	.pecc-121:before
+		content "\e121"
+	.pecc-122:before
+		content "\e122"
+	.pecc-123:before
+		content "\e123"
+	.pecc-124:before
+		content "\e124"		
+	.pecc-900:before
+		content "\e900"
+	.pecc-901:before
+		content "\e901"
+	.pecc-902:before
+		content "\e902"
+	.pecc-903:before
+		content "\e903"
+	.pecc-904:before
+		content "\e904"
+	.pecc-905:before
+		content "\e905"
+	.pecc-906:before
+		content "\e906"
+	.pecc-907:before
+		content "\e907"
+	.pecc-908:before
+		content "\e908"
+	.pecc-909:before
+		content "\e909"
+	.pecc-90a:before
+		content "\e90a"
+	.pecc-90b:before
+		content "\e90b"
+	.pecc-90c:before
+		content "\e90c"
+	.pecc-90d:before
+		content "\e90d"
+	.pecc-90e:before
+		content "\e90e"
+	.pecc-90f:before
+		content "\e90f"
+	.pecc-910:before
+		content "\e910"
+	.pecc-911:before
+		content "\e911"
+	.pecc-912:before
+		content "\e912"
+	.pecc-913:before
+		content "\e913"
+	.pecc-914:before
+		content "\e914"
+	.pecc-915:before
+		content "\e915"
+	.pecc-916:before
+		content "\e916"
+	.pecc-917:before
+		content "\e917"
+	.pecc-918:before
+		content "\e918"
+	.pecc-919:before
+		content "\e919"
+	.pecc-91a:before
+		content "\e91a"
+	.pecc-91b:before
+		content "\e91b"
+	.pecc-91c:before
+		content "\e91c"
+	.pecc-91d:before
+		content "\e91d"
+	.pecc-91e:before
+		content "\e91e"
+	.pecc-91f:before
+		content "\e91f"
+	.pecc-920:before
+		content "\e920"
+	.pecc-921:before
+		content "\e921"
+	.pecc-922:before
+		content "\e922"
+	.pecc-923:before
+		content "\e923"
+	.pecc-924:before
+		content "\e924"
+	.pecc-925:before
+		content "\e925"
+	.pecc-926:before
+		content "\e926"	
+	.pecc-927:before
+		content "\e927"
+	.pecc-928:before
+		content "\e928"
+	.pecc-929:before
+		content "\e929"
+	.pecc-92a:before
+		content "\e92a"
+	.pecc-92b:before
+		content "\e92b"
+	.pecc-92c:before
+		content "\e92c"
+	.pecc-92d:before
+		content "\e92d"
+	.pecc-92e:before
+		content "\e92e"
+	.pecc-92f:before
+		content "\e92f"
+	.pecc-930:before
+		content "\e930"
+	.pecc-931:before
+		content "\e931"
+	.pecc-932:before
+		content "\e932"
+	.pecc-933:before
+		content "\e933"
+	.pecc-934:before
+		content "\e934"
+	.pecc-935:before
+		content "\e935"
+	.pecc-936:before
+		content "\e936"
+	.pecc-937:before
+		content "\e937"
+	.pecc-938:before
+		content "\e938"
+	.pecc-939:before
+		content "\e939"
+	.pecc-93a:before
+		content "\e93a"
+	.pecc-93b:before
+		content "\e93b"
+	.pecc-93c:before
+		content "\e93c"	
+	.pecc-93d:before
+		content "\e93d"	
+	.pecc-93e:before
+		content "\e93e"	
+	.pecc-93f:before
+		content "\e93f"	
+	.pecc-940:before
+		content "\e940"	
+	.pecc-941:before
+		content "\e941"	
+	.pecc-942:before
+		content "\e942"	
+	.pecc-943:before
+		content "\e943"	
+	.pecc-944:before
+		content "\e944"	
+	.pecc-945:before
+		content "\e945"	
+	.pecc-946:before
+		content "\e946"	
+	.pecc-947:before
+		content "\e947"	
+	.pecc-948:before
+		content "\e948"	
+	.pecc-949:before
+		content "\e949"	
+	.pecc-94a:before
+		content "\e94a"	
+	.pecc-94b:before
+		content "\e94b"	
+	.pecc-94c:before
+		content "\e94c"	
+	.pecc-94d:before
+		content "\e94d"	
+	.pecc-94e:before
+		content "\e94e"	
+	.pecc-94f:before
+		content "\e94f"	
+	.pecc-950:before
+		content "\e950"	
+	.pecc-951:before
+		content "\e951"	
+	.pecc-952:before
+		content "\e952"	
+	.pecc-953:before
+		content "\e953"	
+	.pecc-954:before
+		content "\e954"	
+	.pecc-955:before
+		content "\e955"	
+	.pecc-956:before
+		content "\e956"	
+	.pecc-957:before
+		content "\e957"	
+	.pecc-958:before
+		content "\e958"	
+	.pecc-959:before
+		content "\e959"	
+	.pecc-95a:before
+		content "\e95a"	
+	.pecc-95b:before
+		content "\e95b"	
+	.pecc-95c:before
+		content "\e95c"	
+	.pecc-95d:before
+		content "\e95d"	
+	.pecc-95e:before
+		content "\e95e"	
+	.pecc-95f:before
+		content "\e95f"	
+	.pecc-960:before
+		content "\e960"	
+	.pecc-961:before
+		content "\e961"
+	.pecc-962:before
+		content "\e962"
+	.pecc-963:before
+		content "\e963"
+	.pecc-964:before
+		content "\e964"
+	.pecc-965:before
+		content "\e965"
+	.pecc-966:before
+		content "\e966"
+	.pecc-967:before
+		content "\e967"
+	.pecc-968:before
+		content "\e968"
+	.pecc-969:before
+		content "\e969"
+	.pecc-96a:before
+		content "\e96a"
+	.pecc-96b:before
+		content "\e96b"
+	.pecc-96c:before
+		content "\e96c"
+	.pecc-96d:before
+		content "\e96d"
+	.pecc-96e:before
+		content "\e96e"	
+	.pecc-96f:before
+		content "\e96f"	
+	.pecc-970:before
+		content "\e970"	
+	.pecc-971:before
+		content "\e971"	
+	.pecc-972:before
+		content "\e972"	
+	.pecc-973:before
+		content "\e973"	
+	.pecc-974:before
+		content "\e974"	
+	.pecc-975:before
+		content "\e975"	
+	.pecc-976:before
+		content "\e976"	
+	.pecc-977:before
+		content "\e977"	
+	.pecc-978:before
+		content "\e978"	
+	.pecc-979:before
+		content "\e979"	
+	.pecc-97a:before
+		content "\e97a"	
+	.pecc-97b:before
+		content "\e97b"	
+	.pecc-97c:before
+		content "\e97c"	
+	.pecc-97d:before
+		content "\e97d"	
+	.pecc-97e:before
+		content "\e97e"	
+	.pecc-97f:before
+		content "\e97f"	
+	.pecc-980:before
+		content "\e980"	
+	.pecc-981:before
+		content "\e981"	
+	.pecc-982:before
+		content "\e982"	
+	.pecc-983:before
+		content "\e983"	
+	.pecc-984:before
+		content "\e984"	
+	.pecc-985:before
+		content "\e985"	
+	.pecc-986:before
+		content "\e986"	
+	.pecc-987:before
+		content "\e987"	
+	.pecc-988:before
+		content "\e988"	
+	.pecc-989:before
+		content "\e989"	
+	.pecc-98a:before
+		content "\e98a"	
+	.pecc-98b:before
+		content "\e98b"	
+	.pecc-98c:before
+		content "\e98c"	
+	.pecc-98d:before
+		content "\e98d"	
+	.pecc-98e:before
+		content "\e98e"	
+	.pecc-98f:before
+		content "\e98f"	
+	.pecc-990:before
+		content "\e990"	
+	.pecc-991:before
+		content "\e991"	
+	.pecc-992:before
+		content "\e992"	
+	.pecc-993:before
+		content "\e993"	
+	.pecc-994:before
+		content "\e994"	
+	.pecc-995:before
+		content "\e995"	
+	.pecc-996:before
+		content "\e996"	
+	.pecc-997:before
+		content "\e997"
+	.pecc-998:before
+		content "\e998"
+	.pecc-999:before
+		content "\e999"
+
+ModuleStyle(module, color, mod, CA)
+	.unc-pecc-wrapper
+		&.{module},
+		.{module}
+			[class^="icon-"].fill,
+			[class*=" icon-"].fill,
+			[class^="ti-"].fill,
+			[class*=" ti-"].fill
+				background-color color
+				
+			[class^="icon-"].outline,
+			[class*=" icon-"].outline,
+			[class^="ti-"].outline,
+			[class*=" ti-"].outline
+				color color
+				border thin solid color
+
+			[class^="pecc-"],
+			[class*=" pecc-"]
+				&.unc-fill
+					background-color color
+					
+					&.unc-clickeable
+						&:after
+							border 2px solid color
+			
+			.unc-header
+				background-color color
+
+			h1,h2,h3,h4,h5,h6
+				color color
+				
+				&.unc-row-title-line,
+				&.unc-row-title-box
+					background-color color
+					
+					&:before,
+					&:after
+						border-top 3px solid color
+				
+				&.unc-row-title-line
+					background-color transparent
+					color color
+				
+				&.unc-title-border
+					border-color color
+				
+			> h5:not(.unc-row-title-box):not(.unc-row-title-line)
+				&:before
+					background-color color
+				small
+					color color
+			
+			.unc-text-modal
+				color color
+			
+			strong
+				color color
+
+			// Bootstrap Styles
+			ul.nav-tabs
+				> li.active > a
+					color color !important
+			
+			.tabs .indicator
+				background-color color
+				
+			.panel-group
+				.panel-heading
+					background-color color
+					
+			.unc-player
+				.unc-player-header 
+					.unc-header-bottom 
+						.unc-header-title 
+							small
+								color CA
+				.unc-player-list
+					.unc-list-item
+						&.active,
+						&:hover
+							background-color CA				
+
+			// Custom Styles
+			.unc-button
+				background-color CA
+				border thin solid CA
+				
+				&:hover
+					color CA
+			
+			.unc-row-section-title
+				background-image url('../img/' + mod + '_IMG_BG_FULL_V.png')
+			
+			.unc-row-border
+				border 3px solid color
+				color color
+				
+				&.unc-border-double
+					&:after
+						border-color color
+
+			.unc-row-splash
+				.unc-splash
+					background-image url('../img/' + mod + '_IMG_SPLASH.png')
+					
+			.unc-row-degrant
+				.unc-degrant-text
+					background-color rgba(color,0.7)
+					
+			.unc-row-icon
+				border-top 3px solid color
+				border-bottom 3px solid color
+				
+			.unc-row-summary
+				.unc-left
+					background-image url('../img/' + mod + '_IMG01.jpg')
+					
+					.unc-summary-title
+						background-image url('../img/' + mod + '_IMG02.png')
+							
+				.unc-right
+					> h3
+						background-color color
+						
+					.unc-summary-objectives
+						ul
+							li
+								color color
+
+					.unc-guests
+						border thin dashed color
+						
+						.unc-autor							
+							span
+								background-color color
+						
+						h3
+							background-color color
+					
+
+			.unc-row-bgfull
+				h3,h4,h5
+					&.unc-title-border
+						&.unc-fill
+							color color
+
+			.unc-row-title-left
+				border 2px solid color
+					
+			.unc-row-title-top
+				border 2px solid color			
+			
+			.unc-row-prompt
+				border-left 5px solid color
+				
+				.unc-prompt-title
+					color color
+			
+			.unc-row-glosary		
+				ul
+					li
+						strong
+							background-color color !important
+			
+			.unc-row-icon-title
+				span
+					&.unc-fill
+						&.unc-clickeable
+							background-color color !important
+					
+			.unc-separator-dotted
+				border-top-color rgba(color, 0.5)
+			
+			.unc-separator-solid
+				border-top-color color
+				
+			.unc-line-left
+				border-left-color color
+				
+			.unc-row-icon-side
+				.unc-icon-side-border
+					border 3px solid color
+					
+					&.unc-icon-left,
+					&.unc-icon-right
+						span
+							color color
+							
+							&.unc-fill
+								background-color color
+			
+			.unc-row-vt-list
+				.unc-number
+					background-color color
+			
+			.unc-row-card
+				border 3px solid color
+				
+			.unc-row-icon-left
+				[class*="pecc-"]
+					color color
+							
+			.unc-triangle-top
+				border-top-color color !important
+			.unc-triangle-right
+				border-right-color color !important
+			.unc-triangle-bottom
+				border-bottom-color color !important
+			.unc-triangle-left
+				border-left-color color !important
+							
+// ModuleStyle('unc-modulo01', m01, 'M01', m01c)
+// ModuleStyle('unc-modulo02', m02, 'M02', m02c)
+// ModuleStyle('unc-modulo03', m03, 'M03', m03c)
+// ModuleStyle('unc-modulo04', m04, 'M04', m04c)
+// ModuleStyle('unc-modulo05', m05, 'M05', m05c)
+// ModuleStyle('unc-modulo06', m06, 'M06', m06c)
+
+ColorCircle(class, color)
+	#unc-wrapper
+		.unc-col-circle
+			&.unc-color-{class}
+				.unc-text
+					div
+						background-color color
+						
+				.unc-circle
+					border 14px solid color
+					span
+						color color
+						
+				.unc-circle-center
+					background-color color
+
+ColorCircle('m00', m00)
+ColorCircle('m00a', m00a)
+ColorCircle('m00b', m00b)
+
+/**
+ * Main Wrapper styles (Module00 Styles Default)
+ */
+.unc-pecc-wrapper
+	background-color #fff
+	color text
+	// font-family 'Roboto', arial, sans_serif
+	font-size 12pt
+	margin 0 auto
+	position relative
+
+	[class^="icon-"].fill,
+	[class*=" icon-"].fill,
+	[class^="ti-"].fill,
+	[class*=" ti-"].fill
+		border-radius 50%
+		color white
+		display inline-block
+		padding .5em
+		
+	[class^="icon-"].outline,
+	[class*=" icon-"].outline,
+	[class^="ti-"].outline,
+	[class*=" ti-"].outline
+		border-radius 50%
+		display inline-block
+		padding .5em
+	
+	h1,h2,h3,h4,h5,h6
+		font-weight normal
+		line-height 1.2em
+		text-align center
+		margin 12pt
+		
+		&.text-left
+			text-align left
+			
+		&.text-right
+			text-align right
+			
+		&.unc-row-title-line,
+		&.unc-row-title-box
+			color white
+			display block
+			margin 30pt auto
+			max-width 300px
+			text-transform uppercase
+			
+			&:before,
+			&:after
+				display inline-block
+				content ""
+				position absolute
+				margin-top .5em
+				width calc(50% - 150px)
+				left 0
+		
+			&:after
+				left auto
+				right 0
+				
+		&.unc-row-title-line
+			background-color transparent
+			
+		&.unc-row-title-box
+			padding .5em
+			
+		&.unc-title-border
+			margin-left auto
+			margin-right auto
+			padding .5em
+			width 80%
+			
+	.unc-text-modal
+		cursor pointer
+		text-decoration underline
+		
+	h1
+		font-size 3em
+		text-transform uppercase
+	h2
+		color #aaa
+		font-size 2em
+		margin-top 2em
+		text-transform uppercase
+	h3
+		font-size 1.5em
+		text-transform uppercase
+	h4
+		font-size 2em
+	h5
+		font-size 1.5em
+		
+	> h5:not(.unc-row-title-box):not(.unc-row-title-line)
+			font-weight bold
+			margin-top 3em
+			padding-left 2.5em
+			position relative
+			text-align left
+			text-transform uppercase
+			
+			&:before
+				display block
+				content ''
+				height 28px
+				margin-left -2.5em
+				position absolute
+				width 42px
+			
+			small
+				font-size 1em
+				font-weight bold
+				text-transform initial
+			
+	h6
+		font-size 1em
+	
+	img
+		max-width 100%
+		
+	ul
+		margin 0
+		padding-left 1em
+		width 100%
+		
+		li
+			margin 1em 0
+		
+	// Bootstrap Styles
+	.row
+		margin 0
+		
+	[class*="col-"],
+	[class^="col-"]
+		padding 0
+	
+	ul.nav-tabs
+		width 100% !important
+	
+		> li.active > a
+			background-color transparent !important
+			font-size 1.5em
+			padding 0
+	
+	.panel 
+		.panel-body
+			padding 0
+		
+	.panel-group
+		.panel-heading			
+			h5
+				color white
+				font-weight normal
+				margin 0
+				text-align left
+				text-transform initial
+				
+	// Parallax Vanilla Styles
+	.pv-container
+		position relative
+		
+	.pv-block-text
+		color white
+		left 50%
+		position absolute
+		text-align center
+		top 50%
+		transform translate3d(-50%,-50%,0)
+		width 100%
+		
+		h2,h5
+			color white
+	
+	.modal
+		padding 0 !important
+	
+	.unc-row-tip
+		text-align right
+		padding 1em
+		
+		small
+			color #999
+			font-style italic
+		
+	.unc-player
+		min-width auto
+
+		.unc-header-title
+			color white
+			text-align left
+			
+			small
+				overflow hidden
+				text-overflow ellipsis
+				white-space nowrap				
+			
+		.unc-player-list
+			max-height calc(100vh - 255px)
+			.unc-list-item
+				.unc-list-title
+					overflow hidden
+					text-overflow ellipsis
+					white-space nowrap
+			
+			.unc-audio-title
+				font-family 'Brandon'
+				font-size 1.2em
+				font-weight bold
+				margin 0
+				text-align left
+
+	// Custome Styles
+	.unc-button
+		border-radius 5px
+		color white
+		cursor pointer
+		display inline-block
+		font-size inherit
+		font-weight normal
+		margin 1em 0
+		padding 5px 15px
+		transition .3s all ease
+		text-align center
+		
+		&:hover
+			background-color white
+		
+		.btn-label.d-block
+			display block
+			margin 0
+	
+	.unc-flex-center
+		align-items center
+		display flex
+		justify-content center
+		
+		.unc-number
+			font-family 'Brandon'
+			font-size 7em
+			font-weight bold
+			margin-right 10px
+			opacity 0.7
+			
+		> h1, > h2, > h3, > h4, > h5, > h6
+			margin 0
+	
+	.unc-padding-0
+		padding 0em
+	.unc-padding-1
+		padding 1em
+	.unc-padding-2
+		padding 2em
+	.unc-padding-3
+		padding 3em
+	.unc-padding-4
+		padding 4em
+		
+	.unc-row
+		position relative
+		z-index 1
+	
+	.unc-row-section-title
+		align-items center
+		background-repeat repeat
+		background-size contain
+		color white
+		display flex
+		justify-content center
+		margin-bottom 2em
+		padding 4em
+		
+		strong
+			color white
+		
+		> h4
+			font-family 'Brandon'
+			font-weight bold
+			color white !important
+			text-transform uppercase
+			margin 0
+		
+	.unc-row-border
+		margin 0 auto
+		width 80%
+		
+		h3,h4,h5
+			margin 0
+		
+		&.overlap
+			margin-top -1em
+			margin-bottom -1em
+			padding 2em
+			z-index 2
+			
+		&.unc-border-double
+			padding 2em
+			position relative
+			
+			&:after
+				border none
+				display block
+				content ''
+				height 100%
+				left 12pt
+				position absolute
+				top 12pt
+				width 100%
+		
+	.unc-text-center
+		text-align center
+
+	.unc-row-splash
+		height 300px
+		width 100%
+		
+		.unc-splash
+			align-items center
+			background-repeat no-repeat
+			background-size 100% 100%
+			background-position right
+			display flex
+			justify-content flex-end
+			height 80%
+			padding 0 1em
+			position  absolute
+			right 0
+			top 10%
+			width 50%
+			
+			h2
+				color white
+				text-align right
+				font-family 'Brandon'
+				font-weight bold
+				margin 30pt 0
+				max-width 90%
+				
+				small
+					color white
+					display block
+	
+	.unc-row-degrant
+		.unc-degrant-image
+			background-position center
+			background-size cover
+			height 400px
+			margin-left auto
+			margin-right 0
+			width 50%
+			
+		.unc-degrant-text
+			bottom 1em
+			color white
+			padding 1em
+			position absolute
+			width 60%
+			
+			.unc-autor
+				margin-top 2em
+				text-align right
+			
+		&.unc-degrant-inverse
+			.unc-degrant-image
+				margin-left 0
+				margin-right auto
+				
+			.unc-degrant-text
+				right 0
+				
+	.unc-row-icon
+		margin 5em 0
+		padding 1em
+		position relative
+		text-align center
+		
+		.unc-icon-line
+			background-color white
+			display inline-block
+			left 0
+			margin 0 auto
+			margin-top -1.5em
+			font-size 2em
+			right 0
+			position absolute
+			width 4em
+			
+		.unc-icon-text
+			margin-top 2em
+
+	.unc-row-summary
+		display grid
+		grid-template-columns 380px auto
+		
+		.unc-left
+			align-items center
+			background-size cover
+			display flex
+			justify-content center
+			
+			.unc-summary-title
+				align-items center
+				background-repeat no-repeat
+				background-size contain
+				background-position center
+				display flex
+				height 460px
+				justify-content center
+				width 100%
+				
+				h3
+					font-family 'Brandon'
+					font-weight bold
+					margin 0
+					width 175px
+					
+					small
+						display block
+						color inherit
+					
+		.unc-right
+			> h3
+				background-color m00
+				color white
+				font-family 'Brandon'
+				font-weight bold
+				margin 0
+				margin-top 1em
+				padding 10px 0px 10px 1em
+				text-align left
+				width 50%
+			
+			.unc-summary-text
+				padding 1em
+				
+			.unc-summary-objectives,
+			.unc-guests-wrapper
+				float left
+				padding 1em
+				width 50%
+				
+			.unc-summary-objectives,
+				ul
+					li	
+						span
+							color text
+				
+			.unc-guests
+				padding 1em
+				
+				h3
+					color white
+					margin 0
+					padding 5px
+					
+				.unc-autor
+					margin-bottom 1em
+					
+					span
+						color white
+						display inline-block
+						margin-right .5em
+						padding 5px
+					
+					strong
+						color #333
+						display inline-block
+						font-size 1.2em
+						vertical-align top
+					
+				.unc-guest
+					h4
+						margin .5em 0
+						color text
+						text-align left
+	
+	.unc-row-bgfull
+		background-repeat no-repeat
+		background-size cover
+		background-position center
+		color white
+		min-height 200px
+		
+		strong
+			color white
+			
+		h1,h3,h4,h5
+			margin 24pt auto
+			padding 12pt 0
+			color white
+			
+			&.unc-title-border
+				border-color white
+				
+				&.unc-fill
+					background-color white
+					color m00
+			
+		.unc-row-border
+			border-color white
+			color white
+			
+			h3,h4,h5
+				margin 0
+				
+		&.unc-bgfull-contain
+			background-repeat repeat
+			background-size contain
+			min-height initial
+			
+		.unc-row-carousel
+			> div
+				text-align center
+			
+	.unc-equal-cols
+		.unc-row-bgfull
+			min-height unset
+			
+	.unc-row-quote
+		.unc-quote-text
+			width 60%
+			margin 1em auto
+			font-style italic
+			
+			div
+				clear both
+			
+			span
+				font-family 'Brandon'
+				font-size 3em
+				float left
+				margin-left -1em
+				
+				&.unc-quote-right
+					float right
+					margin-right -1em
+			
+			&:after
+				display table
+				content ''
+				clear both
+		
+		.unc-autor
+			margin-top 2em
+			text-align right
+			font-style normal
+
+	.unc-row-title-left
+		align-items center
+		display flex
+		margin-right 0em
+		margin-left 3em
+		position relative
+		
+		.unc-title
+			background-color #fff
+			left -3em
+			margin 2em auto
+			padding 1em 0
+			position relative
+			min-width 150px
+			
+			h5,h6
+				margin 0
+				text-align left
+				
+		.unc-text
+			padding 1em 0
+			position relative
+			left -2em
+			min-width calc(100% - 150px)
+			
+	.unc-row-title-top
+		min-height auto
+		
+		.unc-title
+			background-color #fff
+			display inline-block
+			left 1em
+			max-width 70%
+			padding 0 1em
+			position relative
+			top 0
+			transform translateY(-50%)
+			
+			h5,h6
+				margin .5em 0
+				text-align left
+		
+		.unc-text
+			padding 0 1em
+	
+	.unc-row-prompt
+		overflow auto
+		padding-left 1em
+		
+		.unc-prompt-title
+			text-transform uppercase
+			
+		.unc-prompt-description,
+		.unc-prompt-autor
+			color text
+		
+		a
+			float right
+			font-size 3em
+			margin-right 4px
+			margin-top 8px
+			padding 2px
+			position relative
+	
+	.unc-row-glosary		
+		ul
+			margin 0
+			padding 1em
+			list-style none
+			
+			li
+				margin 1em 0
+				
+				strong
+					color white
+					font-weight normal
+					font-style italic
+					padding .2em .4em
+	
+	.unc-row-indicator
+		h1,h2,h3,h4,h5,h6
+			margin 0
+			padding 0
+	
+	.unc-row-list
+		.unc-list-border
+			border 3px solid white
+			margin 2em auto
+			position relative
+			width 80%
+			
+		[class*="col-"],
+		[class^="col-"]
+			cursor pointer
+			font-family 'Brandon'
+			text-align center
+			
+			&:hover span
+				opacity 1
+				color white
+			
+			span
+				font-size 8em
+				line-height 1em
+				opacity 0.7
+				position relative
+				
+				&:before
+					background-color white
+					content ''
+					display inline-block
+					height 10px
+					width 3px
+					position absolute
+					left 50%
+			
+			h5
+				margin 0
+				
+		h5.unc-row-title-line
+			color white
+			
+			&:before,
+			&:after
+				border-top-color white
+		
+		.unc-text
+			padding 1em
+	
+	.unc-row-icon-title
+		text-align center
+		
+		span
+			color text
+			font-size 4em
+			
+			&.unc-fill
+				background-color text !important
+				color white
+				
+				&.unc-clickeable
+					cursor pointer
+			
+		h5,h6
+			color text
+			font-weight bold
+			margin 12pt 0
+			
+		.unc-text
+			margin-top 2em
+			text-align left
+	
+	.unc-row-carousel
+		> div
+			margin 5em 0
+			text-align left
+			width 80%
+			
+	.unc-col-circle		
+		.unc-text
+			display table-cell
+			font-size 0.8em
+			height 150px
+			text-align center
+			
+			span
+				display block
+			
+			div
+				border-radius 50%
+				display inline-block
+				height 8px
+				width 8px
+		
+		.unc-circle
+			align-items center
+			border-radius 50%
+			display flex
+			height 150px
+			justify-content center
+			margin 0 auto
+			position relative
+			width 150px
+			
+			span
+				font-size 6em
+				
+			div
+				background-color white
+				border-radius 50%
+				height 8px
+				position absolute
+				width 8px
+				
+		.unc-circle-center
+			align-items center
+			border-radius 50%
+			display flex
+			height 50px
+			justify-content center
+			margin 40px auto
+			width 50px
+			
+			div
+				border-radius 50%
+				height 40px
+				width 40px
+				
+		.unc-line-middle
+			border-top 2px dashed lightgray 
+			position absolute
+			top 50%
+			width 100%
+			z-index -1
+			
+		.unc-line-vertical
+			border-left 2px dashed lightgray
+			height 70px
+			left 50%
+			position absolute
+			top 50%
+			z-index -1
+		
+		&.unc-circle-top
+			.unc-line-vertical
+				margin-top -70px
+			.unc-text
+				vertical-align top
+			.unc-circle
+				div
+					bottom -11px
+					
+		&.unc-circle-bottom
+			.unc-text
+				vertical-align bottom
+				
+			.unc-circle
+				div
+					top -11px
+	
+	.unc-separator-dotted
+		clear both
+		border-top 2px dotted
+	
+	.unc-separator-solid
+		clear both
+		border-top thin solid
+		
+	.unc-line-left
+		border-left 8px solid
+		margin 0 1em
+		padding 1em
+		
+		h5
+			width 100%
+			
+	.unc-row-icon-side
+		.unc-icon-side-border
+			margin 0 2em
+			padding 3em
+			position relative
+			
+			&.unc-icon-left,
+			&.unc-icon-right
+				span
+					background-color white
+					border 10px solid white
+					font-size 4em
+					position absolute
+					top 50%
+					
+					&.unc-fill
+						font-size 3em
+						color white						
+			
+			&.unc-icon-left
+				margin-right 0
+				span
+					left 0
+					transform translate(-50%, -50%)
+			
+			&.unc-icon-right
+				margin-left 0
+				span
+					right 0
+					transform translate(50%, -50%)
+					
+	.unc-row-vt-list
+		text-align center
+		
+		.unc-number
+			border-radius 50%
+			color white
+			display block
+			font-size 2em
+			height 50px
+			margin 1em auto
+			width 50px
+			
+		strong
+			color text
+			display block
+			font-weight normal
+			margin-bottom 5em
+			padding .5em
+			
+		[class*="pecc-"]
+			font-size 6em
+		
+		[class*="col-"]
+			border-left thin dashed text
+			
+	.unc-row-card		
+		.unc-row-card-image
+			overflow hidden
+			max-height 200px
+		
+	.unc-row-icon-left
+		[class*="pecc-"]
+			font-size 6em
+			text-align center
+			
+		span
+			display inline-block
+			vertical-align middle
+			width calc(100% - 110px)
+			
+			&[class*="pecc-"]
+				width auto
+	
+	.unc-row-processes
+		.unc-process
+			align-items center
+			cursor pointer
+			display inline-flex
+			height 112px
+			justify-content center
+			width 100%
+			position relative
+			
+			.unc-process-top,
+			.unc-process-bottom
+				background-color #777
+				border 5px solid #777
+				height 50%
+				left 20px
+				position absolute
+				transform skewX(25deg)
+				top 0
+				width calc(100% - 40px)
+				
+			.unc-process-top
+				border-bottom none
+				
+			.unc-process-bottom
+				border-top none
+				top 50%
+				transform skewX(-25deg)
+			
+			.unc-process-title
+				color white
+				padding 2em
+				position relative
+				text-align center
+				width 80%
+				z-index 2
+				
+			// &.unc-clickeable
+			.unc-process-top,	
+			.unc-process-bottom
+				&:before
+					border 3px solid white
+					display block
+					content ''
+					width 100%
+					height 50px
+			.unc-process-top
+				&:before
+					border-bottom none
+			.unc-process-bottom
+				&:before
+					border-top none
+	
+	.unc-row-scalable
+		.unc-scalable
+			transform-origin left top
+	
+	.unc-triangle-top
+		border-top 10px solid transparent
+		border-right 10px solid transparent
+		border-bottom 10px solid transparent
+		border-left 10px solid transparent
+		display block
+		height 0
+		width 0
+		
+	#rentabilidad
+		flex-wrap wrap
+		div
+			color m04
+			margin 1em .5em
+		
+		.unc-flex-center div
+			text-align center
+		.unc-separator-solid
+			margin 5px 0					
+	
+	#obj-tracer
+		margin 0 auto
+		position relative
+		
+		.unc-circle
+			border-radius 50%
+			cursor pointer
+			height 85px
+			left 0
+			position absolute
+			top 0
+			width 85px
+			
+			&.unc-c1
+				left 48px
+				top 4px
+			&.unc-c2
+				left 413px
+				top 77px
+			&.unc-c3
+				left 358px
+				top 359px
+			&.unc-c4
+				left 234px
+				top 514px
+			&.unc-c5
+				left 2px
+				top 329px
+	
+	#obj-arrow
+		margin 0 auto
+		position relative
+		
+		.unc-rect
+			cursor pointer
+			height 25px
+			left 0
+			position absolute
+			top 0
+			transition .3s all ease
+			width 85px
+			
+			&.unc-c1
+				left 210px
+				top 5px
+			&.unc-c2
+				height 45px
+				left 405px
+				top 155px
+				width 100px
+			&.unc-c3
+				left 210px
+				top 330px
+			&.unc-c4
+				height 45px
+				left -5px
+				top 160px
+				width 100px
+			&.unc-c5
+				left 110px
+				top 100px
+				width 130px
+			&.unc-c6
+				left 280px
+				top 100px
+			&.unc-c7
+				left 280px
+				top 230px
+			&.unc-c8
+				left 130px
+				top 230px
+				
+			&:hover
+				background-color rgba(0,0,0,0.2)
+				
+	#obj-innovar
+		.unc-line
+			border-bottom 10px solid transparent
+			padding 1em 0 1em 0
+			
+			.unc-clickeable
+				cursor pointer
+				display inline-block
+				height 100px
+				margin 0 .5em
+				padding .5em
+				position relative
+				vertical-align bottom
+				width 100px
+				
+				.unc-title
+					color white
+					font-size .9em
+					
+				.unc-number
+					color white
+					bottom 5px
+					font-size 2em
+					line-height 1em
+					position absolute
+					right 5px
+					
+				&:after
+					border 2px solid m03
+					content ''
+					display block
+					height 110px
+					left -5px
+					padding 2px
+					position absolute
+					top -5px
+					width 110px
+					z-index: 2
+				
+			&.configuracion
+				border-bottom-color m03
+				padding-left 5em
+				width 80%
+				
+				> span
+					color m03
+					text-transform uppercase
+				
+				.unc-clickeable
+					background-color m03
+			&.oferta
+				border-bottom-color m03a
+				padding-left 31em
+				width 80%
+				
+				> span
+					color m03a
+					text-transform uppercase
+				
+				.unc-clickeable
+					background-color m03a
+					
+					&:after
+						border-color m03a
+					
+			&.experiencia
+				border-bottom-color m03b
+				padding-left 36em
+				width 90%
+				
+				> span
+					color m03b
+					text-transform uppercase
+				
+				.unc-clickeable
+					background-color m03b
+					
+					&:after
+						border-color m03b
+	
+	#obj-ciclo
+		margin 0 auto
+		position relative
+		
+		.unc-circle
+			border-radius 50%
+			cursor pointer
+			height 148px
+			position absolute
+			width 148px
+			
+			&.unc-c1
+				left 178px
+				top 11px
+			&.unc-c2
+				left 336px
+				top 169px
+			&.unc-c3
+				left 175px
+				top 329px
+			&.unc-c4
+				left 16px
+				top 169px
+				
+	#obj-historias
+		margin 0 auto
+		position relative
+		
+		.unc-circle
+			border-radius 50%
+			cursor pointer
+			height 110px
+			position absolute
+			width 110px
+			
+			&.unc-c1
+				left 328px
+				top 7px
+			&.unc-c2
+				left 383px
+				top 140px
+			&.unc-c3
+				left 327px
+				top 273px
+			&.unc-c4
+				left 195px
+				top 328px
+			&.unc-c5
+				left 62px
+				top 272px
+			&.unc-c6
+				left 8px
+				top 140px
+			&.unc-c7
+				left 63px
+				top 7px
+	
+	#obj-arco
+		margin 0 auto
+		position relative
+		
+		.unc-circle
+			background-color rgba(0,0,0,0.1)
+			border-radius 5px
+			cursor pointer
+			height 60px
+			position absolute
+			width 150px
+			
+			&:hover
+				background-color rgba(0,0,0,0.2)
+			
+			&.unc-c1
+				left 28px
+				top 217px
+				width 300px
+			&.unc-c2
+				left 368px
+				top 217px
+			&.unc-c3
+				left 558px
+				top 217px
+			&.unc-c4
+				left 738px
+				top 217px
+	
+	.unc-hangman
+		margin 3em auto
+		
+		img
+			max-width 200px !important
+			
+		.unc-hangman-letters span
+			font-size 1.2em
+			
+		.unc-hangman-finished
+			color white
+			
+			img
+				display block
+				margin 0 auto
+				width 80px
+			
+	.unc-swipe-cards
+		margin 3em auto
+		overflow hidden
+		
+		.unc-swipe-card
+			border-radius 10px
+		
+		.unc-card-title
+			border-bottom-color rgba(255,255,255,0.5)
+		
+		.unc-card-content
+			font-size 1.2em
+			padding-left 2em
+			
+		strong 
+			color white
+	
+	.lnt-memory-grid
+		margin 3em auto
+		border-radius 10px
+		max-width 100%
+		height auto
+		overflow auto
+		padding 2em
+		text-align center
+		width 720px
+		
+		.unc-memory-title
+			color white
+			border-bottom thin solid #ccc
+			padding .5em
+			margin-bottom 1em
+			text-align left
+		
+		.unc-empty-text
+			color white
+			font-size 1.2em
+			text-align center
+			
+			img
+				width 80px
+				display block
+				margin 0 auto
+		
+		.card
+			height 150px
+			width 130px
+			
+			.back,
+			.front
+				border none
+				padding 0
+	
+	#memory-game-02
+		background linear-gradient(#923e90, #ad6dab)
+	
+	#memory-game-05
+		background linear-gradient(#2a7584,#017c93)
+		
+	ul.unc-objectives
+		list-style none
+		text-align center
+		
+		li
+			border 3px solid #7272f5
+			border-radius 5px
+			color #7272f5
+			display inline-block
+			margin 1em
+			padding 1em
+		
+		
+@media (max-width: 992px)
+	#unc-wrapper
+		.unc-row-splash
+			.unc-splash
+				width 70%			
+				
+		.unc-row-summary
+			.unc-right
+				.unc-summary-objectives,
+				.unc-guests-wrapper
+					float none
+					width 100%
+				
+				> h3
+					width 100%
+		
+		.carousel
+			.carousel-inner
+				[class^="col-"],
+				[class*=" col-"]
+					padding 0
+			
+			.left.carousel-control
+				span
+					left 5px
+			.right.carousel-control
+				span
+					right 5px					  
+
+@media (max-width: 768px)
+	#unc-wrapper
+		.unc-row-degrant
+			.unc-degrant-image
+				width 100%
+				
+			.unc-degrant-text
+				width 100%
+				
+				h2
+					padding-right 2em
+					text-align right
+				
+		.unc-row-split
+			div
+				float none
+				width 100%
+				
+		.unc-row-summary
+			display block
+			
+			.unc-right
+				> h3
+					width 70%
+		
+		.unc-hangman
+			.unc-hangman-answer 
+				span
+					.unc-hangman-answer-letter
+						margin 3px
+						width 12px
+						
+		#swipe-cards-00
+			height 550px
+			
+			.unc-swipe-card
+				padding 1em
+				
+			.unc-card-left-image
+				display none
+			
+			.unc-card-content
+				padding-left 0
+				width 100%
+				
+			.unc-swipe-left,
+			.unc-swipe-right
+				top auto
+				bottom 1em
+			
+@media (max-width: 480px)
+	#unc-wrapper
+		.unc-row-title-left
+			display block
+			
+			.unc-title
+				margin 1em auto
+				
+			.unc-text
+				left 0
+				padding 0 1em 1em
+				position static
+				
+		.unc-row-summary			
+			.unc-right
+				> h3
+					width 100%
+					
+		#modal-vimeo
+			.unc-modal-body
+				margin 5px auto
+				padding .5em
+				width 95%
+		
+// TODO: Remove.. only test
+div.color
+	align-items: center
+	color white
+	display inline-flex
+	justify-content: center
+	height 100px
+	width: 100px
+	
+	&.m00
+		background-color m00
+	&.m01
+		background-color m01
+	&.m02
+		background-color m02
+	&.m03
+		background-color m03
+	&.m04
+		background-color m04
+	&.m05
+		background-color m05
+	&.m06
+		background-color m06
+	&.m07
+		background-color m07
+	
