@@ -3,7 +3,7 @@ import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
-/* eslint-disable */
+
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo00')}>
     <Header />
@@ -11,7 +11,47 @@ const CustomPage = (props) => (
       <UDScrollbars>
         <div className='unc-card'>
           <div className='unc-row'>
+            {/* eslint-disable */}
+            { /* TODO: Carousel */}
+            <div id='Carousel_1' className='carousel slide' data-ride='carousel'>
+              <ol className='carousel-indicators'>
+                <li data-target='#Carousel_1' data-slide-to='0' className='active'></li>
+                <li data-target='#Carousel_1' data-slide-to='1'></li>
+              </ol>
 
+              <div className='carousel-inner unc-equal-cols'>
+                <div className='item active col-'>
+                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='/content/pecc/imgs/M00_IMG06.jpg'>
+                    <div>
+                      <h1>EL IMPACTO SOCIAL ES EL MAYOR APORTE DE LAS EMPRESAS
+                      CREATIVAS Y CULTURALES</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='item col-'>
+                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='/content/pecc/imgs/M00_IMG09.jpg'>
+                    <div style={{ textAlign: 'center' }}>
+                      <h3>Puedes capitalizar para la  sostenibilidad de tu emprendimiento</h3>
+                      Tener claro, desde los objetivos de tu empresa creativa y
+                      cultural, qué impacto social generas en la comunidad, ya sea para
+                      resolver problemas comunes o mitigar otros, es clave a la hora de
+                      pensar en la sostenibilidad de tu negocio o emprendimiento.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a className='left carousel-control' href='#Carousel_1' data-slide='prev'>
+                <span className='ti-angle-left'></span>
+                <span className='sr-only'>Previous</span>
+              </a>
+              <a className='right carousel-control' href='#Carousel_1' data-slide='next'>
+                <span className='ti-angle-right'></span>
+                <span className='sr-only'>Next</span>
+              </a>
+            </div>
+          {/* eslint-enable */}
           </div>
 
           <div className='unc-row unc-row-section-title'>
@@ -27,7 +67,8 @@ const CustomPage = (props) => (
             escribas en los campos de texto dando respuesta, desde tu experiencia, a las
             siguientes preguntas:
           </div>
-
+          {/* eslint-disable */}
+          { /* TODO: Collapse */}
           <div className='unc-row'>
             <div id='Collapse_1' className='panel-group' role='tablist' aria-multiselectable='true'>
               <div className='panel panel-default'>
@@ -89,10 +130,11 @@ const CustomPage = (props) => (
                 margin: '0 auto' }}>Ten presente que las respuestas no son almacenadas por el sistema. Por lo tanto deberás llenar las áreas de texto y a continuación hacer clic en <i>Descargar tus respuestas</i>.</small>
             </div>
           </div>
+          {/* eslint-enable */}
         </div>
       </UDScrollbars>
     </div>
   </Page>
 );
-/* eslint-enable */
+
 export default CustomPage;

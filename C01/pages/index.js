@@ -1,6 +1,6 @@
 export { default as Page00 } from './00';
 export { default as Page01 } from './01';
-// export { default as Page02 } from './02';
+export { default as Page02 } from './02';
 // export { default as Page03 } from './03';
 // export { default as Page04 } from './04';
 // export { default as Page05 } from './05';
