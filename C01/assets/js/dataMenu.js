@@ -1,71 +1,98 @@
 export default {
   units: [
     {
-      name: 'Inicio',
+      name: 'Presentación',
       items: [
         {
-          name: 'Introducción',
+          name: 'Generalidades',
           pages: [0]
+        },
+        {
+          name: 'Actividad de exploración',
+          pages: [1]
         }
       ]
     },
     {
-      name: 'Herramientas de promoción del negocio',
+      name: 'Referentes de aplicación',
       items: [
         {
-          name: 'Trabajo efectivo del equipo de trabajo',
-          pages: [1]
-        },
-        {
-          name: 'Trabajo efectivo del equipo de trabajo: Scrum',
+          name: 'La casa de Carlota',
           pages: [2]
-        },
+        }
+      ]
+    },
+    {
+      name: 'El impacto social es el mayor aporte de las empresas',
+      items: [
         {
-          name: 'Metodología Scrum',
+          name: 'Economía creativa y transformación social',
           pages: [3]
         },
         {
-          name: 'Mercadeo del plan de negocio',
+          name: 'Hablemos de impacto social',
           pages: [4]
         },
         {
-          name: 'Herramientas de diseño para la promoción',
+          name: 'Impacto social en negocios del sector creativo y cultural',
           pages: [5]
-        },
+        }
+      ]
+    },
+    {
+      name: 'Cómo reconocer el impacto social',
+      items: [
         {
-          name: 'Herramientas para atraer a clientes objetivos',
+          name: 'Primero define el impacto social de tu emprendimiento',
           pages: [6]
         },
         {
-          name: 'Diseño promocional del negocio',
+          name: 'Mide el impacto social de tu emprendimiento',
           pages: [7]
         }
       ]
     },
     {
-      name: 'Desarrollo de métricas',
+      name: 'Potencial de la creatividad para solucionar impactos negativos',
       items: [
         {
-          name: 'Desarrollo de métricas',
+          name: 'Potencial de la creatividad para solucionar impactos negativos',
           pages: [8]
-        }
-      ]
-    },
-    {
-      name: 'Diseño del resumen ejecutivo',
-      items: [
+        },
         {
-          name: 'Diseño del resumen ejecutivo',
+          name: 'Conocer casos del sector',
           pages: [9]
         }
       ]
     },
     {
-      name: 'Final',
+      name: 'Mensaje de cierre',
       items: [
         {
-          name: 'Fin del módulo',
+          name: 'Mensaje de cierre',
           pages: [10]
+        }
+      ]
+    },
+    {
+      name: 'Recursos de profundización',
+      items: [
+        {
+          name: 'Recursos de profundización',
+          pages: [11]
+        }
+      ]
+    },
+    {
+      name: 'Estrategia de autoevaluación',
+      items: [
+        {
+          name: 'Autoevaluación',
+          pages: [12]
+        },
+        {
+          name: 'Y este tema cómo se relaciona con tu proyecto',
+          pages: [13]
         }
       ]
     }
