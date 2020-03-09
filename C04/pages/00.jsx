@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Header from '../components/Header';
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>
@@ -13,28 +13,32 @@ const CustomPage = (props) => (
           <div className='unc-row-summary'>
             <div className='unc-left'>
               <div className='unc-summary-title'>
-                <h3>El conocimiento del cliente, punto de partida para el desarrollo
-                <small>de oferta creativa y cultural</small></h3>
+                <h3>Gestionar tus intangibles, <small>un asunto clave para la sostenibilidad de
+                  emprendimientos creativos y culturales</small>
+                </h3>
               </div>
             </div>
-
             <div className='unc-right'>
               <h3>Generalidades</h3>
 
               <div className='unc-summary-text'>
-                La innovación en el sector creativo y cultural tiene un doble propósito: generar
-                un impacto social y producir riqueza, es decir, suple una necesidad y ofrece
-                canales de sostenibilidad económica, financiera y de competitividad. Aquí, este
-                módulo, mostrará este camino.
+                Reconocer los intangibles derivados del conocimiento, volverlos activos,
+                sistematizarlos, evaluarlos, y protegerlos y promoverlos desde el marco normativo
+                facilitan la viabilidad y permanencia de tu proyecto. Aquí, te lo explicamos.
               </div>
 
               <div className='unc-summary-objectives'>
                 <h3>Al terminar este módulo podrás reflexionar sobre:</h3>
                 <ul>
-                  <li><span>¿Qué es innovación?</span></li>
-                  <li><span>¿En qué aspectos se puede innovar?</span></li>
-                  <li><span>¿Cómo innovar?</span></li>
-                  <li><span>¿Cuáles aspectos puedes considerar para innovar?</span></li>
+                  <li><span>¿Qué son los activos intangibles y de conocimiento?</span></li>
+                  <li><span>¿Cómo gestionar activos que se soportan en conocimiento?</span></li>
+                  <li><span>¿Cómo emplear la sistematización y la evaluación para mejorar tu
+                    emprendimiento?</span>
+                  </li>
+                  <li><span>¿Cuál es el marco legal para proteger activos intangibles o de
+                    onocimiento?</span>
+                  </li>
+                  <li><span>¿Cuál es el marco legal para promover tu quehacer?</span></li>
                 </ul>
               </div>
 

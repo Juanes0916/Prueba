@@ -50,8 +50,8 @@ const PTCourse = PTCourseHOC(PTMenu, PTNav, {
   defaultNextPageAnimation: 67,
   defaultBackPageAnimation: 67,
   PTMenu: {
-    title: `El conocimiento de cliente, punto de partida para el desarrollo de oferta 
-    creativa y cultural`,
+    title: `Gestionar tus intangibles, un asunto clave para la sostenibilidad
+    de emprendimientos creativos y culturales`,
     placement: 'right',
     slides: Pages.length,
     dataMenu,
