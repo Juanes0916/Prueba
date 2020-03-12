@@ -1,8 +1,9 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, Video } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo06')}>
@@ -26,38 +27,61 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row'>
-            {/* TODO: Popup */}
             <div className='col-md-3' style={{ padding: '1em' }}>
-              <div className='text-center'>
-                <button className='unc-button' data-target='#vModal4' data-toggle='modal' type='button'>
-                  <span className='btn-label' id='m-icon'><i className='fa fa-eye'>&nbsp;</i></span>
-                  ¿Cómo vivimos estas tendencias en el sector creativo y cultural?
-              </button>
-              </div>
+              <ButtonPopup
+                className='text-center'
+                buttonClassName='unc-button'
+                icon='fa fa-eye'
+                inTitle='¿Cómo vivimos estas tendencias en el sector creativo y cultural?'
+                popup={{
+                  title: <h4>¿Cómo vivimos estas tendencias en el sector creativo y cultural?</h4>,
+                  content: (
+                    <Video videoId={315064225} />
+                  )
+                }}
+              />
             </div>
             <div className='col-md-3' style={{ padding: '1em' }}>
-              <div className='text-center'>
-                <button className='unc-button' data-target='#vModal5' data-toggle='modal' type='button'>
-                  <span className='btn-label' id='m-icon'><i className='fa fa-eye'>&nbsp;</i></span>
-                  ¿Cómo podemos utilizar estas tendencias en el sector?
-              </button>
-              </div>
+              <ButtonPopup
+                className='text-center'
+                buttonClassName='unc-button'
+                icon='fa fa-eye'
+                inTitle='¿Cómo podemos utilizar estas tendencias en el sector?'
+                popup={{
+                  title: <h4>¿Cómo podemos utilizar estas tendencias en el sector?</h4>,
+                  content: (
+                    <Video videoId={315069124} />
+                  )
+                }}
+              />
             </div>
             <div className='col-md-3' style={{ padding: '1em' }}>
-              <div className='text-center'>
-                <button className='unc-button' data-target='#vModal6' data-toggle='modal' type='button'>
-                  <span className='btn-label' id='m-icon'><i className='fa fa-eye'>&nbsp;</i></span>
-                  ¿Cuáles son los tiempos de adaptación de estas tendencias?
-              </button>
-              </div>
+              <ButtonPopup
+                className='text-center'
+                buttonClassName='unc-button'
+                icon='fa fa-eye'
+                inTitle='¿Cuáles son los tiempos de adaptación de estas tendencias?'
+                popup={{
+                  title: <h4>¿Cuáles son los tiempos de adaptación de estas tendencias?</h4>,
+                  content: (
+                    <Video videoId={315032690} />
+                  )
+                }}
+              />
             </div>
             <div className='col-md-3' style={{ padding: '1em' }}>
-              <div className='text-center'>
-                <button className='unc-button' data-target='#vModal7' data-toggle='modal' type='button'>
-                  <span className='btn-label' id='m-icon'><i className='fa fa-eye'>&nbsp;</i></span>
-                  ¿Cuál es el panorama de tendencias a nivel local?
-              </button>
-              </div>
+              <ButtonPopup
+                className='text-center'
+                buttonClassName='unc-button'
+                icon='fa fa-eye'
+                inTitle='¿Cuál es el panorama de tendencias a nivel local?'
+                popup={{
+                  title: <h4>¿Cuál es el panorama de tendencias a nivel local?</h4>,
+                  content: (
+                    <Video videoId={315039882} />
+                  )
+                }}
+              />
             </div>
           </div>
         </div>

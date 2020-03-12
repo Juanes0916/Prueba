@@ -24,7 +24,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row'>
-            {/* TODO: Container Image */}
+            {/* TODO: Image Container */}
             <div className='col-md-4 text-center'>
               <button className='unc-button' id='btn4Rios'>
                 <span className='btn-label'><i className='icon-loop'></i></span>

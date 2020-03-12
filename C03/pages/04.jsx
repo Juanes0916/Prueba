@@ -3,6 +3,7 @@ import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -108,27 +109,67 @@ const CustomPage = (props) => (
           </div>
 
           <div className='row unc-row-icon-title'>
-            {/* TODO: Mapa interactivo */}
-            <div className='col-md-4 unc-padding-1'>
-              <span className='pecc-927 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal1'></span>
-              <h5>Sensorial</h5>
-            </div>
-            <div className='col-md-4 unc-padding-1'>
-              <span className='pecc-916 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal2'></span>
-              <h5>De los sentimientos</h5>
-            </div>
-            <div className='col-md-4 unc-padding-1'>
-              <span className='pecc-973 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal3'></span>
-              <h5>Del pensamiento</h5>
-            </div>
-            <div className='col-md-4 col-sm-offset-2 unc-padding-1'>
-              <span className='pecc-94c unc-fill unc-clickeable' data-toggle='modal' data-target='#modal4'></span>
-              <h5>De actuaciones</h5>
-            </div>
-            <div className='col-md-4 unc-padding-1'>
-              <span className='pecc-902 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal5'></span>
-              <h5>De relaciones</h5>
-            </div>
+            <ButtonPopup
+              className='col-md-4 unc-padding-1'
+              buttonClassName='pecc-927 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Sensoriales</h5>,
+                content: (
+                  <div>Implican percepciones sensoriales: olfato, vista, tacto, oído, gusto.</div>
+                )
+              }}
+              downTitle='Sensorial'
+            />
+            <ButtonPopup
+              className='col-md-4 unc-padding-1'
+              buttonClassName='pecc-916 unc-fill unc-clickeable'
+              popup={{
+                title: <h4>De los sentimientos</h4>,
+                content: (
+                  <div>Implican los sentimientos y las emociones.</div>
+                )
+              }}
+              downTitle='De los sentimientos'
+            />
+            <ButtonPopup
+              className='col-md-4 unc-padding-1'
+              buttonClassName='pecc-973 unc-fill unc-clickeable'
+              popup={{
+                title: <h4>Del pensamiento</h4>,
+                content: (
+                  <div>
+                    Apelan al intelecto con el propósito de crear experiencias cognitivas que
+                    resuelvan problemas y que atraigan a los clientes.
+                  </div>
+                )
+              }}
+              downTitle='Del pensamiento'
+            />
+            <ButtonPopup
+              className='col-md-7 col-sm-offset-2 unc-padding-1'
+              buttonClassName='pecc-94c unc-fill unc-clickeable'
+              popup={{
+                title: <h4>De actuaciones</h4>,
+                content: (
+                  <div>
+                    Implican cuestiones físicas y se proponen afectar experiencias corporales,
+                    estilos de vida e interacciones.
+                  </div>
+                )
+              }}
+              downTitle='De actuaciones'
+            />
+            <ButtonPopup
+              className='col-md-2 unc-padding-1'
+              buttonClassName='pecc-902 unc-fill unc-clickeable'
+              popup={{
+                title: <h4>De relaciones</h4>,
+                content: (
+                  <div>Experiencias que son el resultado de relaciones con un grupo.</div>
+                )
+              }}
+              downTitle='De relaciones'
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -163,7 +204,7 @@ const CustomPage = (props) => (
           </div>
 
           <div id='obj-arrow' className='unc-row-scalable' data-width='500'>
-            {/* TODO: Mapa Interactivo */}
+            {/* TODO: D3 */}
             <div className='unc-scalable'>
               <img src='./assets/img/M02_IMG29.png' width='100%' />
               <div className='unc-rect unc-c1' data-toggle='modal' data-target='#modal6'></div>

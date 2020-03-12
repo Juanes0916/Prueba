@@ -33,7 +33,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1'>
-            {/* TODO: Popup */}
+            {/* TODO: D3 */}
             <h4 className='text-center'>El arco de la implicación</h4>
             <div className='text-center'>
               <div id='obj-arco' className='unc-row-scalable' data-width='900' style={{ display: 'inline-block' }}>

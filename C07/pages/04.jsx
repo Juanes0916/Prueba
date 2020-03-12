@@ -34,6 +34,13 @@ const CustomPage = (props) => (
             <small>Haz clic en los componentes del gráfico y conoce cuatro estados mentales o
             macrotendencias.</small>
           </div>
+
+          <div className='unc-row unc-padding-1'>
+            {/* TODO: D3 */}
+            <div className='text-center'>
+              <svg id='unc-macrotendencias-pie'></svg>
+            </div>
+          </div>
         </div>
       </UDScrollbars>
     </div>

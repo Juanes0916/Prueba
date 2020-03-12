@@ -29,7 +29,7 @@ const CustomPage = (props) => (
                 los roles</small>
             </div>
 
-            {/* TODO: Mapa Interactivo */}
+            {/* TODO: D3 */}
             <div className='text-center'>
               <svg id='unc-mercado-pie'></svg>
             </div>
@@ -51,8 +51,8 @@ const CustomPage = (props) => (
                 principal en tu empresa cultural o creativa?</li>
 
               <li>Agregaron o resaltaron algunos aspectos fundamentales como escenografía
-                provocativa, utilización de vídeos, música propia, vestuario atractivo para
-                acercarse más a los gustos de los adultos. ¿Cómo puedes personalizar tu producto,
+              provocativa, utilización de vídeos, música propia, vestuario atractivo para
+              acercarse más a los gustos de los adultos. ¿Cómo puedes personalizar tu producto,
                 servicio o experiencia?</li>
 
               <li>Pusieron un margen de beneficio del 15% en sus espectáculos ¿Tu empresa está
@@ -69,7 +69,7 @@ const CustomPage = (props) => (
                 roles</small>
             </div>
 
-            {/* TODO: Mapa Interactivo */}
+            {/* TODO: D3 */}
             <div className='text-center'>
               <svg id='unc-mercado-pie-2'></svg>
             </div>

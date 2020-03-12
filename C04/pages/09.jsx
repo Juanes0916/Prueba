@@ -23,7 +23,7 @@ const CustomPage = (props) => (
 
           <div className='unc-row row'>
             {/* eslint-disable */}
-            {/* TODO: Popup */}
+            {/* TODO: D3 */}
             <div className='col-sm-6'>
               <h4>Centro de arte contemporáneo</h4>
             </div>

@@ -28,7 +28,7 @@ const CustomPage = (props) => (
             </div>
 
             <div className='text-center'>
-              {/* TODO: Popup */}
+              {/* TODO: D3 */}
               <svg id='unc-mercado6-pie'></svg>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { Page, UDScrollbars, Video } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -32,11 +33,9 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row unc-equal-cols'>
-            {/* eslint-disable */}
-            {/* TODO: Audio */}
-            {/* TODO: Popup */}
             <div className='col-sm-4 unc-padding-1'>
-              <div className='unc-row-card' style={{ height: '555px' }}>
+              {/* TODO: Audio */}
+              <div className='unc-row-card' style={{ height: '650px' }}>
                 <div className='unc-row-card-image'>
                   <img src='./assets/img/M01_IMG27.jpg' width='100%' />
                 </div>
@@ -54,7 +53,7 @@ const CustomPage = (props) => (
               </div>
             </div>
             <div className='col-sm-4 unc-padding-1'>
-              <div className='unc-row-card' style={{ height: '555px' }}>
+              <div className='unc-row-card' style={{ height: '650px' }}>
                 <div className='unc-row-card-image'>
                   <img src='./assets/img/M01_IMG28.jpg' width='100%' />
                 </div>
@@ -64,27 +63,83 @@ const CustomPage = (props) => (
                     Nos referimos al hacer de la sistematización, la puesta en marcha que puede
                     implicar varias fases en su interior
                   </div>
+
                   <button className='unc-button' data-target='#duranteMdl' data-toggle='modal' type='button'>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
-                  <button className='unc-button' data-target='#modal1' data-toggle='modal' type='button'>
-                    <span className='btn-label'><i className='icon-speech'></i></span>
-                    Trabajo de campo
-                  </button>
-                  <button className='unc-button' data-target='#modal2' data-toggle='modal' type='button'>
-                    <span className='btn-label'><i className='icon-speech'></i></span>
-                    Análisis de resultados
-                  </button>
-                  <button className='unc-button' data-target='#modal3' data-toggle='modal' type='button'>
-                    <span className='btn-label'><i className='icon-speech'></i></span>
-                    Conclusiones
-                  </button>
+
+                  <div>
+                    <ButtonPopup
+                      buttonClassName='unc-button'
+                      icon='icon-speech'
+                      inTitle='Trabajo de campo'
+                      popup={{
+                        title: <h5>Trabajo de campo</h5>,
+                        content: (
+                          <div>
+                            Implica la realización de estrategias, técnicas y herramientas que
+                            permitan el diálogo y la construcción colectiva entre los actores
+                            involucrados. Este momento invita a poner las percepciones,
+                            aprendizajes y conocimientos individuales en un mismo plano para
+                            conectarlos y generar un nuevo relato, basado en la evidencia, según
+                            la experiencia individual de cada persona, experiencias todas que serán
+                            las fuentes primarias.
+                            <br /><br />
+
+                            Algunas estrategias pueden ser entrevistas, grupos focales, talleres
+                            participativos, diarios de campo, líneas del tiempo y conversatorios,
+                            todos con herramientas y preguntas sobre qué se hizo, cómo se hizo y
+                            qué se aprendió, o con momentos, hitos o aprendizajes significativos.
+                          </div>
+                        )
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginTop: '-1.5em' }}>
+                    <ButtonPopup
+                      buttonClassName='unc-button'
+                      icon='icon-speech'
+                      inTitle='Análisis de resultados'
+                      popup={{
+                        title: <h5>Análisis de resultados</h5>,
+                        content: (
+                          <div>
+                            Fase dedicada a la interpretación de los resultados, para proceder a
+                            las conclusiones acerca de nuestro proyecto, proceso o práctica. Este
+                            análisis triangula toda la información recopilada desde la fase
+                            documental para encontrar similitudes y diferencias y categorizar los
+                            elementos comunes que responda a las preguntas eje.
+                          </div>
+                        )
+                      }}
+                    />
+                  </div>
+                  <div style={{ marginTop: '-1.5em' }}>
+                    <ButtonPopup
+                      buttonClassName='unc-button'
+                      icon='icon-speech'
+                      inTitle='Conclusiones'
+                      popup={{
+                        title: <h5>Conclusiones</h5>,
+                        content: (
+                          <div>
+                            Surgen de la interpretación que realizamos en la fase anterior. En
+                            este punto la información se convierte conocimiento; es decir, en un
+                            resultado tangible que puede ser divulgado, compartido y posible de
+                            transferir a otras experiencias o contextos, a partir de varias
+                            estrategias de comunicación.
+                          </div>
+                        )
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
             <div className='col-sm-4 unc-padding-1'>
-              <div className='unc-row-card' style={{ height: '555px' }}>
+              {/* TODO: Audio */}
+              <div className='unc-row-card' style={{ height: '650px' }}>
                 <div className='unc-row-card-image'>
                   <img src='./assets/img/M01_IMG29.jpg' width='100%' />
                 </div>
@@ -103,7 +158,6 @@ const CustomPage = (props) => (
                 </div>
               </div>
             </div>
-            {/* eslint-enable */}
           </div>
         </div>
       </UDScrollbars>

@@ -3,6 +3,7 @@ import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -133,27 +134,85 @@ const CustomPage = (props) => (
           </div>
 
           <div className='row unc-row-icon-title'>
-            {/* TODO: Mapa Interactivo */}
-            <div className='col-sm-2 col-sm-offset-1 unc-padding-1'>
-              <span className='pecc-935 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal24'></span>
-              <h5>Empatizar</h5>
-            </div>
-            <div className='col-sm-2 unc-padding-1'>
-              <span className='pecc-94e unc-fill unc-clickeable' data-toggle='modal' data-target='#modal25'></span>
-              <h5>Definir</h5>
-            </div>
-            <div className='col-sm-2 unc-padding-1'>
-              <span className='pecc-94f unc-fill unc-clickeable' data-toggle='modal' data-target='#modal26'></span>
-              <h5>Idear</h5>
-            </div>
-            <div className='col-sm-2 unc-padding-1'>
-              <span className='pecc-948 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal27'></span>
-              <h5>Prototipar</h5>
-            </div>
-            <div className='col-sm-2 unc-padding-1'>
-              <span className='pecc-97e unc-fill unc-clickeable' data-toggle='modal' data-target='#modal28'></span>
-              <h5>Probar</h5>
-            </div>
+            <ButtonPopup
+              className='col-sm-3 col-sm-offset-1 unc-padding-1'
+              buttonClassName='pecc-935 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Empatizar</h5>,
+                content: (
+                  <div>
+                    El proceso comienza con una profunda comprensión de las necesidades de los
+                    usuarios, implicados en la solución que les desarrollamos, así como de su
+                    entorno.
+                  </div>
+                )
+              }}
+              downTitle='Empatizar'
+            />
+            <ButtonPopup
+              className='col-sm-2 unc-padding-1'
+              buttonClassName='pecc-94e unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Definir</h5>,
+                content: (
+                  <div>
+                    Reúne la información recopilada en la fase anterior, hace una selección para
+                    resaltar y sintetizar la información relevante, procesa e identifica problemas
+                    cuyas soluciones serán clave para obtener un resultado con impacto, todo con
+                    base en la necesidad del usuario.
+                  </div>
+                )
+              }}
+              downTitle='Definir'
+            />
+            <ButtonPopup
+              className='col-sm-2 unc-padding-1'
+              buttonClassName='pecc-94f unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Idear</h5>,
+                content: (
+                  <div>
+                    En esta etapa la creatividad juega un papel importante, aún en situaciones
+                    en las que se requiere solo plasmar las ideas más irrisorias o más ocurrentes.
+                    Comienza a buscar alternativas de ver el problema y sesiona por ideas, para
+                    estimular el pensamiento libre y ampliar el espacio problemático.
+                  </div>
+                )
+              }}
+              downTitle='Idear'
+            />
+            <ButtonPopup
+              className='col-sm-2 unc-padding-1'
+              buttonClassName='pecc-948 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Prototipar</h5>,
+                content: (
+                  <div>
+                    Vuelve las ideas realidad, por medio de modelos que las hacen palpables y
+                    ayudan a visualizar las posibles soluciones, debido a que pone elementos que
+                    mejoran o refinan eso que queremos alcanzar antes de llegar a un resultado
+                    final.
+                  </div>
+                )
+              }}
+              downTitle='Prototipar'
+            />
+            <ButtonPopup
+              className='col-sm-2 unc-padding-1'
+              buttonClassName='pecc-97e unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Probar</h5>,
+                content: (
+                  <div>
+                    Los prototipos se pueden compartir y probar dentro del equipo de trabajo, en
+                    otros departamentos o en un pequeño grupo de personas fuera del equipo de
+                    diseño. Esta es una fase experimental y el objetivo es identificar la mejor
+                    solución posible para cada uno de los problemas identificados.
+                  </div>
+                )
+              }}
+              downTitle='Probar'
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>

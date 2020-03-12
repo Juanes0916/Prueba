@@ -20,12 +20,12 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-row-tip'>
-            { /* TODO: Interactive Components */}
+            { /* TODO: D3 */}
             <small>Haz clic en los componentes del mapa interactivo para conocer más sobre impacto
               social</small>
           </div>
 
-          <div className='unc-row unc-row-bgfull unc-row-list unc-padding-1' data-url='./assets/img/M00_IMG14.jpg'>
+          <div className='unc-row unc-row-bgfull unc-row-list unc-padding-1' data-url='../assets/img/M00_IMG14.jpg'>
             <div className='unc-list-border'>
               <div className='row'>
                 <div className='col-sm-3' data-toggle='modal' data-target='#modal2'>

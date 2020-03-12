@@ -24,7 +24,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1'>
-            {/* TODO: Popup */}
+            {/* TODO: D3 */}
             <div className='text-center'>
               <svg id='unc-principios-pie'></svg>
             </div>

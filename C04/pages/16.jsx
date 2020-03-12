@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -144,21 +145,52 @@ const CustomPage = (props) => (
           </div>
 
           <div className='row unc-row-icon-title'>
-            {/* eslint-disable */}
-            {/* TODO: Popup */}
-            <div className='col-sm-4 unc-padding-1'>
-              <span className='pecc-107 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal10'></span>
-              <h5>Leyes</h5>
-            </div>
-            <div className='col-sm-4 unc-padding-1'>
-              <span className='pecc-104 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal11'></span>
-              <h5>Decretos</h5>
-            </div>
-            <div className='col-sm-4 unc-padding-1'>
-              <span className='pecc-109 unc-fill unc-clickeable' data-toggle='modal' data-target='#modal12'></span>
-              <h5>Políticas</h5>
-            </div>
-            {/* eslint-enable} */}
+            <ButtonPopup
+              className='col-sm-4 unc-padding-1'
+              buttonClassName='pecc-107 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Leyes</h5>,
+                content: (
+                  <div>
+                    Las emite el poder legislativo.
+                  </div>
+                )
+              }}
+              downTitle='Leyes'
+            />
+            <ButtonPopup
+              className='col-sm-4 unc-padding-1'
+              buttonClassName='pecc-107 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Decretos</h5>,
+                content: (
+                  <div>
+                    Los emite el poder ejecutivo. Los decretos reglamentan el hacer cultural.
+                  </div>
+                )
+              }}
+              downTitle='Decretos'
+            />
+            <ButtonPopup
+              className='col-sm-4 unc-padding-1'
+              buttonClassName='pecc-107 unc-fill unc-clickeable'
+              popup={{
+                title: <h5>Políticas</h5>,
+                content: (
+                  <div>
+                    Son consideradas cajas de herramientas para la gestión cultural. En ellas
+                    se encuentran consignados las ideas, sueños, proyecciones y lineamientos
+                    a través de los cuales se ha querido proyectar este país multiétnico y
+                    pluricultural. Las políticas culturales son intervenciones realizadas por
+                    el Gobierno, las instituciones civiles y los grupos humanos organizados
+                    para promover, fomentar y orientar el desarrollo artístico y cultural;
+                    satisfacer las necesidades culturales de la población y obtener consenso
+                    para un tipo de orden o transformación social.
+                  </div>
+                )
+              }}
+              downTitle='Políticas'
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>

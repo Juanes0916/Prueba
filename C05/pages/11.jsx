@@ -37,7 +37,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1'>
-            {/* TODO: Popup */}
+            {/* TODO: D3 */}
             <div className='text-center'>
               <div id='obj-historias' className='unc-row-scalable' data-width='500'>
                 <div className='unc-scalable'>

@@ -32,12 +32,12 @@ const CustomPage = (props) => (
 
           <div className='unc-row unc-row-tip'>
             <small>Haz clic en los componentes del mapa interactivo para conocer más sobre
-              innovación social
+            innovación social
             </small>
           </div>
 
-          { /* TODO: Mapa Conceptual */}
           <div className='unc-row text-center'>
+            { /* TODO: D3 */}
             <svg id='unc-innovacion-social-pie'></svg>
           </div>
 

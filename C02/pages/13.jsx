@@ -27,7 +27,7 @@ const CustomPage = (props) => (
             className='unc-row unc-row-bgfull unc-row-list unc-padding-1'
             data-url='./assets/img/M03_IMG06.png'>
             {/* eslint-disable */}
-            {/* TODO: Mapa Interactivo */}
+            {/* TODO: D3 */}
             <div className='unc-list-border'>
               <div className='row'>
                 <div className='col-sm-3' data-toggle='modal' data-target='#modal4'>
