@@ -223,9 +223,8 @@ nav.unc-menu
 	width 100px
 	z-index 1
 	
-	.far
+	.fas
 		cursor pointer
-		font-size 2em
 		opacity .8
 		margin 0 5px
 		
@@ -442,12 +441,33 @@ nav.unc-menu
 	margin 1em 0 2em
 	
 	.unc-background
-		background-size contain
+		background-size cover
 		background-repeat no-repeat
+		color white
 		min-height 350px
+		
+		h1, h3
+			color white !important
 		
 		&:after
 			background-color transparent
+
+.unc-collapse
+	.unc-summary
+		svg
+			color white
+
+		.unc-panel-heading
+			color white
+		
+	.unc-panel-content
+		width 100%
+
+		textarea
+			display block
+			margin 1em auto
+			resize none
+			width 90%
 
 /* Header */
 .unc-header
