@@ -97,6 +97,10 @@ const CustomPage = (props) => (
               hacer clic en <i>Descargar tus respuestas</i>.
             </small>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
