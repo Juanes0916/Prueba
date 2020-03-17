@@ -1,8 +1,40 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  Video,
+  Popup,
+  AudioList,
+  ListSection,
+  ListItem
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const popup = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M01_IMG42.jpg'>
+        <ListSection
+          file={file}
+          title='Desde la consolidación de competencias ciudadanas'
+        >
+          <ListItem
+            title='Dimensiones formación de sostenibilidad'
+            start={0}
+            end={7}
+          />
+          <ListItem
+            title='Desde la consolidación de competencias ciudadanas'
+            start={8}
+            end={40}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo00')}>
@@ -37,10 +69,9 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1 row'>
-            { /* TODO: Audio */}
             <div className='col-sm-4 unc-padding-1'>
               <div className='text-center'>
-                <button className='unc-button' data-target='#formacionMdl_A' data-toggle='modal' type='button'>
+                <button className='unc-button' onClick={ () => popup('./assets/media/m01_06.mp3') }>
                   <span className='btn-label d-block'><i className='icon-volume-2'></i></span>
                   Desde la consolidación de competencias ciudadadanas
                 </button>
@@ -48,7 +79,7 @@ const CustomPage = (props) => (
             </div>
             <div className='col-sm-4 unc-padding-1'>
               <div className='text-center'>
-                <button className='unc-button' data-target='#formacionMdl_B' data-toggle='modal' type='button'>
+                <button className='unc-button' onClick={ () => popup('formacionMdl_B') }>
                   <span className='btn-label d-block'><i className='icon-volume-2'></i></span>
                   Desde el reconocimiento de prácticas locales de desarrollo
                 </button>
@@ -56,7 +87,7 @@ const CustomPage = (props) => (
             </div>
             <div className='col-sm-4 unc-padding-1'>
               <div className='text-center'>
-                <button className='unc-button' data-target='#formacionMdl_C' data-toggle='modal' type='button'>
+                <button className='unc-button' onClick={ () => popup('formacionMdl_C') }>
                   <span className='btn-label d-block'><i className='icon-volume-2'></i></span>
                   Desde la inclusión y promoción de la diversidad
                 </button>
@@ -64,7 +95,7 @@ const CustomPage = (props) => (
             </div>
             <div className='col-sm-4 col-sm-offset-2 unc-padding-1'>
               <div className='text-center'>
-                <button className='unc-button' data-target='#formacionMdl_D' data-toggle='modal' type='button'>
+                <button className='unc-button' onClick={ () => popup('formacionMdl_D') }>
                   <span className='btn-label d-block'><i className='icon-volume-2'></i></span>
                   Desde la construcción conjunta de conocimiento
                 </button>
@@ -72,14 +103,13 @@ const CustomPage = (props) => (
             </div>
             <div className='col-sm-4 unc-padding-1'>
               <div className='text-center'>
-                <button className='unc-button' data-target='#formacionMdl_E' data-toggle='modal' type='button'>
+                <button className='unc-button' onClick={ () => popup('formacionMdl_E') }>
                   <span className='btn-label d-block'><i className='icon-volume-2'></i></span>
                   Desde los lenguajes alternativos
                 </button>
               </div>
             </div>
           </div>
-
         </div>
       </UDScrollbars>
     </div>
