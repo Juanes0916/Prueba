@@ -1,9 +1,84 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCollapse,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+
+const panels = [
+  {
+    title: 'Nombrar',
+    content: (
+      <div className='unc-padding-1'>
+        Debes seleccionar el tema que te parece importante abordar, dándole un
+        nombre. Como todas las fases,   debes seguir unos principios y acciones, por
+        ejemplo, para nombrar es importante tener en cuenta la relevancia, la
+        democracia y el respeto y la transformación social. A la hora de las acciones
+        es vital llenarse de argumentos y entender el nombrar un proceso en sí mismo
+        que abarca un acto político, uno de extrañamiento (detonador) y un
+        descriptivo.
+      </div>
+    )
+  },
+  {
+    title: 'Alimentarse',
+    content: (
+      <div className='unc-padding-1'>
+        Investigar qué otros conocimientos existen sobre el tema. Acá se vale por
+        ejemplo el remix, la copia creativa, la metodología disruptiva, porque los
+        procesos de creación contemporáneos provienen de la contaminación con los
+        demás; es decir, nacen de la comunicación y no del aislamiento.
+      </div>
+    )
+  },
+  {
+    title: 'Experimentar',
+    content: (
+      <div className='unc-padding-1'>
+        La pregunta base es ¿cómo formalizo los contenidos en una secuencia práctica?
+        y es que al final es importante entender que todos los productos, servicios,
+        eventos creativos y culturales deben encerrar en sí mismos una narrativa y
+        esta se le debe acercar al usuario, al público.
+        <br /><br />
+
+        Esta fase se centra en la generación de conocimiento desde el arte, puede ser
+        útil para quiénes están participando de actividades educativas, dentro y
+        fuera de la escuela y, en el caso de los negocios, es válido que cada quién
+        investigue las figuras retóricas que se postulan desde el Art Thinking,
+        ¿por qué?, pues la finalidad de estas figuras es crear un estilo más original
+        de transmisión, de generación de saber. En el caso del sector creativo y
+        cultural estas figuras pueden aportar soporte conceptual, originalidad y,
+        sobre todo, al aplicarlas a uno mismo, expandir las ideas sobre los proyectos
+        que se tienen
+      </div>
+    )
+  },
+  {
+    title: 'Preguntarse',
+    content: (
+      <div className='unc-padding-1'>
+        Una fase que se piensa transversal y que su finalidad es provocarnos a ser
+        críticos, dado que su pilar estructural está en mirar con nuevos ojos la
+        realidad, interrogarla y cambiarla.
+      </div>
+    )
+  },
+  {
+    title: 'Compartir',
+    content: (
+      <div className='unc-padding-1'>
+        Contribuir a que otros, por medio de nuestro trabajo, construyan el suyo,
+        además, porque al compartir puedes cambiar los paradigmas y, sobre todo,
+        mostrar lo que está pasando en los diferentes sectores.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -42,124 +117,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_3' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_3' href='#Collapse_3One'
-                      aria-expanded='true' aria-controls='Collapse_3One'>
-                      Nombrar
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='Heading_3One'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Debes seleccionar el tema que te parece importante abordar, dándole un
-                      nombre. Como todas las fases,   debes seguir unos principios y acciones, por
-                      ejemplo, para nombrar es importante tener en cuenta la relevancia, la
-                      democracia y el respeto y la transformación social. A la hora de las acciones
-                      es vital llenarse de argumentos y entender el nombrar un proceso en sí mismo
-                      que abarca un acto político, uno de extrañamiento (detonador) y un
-                       descriptivo.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Two' aria-expanded='false' aria-controls='Collapse_3Two'>
-                      Alimentarse
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_3Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Investigar qué otros conocimientos existen sobre el tema. Acá se vale por
-                      ejemplo el remix, la copia creativa, la metodología disruptiva, porque los
-                      procesos de creación contemporáneos provienen de la contaminación con los
-                      demás; es decir, nacen de la comunicación y no del aislamiento.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Three'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Three' aria-expanded='false' aria-controls='Collapse_3Three'>
-                      Experimentar
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='Heading_3Three'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      La pregunta base es ¿cómo formalizo los contenidos en una secuencia práctica?
-                      y es que al final es importante entender que todos los productos, servicios,
-                      eventos creativos y culturales deben encerrar en sí mismos una narrativa y
-                      esta se le debe acercar al usuario, al público.
-                      <br /><br />
-
-                      Esta fase se centra en la generación de conocimiento desde el arte, puede ser
-                      útil para quiénes están participando de actividades educativas, dentro y
-                      fuera de la escuela y, en el caso de los negocios, es válido que cada quién
-                      investigue las figuras retóricas que se postulan desde el Art Thinking,
-                      ¿por qué?, pues la finalidad de estas figuras es crear un estilo más original
-                      de transmisión, de generación de saber. En el caso del sector creativo y
-                      cultural estas figuras pueden aportar soporte conceptual, originalidad y,
-                      sobre todo, al aplicarlas a uno mismo, expandir las ideas sobre los proyectos
-                      que se tienen
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Four'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Four' aria-expanded='false' aria-controls='Collapse_3Four'>
-                      Preguntarse
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Four' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_3Four'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Una fase que se piensa transversal y que su finalidad es provocarnos a ser
-                      críticos, dado que su pilar estructural está en mirar con nuevos ojos la
-                      realidad, interrogarla y cambiarla.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Five'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Five' aria-expanded='false' aria-controls='Collapse_3Five'>
-                      Compartir
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Five' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_3Five'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Contribuir a que otros, por medio de nuestro trabajo, construyan el suyo,
-                      además, porque al compartir puedes cambiar los paradigmas y, sobre todo,
-                      mostrar lo que está pasando en los diferentes sectores.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary modulo02' panels={panels} />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -184,6 +142,10 @@ const CustomPage = (props) => (
             ¿No sería muy interesante aprovechar las metodologías que te hemos compartido para
             diseñar en pro de las nuevas tendencias y deseos del cliente?
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

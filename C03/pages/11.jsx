@@ -1,9 +1,41 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCarousel,
+  Popup,
+  AudioList,
+  ListSection,
+  ListItem
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import ButtonPopup from '../../components/ButtonPopup1';
+
+const popup = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='¿Quién ha utilizado Design thinking para crear o mejorar su oferta?'
+        >
+          <ListItem
+            title='Instituto de Artes de Minneapolis (MIA)'
+            start={0}
+            end={73}
+          />
+          <ListItem
+            title='Big Brothers Big Sisters'
+            start={74}
+            end={142}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -32,96 +64,74 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_5' className='carousel slide filter' data-ride='carousel'>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M03_IMG05.jpg',
+                label: (
+                  <div>
+                    <h5>Generación de empatía</h5>
 
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_5' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_5' data-slide-to='1' className=''></li>
-                <li data-target='#Carousel_5' data-slide-to='2' className=''></li>
-                <li data-target='#Carousel_5' data-slide-to='3' className=''></li>
-                <li data-target='#Carousel_5' data-slide-to='4' className=''></li>
-              </ol>
-
-
-              <div
-                className='carousel-inner unc-equal-cols unc-row-bgfull'
-                data-url='./assets/img/M03_IMG05.jpg'>
-                <div className='item col- active'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '350px' }}>
-                    <div>
-                      <h5>Generación de empatía</h5>
-                      La empatía es la capacidad de percibir y comprender lo que otro ser puede
-                      sentir. En nuestro proceso debemos entender los problemas, necesidades y
-                      deseos de los usuarios y tenerlos en cuenta en todas las fases de nuestro
-                      proyecto.
-                    </div>
+                    La empatía es la capacidad de percibir y comprender lo que otro ser puede
+                    sentir. En nuestro proceso debemos entender los problemas, necesidades y
+                    deseos de los usuarios y tenerlos en cuenta en todas las fases de nuestro
+                    proyecto.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M03_IMG05.jpg',
+                label: (
+                  <div>
+                    <h5>Experimentación</h5>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '350px' }}>
-                    <div>
-                      <h5>Experimentación</h5>
-                      Para experimentar se debe dejar el miedo al error, la constante
-                      experimentación en el proceso permitirá la evolución de nuestras ideas. Todo
-                      el proceso de basar en crear ideas e ir a experimentar con nuestro usuario.
-                      Así iremos perfeccionando y entendiendo mejor a dónde queremos llegar.
-                    </div>
+                    Para experimentar se debe dejar el miedo al error, la constante
+                    experimentación en el proceso permitirá la evolución de nuestras ideas. Todo
+                    el proceso de basar en crear ideas e ir a experimentar con nuestro usuario.
+                    Así iremos perfeccionando y entendiendo mejor a dónde queremos llegar.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '350px' }}>
-                    <div>
-                      <h5>Hazlo visual</h5>
-                      Plasma toda la información en imágenes, dibuja, haz recortes, usa el color
-                      para transmitir emociones. Ejercita la creatividad. Importa la estética.
-                      Nos debemos olvidar de largos textos y aprender a captar nuestras ideas en
-                      citas cortas, que contengan la esencia de lo que queremos recordar.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M03_IMG05.jpg',
+                label: (
+                  <div>
+                    <h5>Hazlo visual</h5>
+                    Plasma toda la información en imágenes, dibuja, haz recortes, usa el color
+                    para transmitir emociones. Ejercita la creatividad. Importa la estética.
+                    Nos debemos olvidar de largos textos y aprender a captar nuestras ideas en
+                    citas cortas, que contengan la esencia de lo que queremos recordar.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M03_IMG05.jpg',
+                label: (
+                  <div>
+                    <h5>Trabajo en equipo</h5>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '350px' }}>
-                    <div>
-                      <h5>Trabajo en equipo</h5>
-                      Mientras más perspectivas se tengan en un proyecto el resultado va a ser
-                      mejor. Integrar un equipo multidisciplinario con personas que tengan
-                      diferentes habilidades, profesiones, percepciones es una de las mejores
-                      estrategias que se puede hacer. Se deben valorar las singularidades de cada
-                      miembro y el aporte individual que puede hacer al proyecto.
-                    </div>
+                    Mientras más perspectivas se tengan en un proyecto el resultado va a ser
+                    mejor. Integrar un equipo multidisciplinario con personas que tengan
+                    diferentes habilidades, profesiones, percepciones es una de las mejores
+                    estrategias que se puede hacer. Se deben valorar las singularidades de cada
+                    miembro y el aporte individual que puede hacer al proyecto.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '350px' }}>
-                    <div>
-                      <h5>Recursividad</h5>
-                      No necesitamos materiales difíciles de acceder, papel, marcadores, pegante y
-                      cartón son más que suficientes para probar todas nuestras ideas. Reúsemos los
-                      materiales que tengamos y si necesitamos un elemento muy específico pongamos
-                      a prueba nuestra creatividad y que no se convierta en un obstáculo o en
-                      una inversión económica difícil de hacer.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M03_IMG05.jpg',
+                label: (
+                  <div>
+                    <h5>Recursividad</h5>
+                    No necesitamos materiales difíciles de acceder, papel, marcadores, pegante y
+                    cartón son más que suficientes para probar todas nuestras ideas. Reúsemos los
+                    materiales que tengamos y si necesitamos un elemento muy específico pongamos
+                    a prueba nuestra creatividad y que no se convierta en un obstáculo o en
+                    una inversión económica difícil de hacer.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_5' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_5' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -138,7 +148,7 @@ const CustomPage = (props) => (
               className='col-sm-3 col-sm-offset-1 unc-padding-1'
               buttonClassName='pecc-935 unc-fill unc-clickeable'
               popup={{
-                title: <h5>Empatizar</h5>,
+                title: (<h5>Empatizar</h5>),
                 content: (
                   <div>
                     El proceso comienza con una profunda comprensión de las necesidades de los
@@ -153,7 +163,7 @@ const CustomPage = (props) => (
               className='col-sm-2 unc-padding-1'
               buttonClassName='pecc-94e unc-fill unc-clickeable'
               popup={{
-                title: <h5>Definir</h5>,
+                title: (<h5>Definir</h5>),
                 content: (
                   <div>
                     Reúne la información recopilada en la fase anterior, hace una selección para
@@ -169,7 +179,7 @@ const CustomPage = (props) => (
               className='col-sm-2 unc-padding-1'
               buttonClassName='pecc-94f unc-fill unc-clickeable'
               popup={{
-                title: <h5>Idear</h5>,
+                title: (<h5>Idear</h5>),
                 content: (
                   <div>
                     En esta etapa la creatividad juega un papel importante, aún en situaciones
@@ -185,7 +195,7 @@ const CustomPage = (props) => (
               className='col-sm-2 unc-padding-1'
               buttonClassName='pecc-948 unc-fill unc-clickeable'
               popup={{
-                title: <h5>Prototipar</h5>,
+                title: (<h5>Prototipar</h5>),
                 content: (
                   <div>
                     Vuelve las ideas realidad, por medio de modelos que las hacen palpables y
@@ -201,7 +211,7 @@ const CustomPage = (props) => (
               className='col-sm-2 unc-padding-1'
               buttonClassName='pecc-97e unc-fill unc-clickeable'
               popup={{
-                title: <h5>Probar</h5>,
+                title: (<h5>Probar</h5>),
                 content: (
                   <div>
                     Los prototipos se pueden compartir y probar dentro del equipo de trabajo, en
@@ -216,14 +226,17 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1'>
-            {/* TODO: Audio */}
             <div className='text-center'>
-              <button className='unc-button' data-target='#modal30' data-toggle='modal' type='button'>
+              <button className='unc-button' onClick={() => popup('./assets/media/m02_06.mp3')}>
                 <span className='btn-label'><i className='icon-volume-2'></i></span>
                 ¿Quién ha utilizado Design thinking para crear o mejorar su oferta?
               </button>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

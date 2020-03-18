@@ -21,6 +21,10 @@ const CustomPage = (props) => (
             algunos elementos clave a la hora de pensar en lograr el éxito de nuestros productos
             en el mercado.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -35,6 +35,10 @@ const CustomPage = (props) => (
             de la oferta (<i>Growth Hacking</i>), para llevarla al mercado (<i>Lean
             Startup</i>) y para hacer ajustes rápidos (<i>Agile</i>).
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -1,8 +1,28 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCarousel,
+  UDCollapse
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const panels = [
+  {
+    title: '¿Conoces herramientas para conocer al público al que va dirigida tu oferta creativa y cultural? Escribe cuáles.',
+    content: (
+      <textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
+    )
+  },
+  {
+    title: '¿Conoces metodologías que puedes utilizar para diseñar una oferta creativa y cultural centrada en el usuario? Escribe cuáles.',
+    content: (
+      <textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -11,55 +31,34 @@ const CustomPage = (props) => (
       <UDScrollbars>
         <div className='unc-card'>
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO:  Carousel */}
-            <div id='Carousel_1' className='carousel slide' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_1' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_1' data-slide-to='1'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M02_IMG15.jpg'>
-                    <div>
-                      <h1>El conocimiento del cliente, punto de partida para el desarrollo de
-                        oferta creativa y cultural</h1>
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M02_IMG15.jpg',
+                label: (
+                  <div>
+                    <h1>El conocimiento del cliente, punto de partida para el desarrollo de
+                      oferta creativa y cultural</h1>
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M02_IMG18.jpg',
+                label: (
+                  <div style={{ textalign: 'center' }}>
+                    <h3>
+                      En las empresas creativas y culturales el conocimiento del público te asegura
+                      gran parte del éxito
+                    </h3>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M02_IMG18.jpg'>
-                    <div style={{ textalign: 'center' }}>
-                      <h3>
-                        En las empresas creativas y culturales el conocimiento del público te asegura
-                        gran parte del éxito
-                      </h3>
-                      No basta con tener un buen producto, si no tienes un vasto conocimiento del
-                      público al que irán dirigidos estás haciendo la mitad de la tarea par
-                      a mantenerte vigente en el sector creativo y cultural.
-								      Aquí, te mostramos asuntos a tener en cuenta.
-                    </div>
+                    No basta con tener un buen producto, si no tienes un vasto conocimiento del
+                    público al que irán dirigidos estás haciendo la mitad de la tarea par
+                    a mantenerte vigente en el sector creativo y cultural.
+                    Aquí, te mostramos asuntos a tener en cuenta.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_1' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_1' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <br /><br />
@@ -78,66 +77,30 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_1' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_1One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_1' href='#Collapse_1One'
-                      aria-expanded='true' aria-controls='Collapse_1One'>
-                      ¿Conoces herramientas para conocer al público al que va dirigida tu oferta
-                      creativa y cultural? Escribe cuáles.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_1One' className='panel-collapse collapse in' role='tabpanel'
-                  aria-labelledby='Heading_1One'>
-                  <div className='panel-body'>
-                    <textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_1Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_1'
-                      href='#Collapse_1Two' aria-expanded='false' aria-controls='Collapse_1Two'>
-                      ¿Conoces metodologías que puedes utilizar para diseñar una oferta creativa
-                      y cultural centrada en el usuario? Escribe cuáles.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_1Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_1Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <textarea id='TA_2_before' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary modulo02' panels={panels} />
+
             <div className='text-center'>
               <button className='unc-button button-form' type='button' data-content-id='Collapse_1'
                 data-module='unc-modulo02'>
                 <span className='btn-label'><i className='icon-speech'></i></span>
                 Descarga tus respuestas
               </button>
-              <div style={{
+              <small style={{
                 display: 'block',
                 color: '#773939',
                 maxwidth: '600px',
                 margin: '0 auto'
-              }}>
-                <small>
-                  Ten presente que las respuestas no son almacenadas por el sistema. Por lo tanto
-                  deberás llenar las áreas<br /> de texto y a continuación hacer clic en
-                  <i> Descargar tus respuestas</i>.
-                </small>
-              </div>
+              }}>>
+                Ten presente que las respuestas no son almacenadas por el sistema. Por lo tanto
+                deberás llenar las áreas<br /> de texto y a continuación hacer clic en
+                <i> Descargar tus respuestas</i>.
+              </small>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

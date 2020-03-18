@@ -37,6 +37,10 @@ const CustomPage = (props) => (
           <DegrantImage url='./assets/img/M01_IMG42.jpg' inverse>
             Tu talento + el conocimiento del cliente son fundamentales para hacer cosas increíbles.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

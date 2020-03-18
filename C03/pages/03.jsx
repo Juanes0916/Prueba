@@ -60,6 +60,10 @@ const CustomPage = (props) => (
             cliente. Esperamos que trabajar de manera articulada en ambos retos sea clave para la
             consolidación y éxito de tu negocio en el sector creativo y cultural.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
