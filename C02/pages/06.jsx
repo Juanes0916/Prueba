@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -28,68 +28,45 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            { /* TODO: Carousel */}
-            <div id='Carousel_2' className='carousel slide filter' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_2' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_2' data-slide-to='1'></li>
-                <li data-target='#Carousel_2' data-slide-to='2'></li>
-              </ol>
-
-              <div className='carousel-inner unc-equal-cols' data-url='/content/pecc/imgs/M04_IMG07.jpg'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='/content/pecc/imgs/M04_IMG47.jpg'>
-                    <div>
-                      <h5>Innovación incremental</h5>
-                      Es la forma más común de innovación, pues propone cambios pequeños a la
-                      oferta tradicional que generan valor en los consumidores finales.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M04_IMG47.jpg',
+                label: (
+                  <div>
+                    <h5>Innovación incremental</h5>
+                    Es la forma más común de innovación, pues propone cambios pequeños a la
+                    oferta tradicional que generan valor en los consumidores finales.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='/content/pecc/imgs/M02_IMG09.jpg'>
-                    <div>
-                      <h5>Innovación radical</h5>
-                      Rompe todos los paradigmas acerca de una actividad, un producto, un servicio
-                      y genera un nivel superior en la competencia; por ejemplo, las USB hicieron
-                      desaparecer a los diskettes.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M02_IMG09.jpg',
+                label: (
+                  <div>
+                    <h5>Innovación radical</h5>
+                    Rompe todos los paradigmas acerca de una actividad, un producto, un servicio
+                    y genera un nivel superior en la competencia; por ejemplo, las USB hicieron
+                    desaparecer a los diskettes.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='/content/pecc/imgs/M02_IMG07.jpg'>
-                    <div>
-                      <h5>Otros tipos de innovación</h5>
-                      También se clasifica la innovación por los aspectos en los que ocurre, por
-                      ejemplo, es común que se hable de innovación en producto, proceso, modelo
-                      organización e, inclusive, hace poco se ha hablado de <strong>Innovación en
-                      modelos de negocio</strong>: la forma en la que las empresas generan ingresos
-                      y valor. Esta ha sido un tipo de innovación común en las últimas décadas en
-                      las que las organizaciones necesitan cada vez más diferenciación y ventaja
-                      competitiva.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M02_IMG07.jpg',
+                label: (
+                  <div>
+                    <h5>Otros tipos de innovación</h5>
+                    También se clasifica la innovación por los aspectos en los que ocurre, por
+                    ejemplo, es común que se hable de innovación en producto, proceso, modelo
+                    organización e, inclusive, hace poco se ha hablado de <strong>Innovación en
+                    modelos de negocio</strong>: la forma en la que las empresas generan ingresos
+                    y valor. Esta ha sido un tipo de innovación común en las últimas décadas en
+                    las que las organizaciones necesitan cada vez más diferenciación y ventaja
+                    competitiva.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_2' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_2' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -99,6 +76,10 @@ const CustomPage = (props) => (
             posibilita su diferenciación y ventaja en el mercado, lo cual a su vez permite
             también su sostenibilidad económica.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

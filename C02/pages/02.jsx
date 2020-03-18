@@ -41,6 +41,10 @@ const CustomPage = (props) => (
             que haga el consumidor, quien también gana dinero (el 20 % del precio estipulado) si lo
             socializa en sus redes sociales, según explica Alejandro.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

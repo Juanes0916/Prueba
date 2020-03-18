@@ -39,6 +39,10 @@ const CustomPage = (props) => (
             es innovación, para qué innovar y en qué aspectos puede hacerse una innovación
             desde un emprendimiento.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
