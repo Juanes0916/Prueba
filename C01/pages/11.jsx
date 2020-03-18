@@ -25,7 +25,7 @@ const CustomPage = (props) => (
               <div className='unc-row-prompt'>
                 <a href='/mis-contenidos/portada/52' target='_blank' className='pecc-96b unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Intangibles, gestionarlos es un asunto clave para
-                  la sostenibilidad económica de tu emprendimiento
+                la sostenibilidad económica de tu emprendimiento
                 </div>
                 <div className='unc-prompt-description'>ELPAUER</div>
                 <div className='unc-prompt-autor'>Fundación Viajelogía</div>
@@ -38,7 +38,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Anexo_1_Creatividad_y_cultura.pdf' target='_blank'
+                <a href='./assets/files/Anexo_1_Creatividad_y_cultura.pdf' target='_blank'
                   className='pecc-112 unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
                 <div className='unc-prompt-description'>Información general sobre el sector</div>
@@ -49,7 +49,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Lista_de_referencias_Innovaci%c3%b3n.pdf' target='_blank'
+                <a href='./assets/files/Lista_de_referencias_Innovaci%c3%b3n.pdf' target='_blank'
                   className='pecc-112 unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documento externo</div>
                 <div className='unc-prompt-description'>Bibliografía</div>
@@ -58,6 +58,9 @@ const CustomPage = (props) => (
             </div>
           </div>
 
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

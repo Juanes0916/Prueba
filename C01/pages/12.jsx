@@ -1,8 +1,27 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCollapse } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const panels = [
+  {
+    title: '¿Sabes qué es impacto social? Escribe tu definición.',
+    content:
+      (<textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta' />)
+  },
+  {
+    title: '¿Sabes en qué consiste capitalizar el capital? Escribe en qué consiste.',
+    content:
+      (<textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta' />)
+  },
+  {
+    title: '¿Conoces negocios del sector creativo y cultural que han capitalizado el impacto social para su sostenibilidad económica? Escribe cuáles y de qué forma.',
+    content:
+      (<textarea id='TA_1_before' cols='30' rows='10' placeholder='Ingresa tu respuesta' />)
+  }
+];
+
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo00')}>
@@ -24,62 +43,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            { /* TODO: Collapse */}
-            <div id='Collapse_4' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_4One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_4' href='#Collapse_4One'
-                      aria-expanded='true' aria-controls='Collapse_4One'>
-                      ¿Sabes qué es impacto social? Escribe tu definición.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_4One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='Heading_4One'>
-                  <div className='panel-body'>
-                    <textarea id='TA_1_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_4Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_4'
-                      href='#Collapse_4Two' aria-expanded='false' aria-controls='Collapse_4Two'>
-                      ¿Sabes en qué consiste capitalizar el capital? Escribe en qué consiste.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_4Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_4Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <textarea id='TA_2_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_4Three'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_4'
-                      href='#Collapse_4Three' aria-expanded='false' aria-controls='Collapse_4Three'>
-                      ¿Conoces negocios del sector creativo y cultural que han capitalizado el impacto social para su
-                      sostenibilidad económica? Escribe cuáles y de qué forma.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_4Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='Heading_4Three'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <textarea id='TA_3_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* eslint-enable */}
-            </div>
+            <UDCollapse summaryClassName='unc-summary modulo00' panels={panels} />
             <div className='text-center'>
               <button className='unc-button button-form' type='button' data-content-id='Collapse_4'
                 data-module='unc-modulo00'>
@@ -101,6 +65,9 @@ const CustomPage = (props) => (
             </div>
           </div>
 
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

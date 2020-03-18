@@ -54,6 +54,10 @@ const CustomPage = (props) => (
             con este impacto social, cobran mayor relevancia que las instituciones estatales porque
             no solo son sostenibles sino que son relevantes.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

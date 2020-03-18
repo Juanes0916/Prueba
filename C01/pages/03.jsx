@@ -55,6 +55,10 @@ const CustomPage = (props) => (
             <a href='/mis-contenidos/portada/52' target='_blank'>“Gestionar los intangibles, un
             asunto clave para la sostenibilidad económica de tu emprendimiento”</a>.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

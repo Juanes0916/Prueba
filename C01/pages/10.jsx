@@ -37,6 +37,9 @@ const CustomPage = (props) => (
 
           <Video videoId={315281041} />
 
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
