@@ -55,8 +55,8 @@ const CustomPage = (props) => (
                 }}>
                 <small >
                   Ten presente que las respuestas no son almacenadas por el sistema. Por lo tanto
-                  deberás llenar las áreas de texto y a continuación hacer clic en
-                  <i>Descargar tus respuestas</i>.</small>
+                  deberás llenar las áreas de texto y a continuación hacer clic en <i>Descarga
+                  tus respuestas</i>.</small>
               </div>
             </div>
           </div>
