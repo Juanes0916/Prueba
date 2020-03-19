@@ -15,7 +15,7 @@ const panels = [
     title: '¿Cuáles son las palabras clave de tu proyecto?',
     content: (
       <div className='unc-row row unc-equal-cols'>
-        <div className='col-md-5 col-sm-7 unc-padding-1'>
+        <div className='col-md-7 unc-padding-1'>
           Plantear 4 palabras claves que describan lo que quieres hacer es siempre
           útil para darle claridad al proyecto. Debes concertar con tu equipo de
           trabajo cuáles palabras describen lo que buscan hallar.
@@ -28,10 +28,12 @@ const panels = [
           fusionar palabras</strong>. Mantener estas construcciones a lo largo del
           proceso será una inspiración permanente para mantener las estrategias
           acotadas a tus verdaderos intereses y motivaciones.
-
         </div>
-        <div className='col-md-5 col-sm-5 unc-padding-1 unc-row-bgfull'>
-          <img src='./assets/img/M01_IMG13.jpg' />
+        <div className='col-sm-5 unc-padding-1'>
+          <div
+            className='unc-row-bgfull'
+            style={{ backgroundImage: 'url(./assets/img/M01_IMG13.jpg)' }}
+          />
         </div>
       </div>
     )
@@ -53,7 +55,6 @@ const panels = [
           proponemos esta charla TED en la que Damian Kulash nos muestra el proceso
           creativo de la banda, y cómo descubrir ideas maravilloso.
         </div>
-
         <div className='col-sm-6 unc-padding-1'>
           <div className='unc-row unc-row-prompt'>
             <a
@@ -86,9 +87,11 @@ const panels = [
           Recuerda que cada proyecto desencadena otras posibilidades y que no todo
           debe ser resuelto con una única intervención.
         </div>
-
-        <div className='col-sm-6 unc-padding-1 unc-row-bgfull'>
-          <img src='./assets/img/M01_IMG41.jpg' />
+        <div className='col-sm-6 unc-padding-1'>
+          <div
+            className='unc-row-bgfull'
+            style={{ backgroundImage: 'url(./assets/img/M01_IMG41.jpg)' }}
+          />
         </div>
       </div>
     )
@@ -109,7 +112,10 @@ const panels = [
           sobre todo cuando tu propuesta requiere de financiadores.
         </div>
         <div className='col-md-6 col-sm-5 unc-padding-1'>
-          <img src='./assets/img/M01_IMG42.jpg' />
+          <div
+            className='unc-row-bgfull'
+            style={{ backgroundImage: 'url(./assets/img/M01_IMG42.jpg)' }}
+          />
         </div>
       </div>
     )
