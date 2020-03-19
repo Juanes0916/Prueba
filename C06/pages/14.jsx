@@ -38,6 +38,10 @@ const CustomPage = (props) => (
               <svg id='unc-precios-pie'></svg>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

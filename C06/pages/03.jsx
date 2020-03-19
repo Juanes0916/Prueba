@@ -73,6 +73,10 @@ const CustomPage = (props) => (
             contenidos personalizados y de valor para que quiera volver a vivir la
             experiencia que se le ofrece.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -26,6 +26,10 @@ const CustomPage = (props) => (
             Éste propicia una de las experiencias que tu público tiene con tu oferta y puede
             incidir en que se dé o no, la experiencia total mencionada en el Aro de implicación:
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

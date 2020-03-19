@@ -32,6 +32,10 @@ const CustomPage = (props) => (
             Implicar a gran escala es estratégico para la salud del sector y para la vitalidad
             cultural de las comunidades.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

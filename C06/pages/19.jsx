@@ -36,12 +36,13 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Anexo_6_Marketing_cultural.pdf' target='_blank'
+                <a href='./assets/files/Anexo_6_Marketing_cultural.pdf' target='_blank'
                   className='pecc-96b unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
-                <div className='unc-prompt-description'>Aquí encontrarás más información sobre estudios de mercado, definición
-                  de
-                  precios y desarrollo de públicos.</div>
+                <div className='unc-prompt-description'>
+                  Aquí encontrarás más información sobre estudios de mercado, definición
+                  de precios y desarrollo de públicos.
+                </div>
                 <div className='unc-prompt-autor'>ELPAUER</div>
               </div>
             </div>
@@ -49,7 +50,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Lista_de_referencias_Marketing.pdf' target='_blank'
+                <a href='./assets/files/Lista_de_referencias_Marketing.pdf' target='_blank'
                   className='pecc-96b unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
                 <div className='unc-prompt-description'>Bibliografía</div>
@@ -57,6 +58,10 @@ const CustomPage = (props) => (
               </div>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

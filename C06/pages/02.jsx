@@ -31,6 +31,10 @@ const CustomPage = (props) => (
             <strong>Ahora bien, si has respondido con dudas las preguntas anteriores, te invitamos a
             conocer más a través de este módulo.</strong>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

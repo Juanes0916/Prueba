@@ -54,6 +54,10 @@ const CustomPage = (props) => (
             Canclini: “Los públicos no nacen sino que se hacen, pero de modos distintos en la
             época gutenberguiana o en la digital”
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

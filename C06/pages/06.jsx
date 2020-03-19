@@ -55,6 +55,10 @@ const CustomPage = (props) => (
               http://www.marketingdelasartes.com/implica-a-tu-publico-asimetrica
             </a>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

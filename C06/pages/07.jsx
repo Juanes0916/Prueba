@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -22,90 +22,70 @@ const CustomPage = (props) => (
             producto creativo o el evento, nos sugiere seis tipologías generales de público:
           </div>
 
-          {/* eslint-disable */}
-          {/* TODO: AiCarousel */}
-          <div id='AiCarousel' className='carousel slide filter' data-ride='carousel'>
-
-            <ol className='carousel-indicators'>
-              <li data-target='#AiCarousel' data-slide-to='0' className='active'></li>
-              <li data-target='#AiCarousel' data-slide-to='1'></li>
-              <li data-target='#AiCarousel' data-slide-to='2'></li>
-              <li data-target='#AiCarousel' data-slide-to='3'></li>
-              <li data-target='#AiCarousel' data-slide-to='4'></li>
-              <li data-target='#AiCarousel' data-slide-to='5'></li>
-            </ol>
-
-
-            <div className='carousel-inner unc-equal-cols' data-url='./assets/img/M04_IMG07.jpg'>
-              <div className='item active col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG37.jpg'>
-                  <div>
-                    <strong>Los Lectores:</strong> son personas con una “implicación ligera”,
-                    personas que disfrutan haciendo poco, excepto leer notas sobre el
-                    programa, carteleras, y algún que otro artículo.
-                  </div>
+          <UDCarousel steps={[
+            {
+              bgImage: './assets/img/M04_IMG07.jpg',
+              label: (
+                <div>
+                  <strong>Los Lectores:</strong> son personas con una “implicación ligera”,
+                  personas que disfrutan haciendo poco, excepto leer notas sobre el
+                  programa, carteleras, y algún que otro artículo.
                 </div>
-              </div>
-
-              <div className='item col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG38.jpg'>
-                  <div>
-                    <strong>Los Evaluadores Críticos:</strong> prestan atención a las reseñas de
-                     los críticos y a otras fuentes independientes de información antes de
-                     decidir asistir.
-                  </div>
+              )
+            },
+            {
+              bgImage: './assets/img/M04_IMG38.jpg',
+              label: (
+                <div>
+                  <strong>Los Evaluadores Críticos:</strong> prestan atención a las reseñas de
+                    los críticos y a otras fuentes independientes de información antes de
+                    decidir asistir.
                 </div>
-              </div>
-
-              <div className='item col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG39.jpg'>
-                  <div>
-                    <strong>Los Conversadores Ocasionales:</strong> procesan el arte hablando sobre
-                    él de manera informal con amigos y familiares.
-                  </div>
+              )
+            },
+            {
+              bgImage: './assets/img/M04_IMG39.jpg',
+              label: (
+                <div>
+                  <strong>Los Conversadores Ocasionales:</strong> procesan el arte hablando sobre
+                  él de manera informal con amigos y familiares.
                 </div>
-              </div>
-
-              <div className='item col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG40.jpg'>
-                  <div>
-                    <strong>Los Procesadores Tecnológicos:</strong> hacen uso de blogs, redes
+              )
+            },
+            {
+              bgImage: './assets/img/M04_IMG40.jpg',
+              label: (
+                <div>
+                  <strong>Los Procesadores Tecnológicos:</strong> hacen uso de blogs, redes
                     sociales y otros entornos digitales para implicarse
-                  </div>
                 </div>
-              </div>
-
-              <div className='item col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG41.jpg'>
-                  <div>
-                    <strong>Los Buscadores de Perspectivas:</strong> buscan una experiencia
-                    intelectual, y disfrutan absorbiendo gran cantidad de información antes y después de
-                    su asistencia.
-                  </div>
+              )
+            },
+            {
+              bgImage: './assets/img/M04_IMG41.jpg',
+              label: (
+                <div>
+                  <strong>Los Buscadores de Perspectivas:</strong> buscan una experiencia
+                  intelectual, y disfrutan absorbiendo gran cantidad de información antes
+                  y después de su asistencia.
                 </div>
-              </div>
-
-              <div className='item col-'>
-                <div className='unc-row-carousel unc-flex-center unc-row-bgfull' data-url='./assets/img/M04_IMG42.jpg'>
-                  <div>
-                    <strong>Los Aprendices Activos:</strong> desean involucrarse personalmente
-                    en la configuración de su propia experiencia.
-                  </div>
+              )
+            },
+            {
+              bgImage: './assets/img/M04_IMG42.jpg',
+              label: (
+                <div>
+                  <strong>Los Aprendices Activos:</strong> desean involucrarse personalmente
+                  en la configuración de su propia experiencia.
                 </div>
-              </div>
-            </div>
+              )
+            }
+          ]}
+          />
 
-
-            <a className='left carousel-control' href='#AiCarousel' data-slide='prev'>
-              <span className='ti-angle-left'></span>
-              <span className='sr-only'>Previous</span>
-            </a>
-            <a className='right carousel-control' href='#AiCarousel' data-slide='next'>
-              <span className='ti-angle-right'></span>
-              <span className='sr-only'>Next</span>
-            </a>
-          </div>
-          {/* eslint-enable */}
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

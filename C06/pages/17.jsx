@@ -1,5 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCarousel,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -49,67 +54,46 @@ const CustomPage = (props) => (
           <Video videoId={315027846} />
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_4' className='carousel slide filter' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_4' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_4' data-slide-to='1'></li>
-                <li data-target='#Carousel_4' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M04_IMG25.jpg'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Un ejemplo destacable en relación con lo que dice el experto es la
-                      experiencia de Salallena.com, proyecto que inició en abril de 2017 y
-                      que ha facilitado el acceso de artistas locales de Medellín,
-                      vinculados al sector independiente de las artes escénicas, a la venta
-                      de boletería en línea.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M04_IMG25.jpg',
+                label: (
+                  <div>
+                    Un ejemplo destacable en relación con lo que dice el experto es la
+                    experiencia de Salallena.com, proyecto que inició en abril de 2017 y
+                    que ha facilitado el acceso de artistas locales de Medellín,
+                    vinculados al sector independiente de las artes escénicas, a la venta
+                    de boletería en línea.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Así, un músico puede ofrecer un concierto en un café pequeño, para 50
-                      personas, a diez mil pesos la entrada, o una banda como Los Petit Fellas,
-                      que se presenta en el Teatro Pablo Tobón Uribe, puede estar anunciada en
-                      una misma cartelera y, a su vez, vender entradas con la comodidad de contar
-                      con una taquilla <i>online</i> abierta 24/7.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M04_IMG25.jpg',
+                label: (
+                  <div>
+                    Así, un músico puede ofrecer un concierto en un café pequeño, para 50
+                    personas, a diez mil pesos la entrada, o una banda como Los Petit Fellas,
+                    que se presenta en el Teatro Pablo Tobón Uribe, puede estar anunciada en
+                    una misma cartelera y, a su vez, vender entradas con la comodidad de contar
+                    con una taquilla <i>online</i> abierta 24/7.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Los datos que arroja Salallena.com en menos de un año de operaciones son
-                      interesantes. El primero es que la boletería inferior a diez mil pesos no
-                      tiene casi circulación dentro de los medios de pago electrónico. Otro dato
-                      importante es que el promedio de pago por entrada para un espectáculo
-                      escénico en la ciudad, a través de medios electrónicos, es de unos 26.000
-                      pesos, por boleta.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M04_IMG25.jpg',
+                label: (
+                  <div>
+                    Los datos que arroja Salallena.com en menos de un año de operaciones son
+                    interesantes. El primero es que la boletería inferior a diez mil pesos no
+                    tiene casi circulación dentro de los medios de pago electrónico. Otro dato
+                    importante es que el promedio de pago por entrada para un espectáculo
+                    escénico en la ciudad, a través de medios electrónicos, es de unos 26.000
+                    pesos, por boleta.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_4' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_4' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -129,50 +113,30 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_5' className='carousel slide filter' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_5' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_5' data-slide-to='1'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M04_IMG09.jpg'>
-                <div className='item active col-' style={{ minheight: '200px' }}>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      El Teatro Matacandelas utilizó el Bitcoin y en la actualidad recibe desde
-                      su página web casi todas las criptomonedas para el pago de entradas.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M04_IMG09.jpg',
+                label: (
+                  <div>
+                    El Teatro Matacandelas utilizó el Bitcoin y en la actualidad recibe desde
+                    su página web casi todas las criptomonedas para el pago de entradas.
                   </div>
-                </div>
-
-                <div className='item col-' style={{ minheight: '200px' }}>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      En la página de <a href='https://www.coinpayments.net' target='_blank'
-                        style={{ color: 'white', fontweight: 'bold' }}>CoinPayments</a> puede
+                )
+              },
+              {
+                bgImage: './assets/img/M04_IMG09.jpg',
+                label: (
+                  <div>
+                    En la página de <a href='https://www.coinpayments.net' target='_blank'
+                      style={{ color: 'white', fontweight: 'bold' }}> CoinPayments</a> puede
                     consultarse sobre el uso de más de 250 tipos de criptomonedas y la manera
                     de implementarlas en el comercio electrónico ¿Podrías ser la moneda
                     del futuro? Eso está por verse.
-                    </div>
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_5' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_5' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -220,6 +184,10 @@ const CustomPage = (props) => (
             la palma. De esta forma, los datos quedan asociados y a partir de ahí se utilizar la
             mano para realizar futuros pagos en locales que cuenten con este terminal.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
