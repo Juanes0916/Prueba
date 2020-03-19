@@ -35,31 +35,82 @@ const audios = [
     ]
   },
   {
-    file: './assets/media/m01_07.mp3',
     headerImageSrc: './assets/img/M01_IMG42.jpg',
     sections: [
-
+      {
+        title: 'Desde el reconocimiento de prácticas locales de desarrollo',
+        file: './assets/media/m01_07.mp3',
+        items: [
+          {
+            title: 'Desde el reconocimiento de prácticas locales de desarrollo',
+            start: 0,
+            end: 18
+          },
+          {
+            title: 'Propuestas de procesos continuados',
+            start: 19,
+            end: 32
+          }
+        ]
+      }
     ]
   },
   {
-    file: './assets/media/m01_08.mp3',
     headerImageSrc: './assets/img/M01_IMG42.jpg',
     sections: [
-
+      {
+        title: 'Desde la inclusión y promoción de la diversidad',
+        file: './assets/media/m01_08.mp3',
+        items: [
+          {
+            title: 'Desde la inclusión y promoción de la diversidad',
+            start: 0,
+            end: 1
+          },
+          {
+            title: 'Diferencia como cohesionador',
+            start: 2,
+            end: 17
+          },
+          {
+            title: 'Comprender la inclusión',
+            start: 18,
+            end: 35
+          }
+        ]
+      }
     ]
   },
   {
-    file: './assets/media/m01_09.mp3',
     headerImageSrc: './assets/img/M01_IMG42.jpg',
     sections: [
-
+      {
+        title: 'Desde la construcción conjunta de conocimiento',
+        file: './assets/media/m01_09.mp3',
+        items: [
+          {
+            title: 'Desde la construcción conjunta del conocimiento',
+            start: 0,
+            end: 18
+          }
+        ]
+      }
     ]
   },
   {
-    file: './assets/media/m01_10.mp3',
     headerImageSrc: './assets/img/M01_IMG42.jpg',
     sections: [
-
+      {
+        title: 'Desde los lenguajes alternativos',
+        file: './assets/media/m01_10.mp3',
+        items: [
+          {
+            title: 'Desde los lenguajes alternativos',
+            start: 0,
+            end: 17
+          }
+        ]
+      }
     ]
   }
 ];
@@ -86,107 +137,6 @@ const popup = (audio) => {
     )
   });
 };
-
-// const popupB = (file) => {
-//   Popup.open({
-//     content: (
-//       <AudioList headerImageSrc='./assets/img/M01_IMG42.jpg'>
-//         <ListSection
-//           file={file}
-//           title='Desde el reconocimiento de prácticas locales de desarrollo'
-//         >
-//           <ListItem
-//             title='Desde el reconocimiento de prácticas locales de desarrollo'
-//             start={0}
-//             end={18}
-//           />
-//           <ListItem
-//             title='Propuestas de procesos continuados'
-//             start={19}
-//             end={32}
-//           />
-//         </ListSection>
-//       </AudioList>
-//     )
-//   });
-// };
-
-// const popupC = (file) => {
-//   Popup.open({
-//     content: (
-//       <AudioList headerImageSrc='./assets/img/M01_IMG42.jpg'>
-//         <ListSection
-//           file={file}
-//           title='Desde la inclusión y promoción de la diversidad'
-//         >
-//           <ListItem
-//             title='Desde la inclusión y promoción de la diversidad'
-//             start={0}
-//             end={1}
-//           />
-//           <ListItem
-//             title='Diferencia como cohesionador'
-//             start={2}
-//             end={17}
-//           />
-//           <ListItem
-//             title='Comprender la inclusión'
-//             start={18}
-//             end={35}
-//           />
-//         </ListSection>
-//       </AudioList>
-//     )
-//   });
-// };
-
-// const popupD = (file) => {
-//   Popup.open({
-//     content: (
-//       <AudioList headerImageSrc='./assets/img/M01_IMG42.jpg'>
-//         <ListSection
-//           file={file}
-//           title='Desde la construcción conjunta de conocimiento'
-//         >
-//           <ListItem
-//             title='Desde la construcción conjunta del conocimiento'
-//             start={0}
-//             end={18}
-//           />
-//           <ListItem
-//             title=''
-//             start={0}
-//             end={0}
-//           />
-//         </ListSection>
-//       </AudioList>
-//     )
-//   });
-// };
-
-// const popupE = (file) => {
-//   Popup.open({
-//     content: (
-//       <AudioList headerImageSrc='./assets/img/M01_IMG42.jpg'>
-//         <ListSection
-//           file={file}
-//           title='Desde los lenguajes alternativos'
-//         >
-//           <ListItem
-//             title='Desde los lenguajes alternativos'
-//             start={0}
-//             end={17}
-//           />
-//           <ListItem
-//             title=''
-//             start={0}
-//             end={0}
-//           />
-//         </ListSection>
-//       </AudioList>
-//     )
-//   });
-// };
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo00')}>
