@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Header from '../components/Header';
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo05')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo04')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>

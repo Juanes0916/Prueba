@@ -44,7 +44,7 @@ const panels = [
 ];
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>
@@ -86,11 +86,11 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCollapse summaryClassName='unc-summary module03' panels={panels} />
+            <UDCollapse summaryClassName='unc-summary module01' panels={panels} />
           </div>
 
           <div className='unc-row unc-row-bgfull unc-bgfull-contain unc-padding-2 text-center'
-            data-url='./assets/img/M03_IMG_BG_FULL_V.png'>
+            style={{ backgroundImage: 'url(./assets/img/IMG_BG_FULL_V.png)' }}>
             <h5>El conocimiento, como principal capital de las empresas creativas y culturales, da
               lugar a activos intangibles y activos de conocimiento.</h5>
           </div>

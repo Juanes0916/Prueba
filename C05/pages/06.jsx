@@ -7,7 +7,7 @@ import DegrantImage from '../../components/DegrantImage';
 import ButtonPopup from '../../components/ButtonPopup1';
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo04')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo05')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>

@@ -158,7 +158,7 @@ const panels1 = [
 ];
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>
@@ -204,7 +204,7 @@ const CustomPage = (props) => (
           <Video videoId={318926762} />
 
           <div className='unc-row'>
-            <UDCollapse summaryClassName='unc-summary module03' panels={panels} />
+            <UDCollapse summaryClassName='unc-summary module01' panels={panels} />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -212,7 +212,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCollapse summaryClassName='unc-summary module03' panels={panels1} />
+            <UDCollapse summaryClassName='unc-summary module01' panels={panels1} />
           </div>
 
           <DegrantImage url='./assets/img/M01_IMG44.jpg' inverse>

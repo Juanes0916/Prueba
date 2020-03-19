@@ -26,7 +26,7 @@ const panels = [
 ];
 
 const CustomPage = (props) => (
-  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo04')}>
+  <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo05')}>
     <Header />
     <div className='unc-container'>
       <UDScrollbars>
@@ -45,7 +45,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCollapse summaryClassName='unc-summary module04' panels={panels} />
+            <UDCollapse summaryClassName='unc-summary module05' panels={panels} />
 
             <div className='text-center'>
               <button className='unc-button button-form' type='button' data-content-id='Collapse_6'
