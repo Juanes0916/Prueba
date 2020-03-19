@@ -15,7 +15,7 @@ import Header from '../components/Header';
 const popup = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='¿Big data y House of Cards?'

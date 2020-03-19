@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -23,67 +23,52 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_2' className='carousel slide filter' data-ride='carousel'>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M01_IMG11.jpg',
+                label: (
+                  <div>
+                    <h5>Capital humano</h5>
 
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_2' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_2' data-slide-to='1' className=''></li>
-                <li data-target='#Carousel_2' data-slide-to='2' className=''></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M01_IMG11.jpg'
-                style={{ backgroundimage: 'url(&quot;./assets/imgs/M01_IMG11.jpg&quot;)' }}>
-                <div className='item col- active left'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px;' }}>
-                    <div>
-                      <h5>Capital humano</h5>
-                      No le pertenece a la empresa pero es el que cuenta con el conocimiento
-                    </div>
+                    No le pertenece a la empresa pero es el que cuenta con el conocimiento
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG11.jpg',
+                label: (
+                  <div>
+                    <h5>Capital estructural</h5>
 
-                <div className='item col- next left'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px;' }}>
-                    <div>
-                      <h5>Capital estructural</h5>
-                      Krell hace referencia al conjunto de patentes, Marcas, bases de datos,
-                      plataformas tecnológicas u otro tipo de recursos de información con los que
-                      cuenta cada empresa. Para el caso del sector creativo y cultural donde se
-                      incluye lo social suelen ser las metodologías propias de trabajo que permiten
-                      hacer diferentes tipos de intervenciones e interacciones con distintas
-                      comunidades.
-                    </div>
+                    Krell hace referencia al conjunto de patentes, Marcas, bases de datos,
+                    plataformas tecnológicas u otro tipo de recursos de información con los que
+                    cuenta cada empresa. Para el caso del sector creativo y cultural donde se
+                    incluye lo social suelen ser las metodologías propias de trabajo que permiten
+                    hacer diferentes tipos de intervenciones e interacciones con distintas
+                    comunidades.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG11.jpg',
+                label: (
+                  <div>
+                    <h5>Capital relacional</h5>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px;' }}>
-                    <div>
-                      <h5>Capital relacional</h5>
-                      Se refiere a la capacidad de cada organización de establecer relaciones
-                      directas y efectivas, con tomadores de decisiones, patrocinadores o posibles
-                      socios potenciales que lleven al desarrollo de nuevas iniciativas, proyectos
-                      o productos.
-                    </div>
+                    Se refiere a la capacidad de cada organización de establecer relaciones
+                    directas y efectivas, con tomadores de decisiones, patrocinadores o posibles
+                    socios potenciales que lleven al desarrollo de nuevas iniciativas, proyectos
+                    o productos.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_2' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_2' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

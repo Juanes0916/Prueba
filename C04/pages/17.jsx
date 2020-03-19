@@ -36,7 +36,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Anexo_1_Creatividad_y_cultura.pdf' target='_blank' className='pecc-112 unc-fill
+                <a href='./assets/files/Anexo_1_Creatividad_y_cultura.pdf' target='_blank' className='pecc-112 unc-fill
                   unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
                 <div className='unc-prompt-description'>
@@ -51,7 +51,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='./assets/docs/Lista_de_referencias_Gestión_de_intangibles.pdf' target='_blank'
+                <a href='./assets/files/Lista_de_referencias_Gestión_de_intangibles.pdf' target='_blank'
                   className='pecc-112 unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documento en biblioteca</div>
                 <div className='unc-prompt-description'>Bibliografía</div>
@@ -102,7 +102,7 @@ const CustomPage = (props) => (
                   target='_blank' className='pecc-10f unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
                 <div className='unc-prompt-description'>Ley 1834 de 2017 Fomento de la economía
-                  creativa ley naranja
+                creativa ley naranja
                 </div>
                 <div className='unc-prompt-autor'>Gobierno Nacional</div>
               </div>
@@ -120,6 +120,9 @@ const CustomPage = (props) => (
             </div>
           </div>
 
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

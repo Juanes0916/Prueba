@@ -61,6 +61,10 @@ const CustomPage = (props) => (
             evaluamos la planeación y la ejecución para tener un control de lo que se está
             realizando y prever las acciones siguientes.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

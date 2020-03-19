@@ -1,9 +1,119 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  AudioList,
+  ListItem,
+  ListSection,
+  Page,
+  Popup,
+  UDScrollbars,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import ButtonPopup from '../../components/ButtonPopup1';
+
+const popupA = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M01_IMG27.jpg'>
+        <ListSection
+          file={file}
+          title='Antes de sistematizar'
+        >
+          <ListItem
+            title='Antes de sistematizar'
+            start={0}
+            end={5}
+          />
+          <ListItem
+            title='Preguntarnos el porqué'
+            start={6}
+            end={15}
+          />
+          <ListItem
+            title='Preguntas bien realizadas'
+            start={16}
+            end={37}
+          />
+          <ListItem
+            title='Delimitación temporal'
+            start={38}
+            end={49}
+          />
+          <ListItem
+            title='Formatos comunicativos'
+            start={50}
+            end={59}
+          />
+          <ListItem
+            title='Alcance de sistematización'
+            start={60}
+            end={81}
+          />
+          <ListItem
+            title='Recuperar conocimiento en el hacer'
+            start={82}
+            end={105}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
+
+const popupB = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M01_IMG28.jpg'>
+        <ListSection
+          file={file}
+          title='Durante la sistematización'
+        >
+          <ListItem
+            title='Durante la sistematización'
+            start={0}
+            end={5}
+          />
+          <ListItem
+            title='Fuentes secundarias'
+            start={6}
+            end={20}
+          />
+          <ListItem
+            title='Analizar y depurar información'
+            start={21}
+            end={43}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
+
+const popupC = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M01_IMG29.jpg'>
+        <ListSection
+          file={file}
+          title='Después de la sistematización'
+        >
+          <ListItem
+            title='Después de la sistematización'
+            start={0}
+            end={17}
+          />
+          <ListItem
+            title='Preguntas de evaluación'
+            start={18}
+            end={33}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -34,7 +144,6 @@ const CustomPage = (props) => (
 
           <div className='unc-row row unc-equal-cols'>
             <div className='col-sm-4 unc-padding-1'>
-              {/* TODO: Audio */}
               <div className='unc-row-card' style={{ height: '650px' }}>
                 <div className='unc-row-card-image'>
                   <img src='./assets/img/M01_IMG27.jpg' width='100%' />
@@ -45,7 +154,7 @@ const CustomPage = (props) => (
                     Marcar una ruta de inicio que debemos planear para darle un propósito o
                     un norte al proceso.
                   </div>
-                  <button className='unc-button' data-target='#antesMdl' data-toggle='modal' type='button'>
+                  <button className='unc-button' onClick={() => popupA('./assets/media/m01_11.mp3')}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
@@ -64,7 +173,7 @@ const CustomPage = (props) => (
                     implicar varias fases en su interior
                   </div>
 
-                  <button className='unc-button' data-target='#duranteMdl' data-toggle='modal' type='button'>
+                  <button className='unc-button' onClick={() => popupB('./assets/media/m01_12.mp3')}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
@@ -138,7 +247,6 @@ const CustomPage = (props) => (
               </div>
             </div>
             <div className='col-sm-4 unc-padding-1'>
-              {/* TODO: Audio */}
               <div className='unc-row-card' style={{ height: '650px' }}>
                 <div className='unc-row-card-image'>
                   <img src='./assets/img/M01_IMG29.jpg' width='100%' />
@@ -151,7 +259,7 @@ const CustomPage = (props) => (
                     diferentes formatos, como publicaciones, videos, multimedias,
                     plataformas web, espacios de interlocución o difusión, entre otros.
                   </div>
-                  <button className='unc-button' data-target='#despuesMdl' data-toggle='modal' type='button'>
+                  <button className='unc-button' onClick={() => popupC('./assets/media/m01_13.mp3')}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
@@ -159,6 +267,10 @@ const CustomPage = (props) => (
               </div>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

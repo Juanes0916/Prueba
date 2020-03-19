@@ -15,7 +15,7 @@ import Header from '../components/Header';
 const popup1 = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='En dónde innovar'
@@ -49,7 +49,7 @@ const popup1 = (file) => {
 const popup2 = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='En dónde innovar'
@@ -73,7 +73,7 @@ const popup2 = (file) => {
 const popup3 = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='En dónde innovar'

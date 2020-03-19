@@ -1,9 +1,47 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCollapse } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+
+const panels = [
+  {
+    title: 'El conocimiento es intangible',
+    content: (
+      <div className='unc-padding-1'>
+        Esto significa que no es fácilmente medible o transaccionable, sino que se
+        manifiesta de forma no contable.
+      </div>
+    )
+  },
+  {
+    title: 'El conocimiento genera valor',
+    content: (
+      <div className='unc-padding-1'>
+        Aunque no pueda contarse, el conocimiento genera valor o ayuda a construir
+        riqueza.
+      </div>
+    )
+  },
+  {
+    title: 'El conocimiento connatural al ser humano',
+    content: (
+      <div className='unc-padding-1'>
+        Tanto niveles macro como las grandes construcciones científicas como nivel
+        micro desde prácticas ancestrales.
+      </div>
+    )
+  },
+  {
+    title: 'El conocimiento induce a la acción',
+    content: (
+      <div className='unc-padding-1'>
+        Entre más saber haya existirá mayor claridad para ejecutar acciones concretas.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -48,83 +86,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/*TODO: Collapse */}
-            <div id='Collapse_2' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='CmHeadingOne'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_2' href='#Collapse_2One'
-                      aria-expanded='true' aria-controls='Collapse_2One'>
-                      El conocimiento es intangible
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='CmHeadingOne'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Esto significa que no es fácilmente medible o transaccionable, sino que se
-                      manifiesta de forma no contable.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='CmHeadingTwo'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_2'
-                      href='#Collapse_2Two' aria-expanded='false' aria-controls='Collapse_2Two'>
-                      El conocimiento genera valor
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='CmHeadingTwo'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Aunque no pueda contarse, el conocimiento genera valor o ayuda a construir
-                      riqueza.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='CmHeadingThree'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_2'
-                      href='#Collapse_2Three' aria-expanded='false' aria-controls='Collapse_2Three'>
-                      El conocimiento connatural al ser humano
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='CmHeadingThree'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Tanto niveles macro como las grandes construcciones científicas como nivel
-                      micro desde prácticas ancestrales.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='CmHeadingFour'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_2'
-                      href='#Collapse_2Four' aria-expanded='false' aria-controls='Collapse_2Four'>
-                      El conocimiento induce a la acción
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2Four' className='panel-collapse collapse' role='tabpanel' aria-labelledby='CmHeadingFour'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Entre más saber haya existirá mayor claridad para ejecutar acciones concretas.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary module03' panels={panels} />
           </div>
 
           <div className='unc-row unc-row-bgfull unc-bgfull-contain unc-padding-2 text-center'
@@ -139,6 +101,10 @@ const CustomPage = (props) => (
             gran capital de las empresas culturales y creativas y de ellos depende su valor como
             organización y su posibilidad de permanecer a lo largo del tiempo.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

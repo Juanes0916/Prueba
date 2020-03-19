@@ -1,5 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCarousel,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -44,67 +49,45 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_6' className='carousel slide' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_6' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_6' data-slide-to='1'></li>
-                <li data-target='#Carousel_6' data-slide-to='2'></li>
-                <li data-target='#Carousel_6' data-slide-to='3'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M01_IMG26.jpg'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Convención para la protección de los bienes culturales en caso de conflicto
-                      armado y reglamento para la aplicación de la Convención (1954).
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M01_IMG26.jpg',
+                label: (
+                  <div>
+                    Convención para la protección de los bienes culturales en caso de conflicto
+                    armado y reglamento para la aplicación de la Convención (1954).
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Convención sobre las medidas que deben adoptarse para prohibir e impedir la
-                      importación, la exportación y la transferencia de propiedad ilícitas de
-                      bienes culturales (1970).
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG26.jpg',
+                label: (
+                  <div>
+                    Convención sobre las medidas que deben adoptarse para prohibir e impedir la
+                    importación, la exportación y la transferencia de propiedad ilícitas de
+                    bienes culturales (1970).
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Convención para la salvaguardia del patrimonio cultural inmaterial (2003).
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG26.jpg',
+                label: (
+                  <div>
+                    Convención para la salvaguardia del patrimonio cultural inmaterial (2003).
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Convención sobre la protección y la promoción de la diversidad de las
-                      expresiones culturales (2005).
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG26.jpg',
+                label: (
+                  <div>
+                    Convención sobre la protección y la promoción de la diversidad de las
+                    expresiones culturales (2005).
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_6' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_6' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -268,6 +251,10 @@ const CustomPage = (props) => (
           </div>
 
           <Video videoId={318951978} />
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

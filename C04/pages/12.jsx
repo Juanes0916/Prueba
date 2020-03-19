@@ -66,7 +66,7 @@ const CustomPage = (props) => (
             </div>
           </div>
 
-          <div className='unc-row unc-padding-1'>
+          <div className='unc-row unc-padding-1 row unc-equal-cols'>
             <div className='col-sm-6 unc-padding-1'>
               <strong>Para la construcción de estos indicadores, ellos definieron de cada variable
               un atributo o rasgo medible que sirvió para definir qué información requerían y
@@ -166,6 +166,10 @@ const CustomPage = (props) => (
             que le otorga valor a la organización u empresa, la sistematización y la evaluación son
             procesos fundamentales que le otorgan capital.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

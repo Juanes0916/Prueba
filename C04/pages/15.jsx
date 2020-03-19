@@ -39,6 +39,10 @@ const CustomPage = (props) => (
             exclusividad en el dominio. Hay bienes culturales que pertenecen a todos y así deben
             identificarse.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -15,7 +15,7 @@ import DegrantImage from '../../components/DegrantImage';
 const popup = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?'

@@ -16,7 +16,7 @@ import ButtonPopup from '../../components/ButtonPopup1';
 const popup = (file) => {
   Popup.open({
     content: (
-      <AudioList headerImageScr='./assets/img/M03_IMG26.jpg'>
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
         <ListSection
           file={file}
           title='¿Quién ha utilizado Design thinking para crear o mejorar su oferta?'

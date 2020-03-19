@@ -59,6 +59,10 @@ const CustomPage = (props) => (
 
             Artículo 27 de la Declaración
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
