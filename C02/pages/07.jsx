@@ -1,8 +1,109 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  Video,
+  Popup,
+  AudioList,
+  ListSection,
+  ListItem
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const popup1 = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='En dónde innovar'
+        >
+          <ListItem
+            title='El Modelo de Ingresos'
+            start={0}
+            end={51}
+          />
+          <ListItem
+            title='Las Redes'
+            start={52}
+            end={96}
+          />
+          <ListItem
+            title='La Estructura Interna de la Empresa'
+            start={97}
+            end={119}
+          />
+          <ListItem
+            title='Los Procesos'
+            start={120}
+            end={136}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
+
+const popup2 = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='En dónde innovar'
+        >
+          <ListItem
+            title='Desempeño de Producto o Servicio'
+            start={0}
+            end={21}
+          />
+          <ListItem
+            title='El Sistema que acompaña el  Producto o Servicio'
+            start={22}
+            end={44}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
+
+const popup3 = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='En dónde innovar'
+        >
+          <ListItem
+            title='El Servicio'
+            start={0}
+            end={23}
+          />
+          <ListItem
+            title='Los Canales'
+            start={24}
+            end={82}
+          />
+          <ListItem
+            title='Estrategia de Marca'
+            start={83}
+            end={117}
+          />
+          <ListItem
+            title='La Participación'
+            start={118}
+            end={147}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
+
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
@@ -45,16 +146,14 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1 unc-row-scalable' data-width='1300'>
-            {/* eslint-disable */}
-            {/* TODO: Audio */}
             <div id='obj-innovar' className='unc-scalable'>
               <div className='unc-line configuracion'>
                 <span>Configuración</span>
-                <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_A' data-audio='m03_01.mp3'
-                  data-second='0' data-end='51'>
+                <div className='unc-clickeable' onClick={() => popup1('./assets/media/m03_01.mp3')}>
                   <span className='unc-title'>Modelo de ingresos</span>
                   <span className='unc-number'>1</span>
                 </div>
+                {/* TODO: Audio */}
                 <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_A' data-audio='m03_01.mp3'
                   data-second='52' data-end='96'>
                   <span className='unc-title'>Redes</span>
@@ -73,11 +172,11 @@ const CustomPage = (props) => (
               </div>
               <div className='unc-line oferta'>
                 <span>Oferta</span>
-                <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_B' data-audio='m03_02.mp3'
-                  data-second='0' data-end='21'>
+                <div className='unc-clickeable' onClick={() => popup2('./assets/media/m03_02.mp3')}>
                   <span className='unc-title'>Desempeño del producto</span>
                   <span className='unc-number'>5</span>
                 </div>
+                {/* TODO: Audio */}
                 <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_B' data-audio='m03_02.mp3'
                   data-second='22' data-end=''>
                   <span className='unc-title'>Sistema del producto</span>
@@ -86,11 +185,11 @@ const CustomPage = (props) => (
               </div>
               <div className='unc-line experiencia'>
                 <span>Experiencia</span>
-                <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_C' data-audio='m03_03.mp3'
-                  data-second='0' data-end='23'>
+                <div className='unc-clickeable' onClick={() => popup3('./assets/media/m03_03.mp3')}>
                   <span className='unc-title'>Servicio</span>
                   <span className='unc-number'>7</span>
                 </div>
+                {/* TODO: Audio */}
                 <div className='unc-clickeable' data-toggle='modal' data-target='#innovarMdl_C' data-audio='m03_03.mp3'
                   data-second='24' data-end='82'>
                   <span className='unc-title'>Canal</span>
@@ -108,7 +207,6 @@ const CustomPage = (props) => (
                 </div>
               </div>
             </div>
-            {/* eslint-enable */}
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -127,6 +225,10 @@ const CustomPage = (props) => (
             interna del negocio y, en especial, desde las redes. Como conclusión el método, el
             proceso y no solo la plataforma son las herramientas que demuestran su innovación.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -35,6 +35,10 @@ const CustomPage = (props) => (
             desarrollo de la oferta, los puntos que debes tener en cuenta y las herramientas que
             puedes utilizar para lograrlo.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -21,83 +21,59 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_2' className='carousel slide filter' data-ride='carousel'>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M02_IMG04.jpg',
+                label: (
+                  <div>
+                    <h3>Producto</h3>
 
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_2' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_2' data-slide-to='1'></li>
-                <li data-target='#Carousel_2' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M02_IMG04.jpg'>
-                    <div>
-                      <h3>Producto</h3>
-
-                      Cualquier cosa que se puede ofrecer a un mercado para su atención,
-                      adquisición, uso o consumo, y que pudiera satisfacer un deseo o una
-                      necesidad. Los productos incluyen más que solo los bienes tangibles. Para el
-                      sector creativo y cultural puede ser un tanto más fácil determinar sus
-                      productos, objetos, servicios, espacios, material gráfico, prendas de vestir
-                      etc. Como ejemplo de algunos productos, podemos citar la producción de
-                      contenido multimedia, revistas culturales, producción de series de
-                      televisión, programación de videojuegos, venta de obras de arte,
-                      artesanías, etc.
-                    </div>
+                    Cualquier cosa que se puede ofrecer a un mercado para su atención,
+                    adquisición, uso o consumo, y que pudiera satisfacer un deseo o una
+                    necesidad. Los productos incluyen más que solo los bienes tangibles. Para el
+                    sector creativo y cultural puede ser un tanto más fácil determinar sus
+                    productos, objetos, servicios, espacios, material gráfico, prendas de vestir
+                    etc. Como ejemplo de algunos productos, podemos citar la producción de
+                    contenido multimedia, revistas culturales, producción de series de
+                    televisión, programación de videojuegos, venta de obras de arte,
+                    artesanías, etc.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M02_IMG07.jpg',
+                label: (
+                  <div>
+                    <h3>Servicios</h3>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M02_IMG07.jpg'>
-                    <div>
-                      <h3>Servicios</h3>
-
-                      Son una forma de producto que consiste en actividades, beneficios o
-                      satisfacciones que se ofrecen a la venta; son, básicamente, intangibles
-                      que no tienen como resultado la obtención de la propiedad de algo. Como
-                      ejemplos, podemos citar los servicios de los teatros, institutos educativos,
-                      centros culturales, escuelas de arte, editoriales y demás servicios
-                      culturales.
-                    </div>
+                    Son una forma de producto que consiste en actividades, beneficios o
+                    satisfacciones que se ofrecen a la venta; son, básicamente, intangibles
+                    que no tienen como resultado la obtención de la propiedad de algo. Como
+                    ejemplos, podemos citar los servicios de los teatros, institutos educativos,
+                    centros culturales, escuelas de arte, editoriales y demás servicios
+                    culturales.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M02_IMG28.jpg',
+                label: (
+                  <div>
+                    <h3>Experiencias</h3>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M02_IMG28.jpg'>
-                    <div>
-                      <h3>Experiencias</h3>
-
-                      Se trata del nombre asignado al conjunto de políticas y estrategias más
-                      recientes e innovadoras, centradas en la búsqueda de una nueva fuente de
-                      ventaja competitiva basada en la implicación emocional de los clientes y
-                      en la creación de experiencias ligadas al producto o servicio. Es, en otras
-                      palabras, la búsqueda, por parte del sector creativo y cultura, de enfatizar
-                      la diferenciación de sus ofertas. Algunos ejemplos: Programadores de festivales,
-                      muestras o redes de teatro o cine; sello discográfico; videojuegos;
-                      productora de música; conciertos, entre otros.
-                    </div>
+                    Se trata del nombre asignado al conjunto de políticas y estrategias más
+                    recientes e innovadoras, centradas en la búsqueda de una nueva fuente de
+                    ventaja competitiva basada en la implicación emocional de los clientes y
+                    en la creación de experiencias ligadas al producto o servicio. Es, en otras
+                    palabras, la búsqueda, por parte del sector creativo y cultura, de enfatizar
+                    la diferenciación de sus ofertas. Algunos ejemplos: Programadores de festivales,
+                    muestras o redes de teatro o cine; sello discográfico; videojuegos;
+                    productora de música; conciertos, entre otros.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_2' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_2' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -113,7 +89,9 @@ const CustomPage = (props) => (
               className='col-md-4 unc-padding-1'
               buttonClassName='pecc-927 unc-fill unc-clickeable'
               popup={{
-                title: <h5>Sensoriales</h5>,
+                title: (
+                  <h5>Sensoriales</h5>
+                ),
                 content: (
                   <div>Implican percepciones sensoriales: olfato, vista, tacto, oído, gusto.</div>
                 )
@@ -124,7 +102,7 @@ const CustomPage = (props) => (
               className='col-md-4 unc-padding-1'
               buttonClassName='pecc-916 unc-fill unc-clickeable'
               popup={{
-                title: <h4>De los sentimientos</h4>,
+                title: (<h5>De los sentimientos</h5>),
                 content: (
                   <div>Implican los sentimientos y las emociones.</div>
                 )
@@ -135,7 +113,7 @@ const CustomPage = (props) => (
               className='col-md-4 unc-padding-1'
               buttonClassName='pecc-973 unc-fill unc-clickeable'
               popup={{
-                title: <h4>Del pensamiento</h4>,
+                title: (<h5>Del pensamiento</h5>),
                 content: (
                   <div>
                     Apelan al intelecto con el propósito de crear experiencias cognitivas que
@@ -149,7 +127,7 @@ const CustomPage = (props) => (
               className='col-md-7 col-sm-offset-2 unc-padding-1'
               buttonClassName='pecc-94c unc-fill unc-clickeable'
               popup={{
-                title: <h4>De actuaciones</h4>,
+                title: (<h5>De actuaciones</h5>),
                 content: (
                   <div>
                     Implican cuestiones físicas y se proponen afectar experiencias corporales,
@@ -163,7 +141,7 @@ const CustomPage = (props) => (
               className='col-md-2 unc-padding-1'
               buttonClassName='pecc-902 unc-fill unc-clickeable'
               popup={{
-                title: <h4>De relaciones</h4>,
+                title: (<h5>De relaciones</h5>),
                 content: (
                   <div>Experiencias que son el resultado de relaciones con un grupo.</div>
                 )
@@ -229,6 +207,10 @@ const CustomPage = (props) => (
             el servicio que ofrece para captar y enganchar a los clientes en un evento memorable
             y ya sabes qué es un evento memorable.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

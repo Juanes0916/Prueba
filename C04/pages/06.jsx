@@ -1,9 +1,43 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCollapse,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+
+const panels = [
+  {
+    title: 'La sistematización',
+    content: (
+      <div className='unc-padding-1'>
+        Te permitirá reconocer el conocimiento que tienes tu organización.
+      </div>
+    )
+  },
+  {
+    title: 'La evaluación',
+    content: (
+      <div className='unc-padding-1'>
+        Te permitirá identificar las posibilidades de capitalización de tu
+        conocimiento o de su transformación.
+      </div>
+    )
+  },
+  {
+    title: 'El marco normativo',
+    content: (
+      <div className='unc-padding-1'>
+        Te permitirá promover el quehacer de tu emprendimiento y proteger tus
+        activos, sobre todo, si deseas realizar una explotación económica de ellos.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -42,67 +76,10 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_3' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_3' href='#Collapse_3One'
-                      aria-expanded='true' aria-controls='Collapse_3One'>
-                      La sistematización
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='Heading_3One'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Te permitirá reconocer el conocimiento que tienes tu organización.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Two' aria-expanded='false' aria-controls='Collapse_3Two'>
-                      La evaluación
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_3Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Te permitirá identificar las posibilidades de capitalización de tu
-                      conocimiento o de su transformación.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_3Three'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_3'
-                      href='#Collapse_3Three' aria-expanded='false' aria-controls='Collapse_3Three'>
-                      El marco normativo
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_3Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='Heading_3Three'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Te permitirá promover el quehacer de tu emprendimiento y proteger tus
-                      activos, sobre todo, si deseas realizar una explotación económica de ellos.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary module03' panels={panels} />
           </div>
 
+          <br />
           <div className='unc-row unc-padding-1'>
             Para iniciar hablemos de sistematización y evaluación, pero para hacerlo, qué mejor
             manera que en las palabras del experto Juan Felipe Aramburo, de la Fundación
@@ -121,6 +98,10 @@ const CustomPage = (props) => (
             con el fin de direccionar el hacer, posibilitar la toma de decisiones y el
             fortalecimiento empresarial.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

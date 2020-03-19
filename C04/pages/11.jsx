@@ -52,6 +52,10 @@ const CustomPage = (props) => (
             está haciendo y lo que se hizo, recogiendo las opiniones de oferentes y demandantes
             sobre los bienes y servicios culturales promovidos”, agrega Quintero.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

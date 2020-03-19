@@ -81,6 +81,10 @@ const CustomPage = (props) => (
             aportar valor al producto o servicio final prestado y ese valor
             debe ser percibido por el usuario o consumidor.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

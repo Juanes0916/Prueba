@@ -19,12 +19,14 @@ const CustomPage = (props) => (
             las expertas de la Universidad de Santiago de Compostela, España, Ana María Porto
             Castro y Maria Josefa Mosteiro García.
             <br /><br />
+
             En este sentido, algunos subsectores y emprendimientos de la economía creativa han
             logrado ser reconocidos, no solo por generar valor económico y simbólico en sus
             territorios, sino por promover la innovación al impulsar la generación y uso de nuevas
             ideas, herramientas y tecnologías que representan soluciones para necesidades del
             mercado o del entorno social, dice el informe mundial de la UNESCO, de 2013.
             <br /><br />
+
             Estrechamente relacionado con la creación de soluciones para un entorno social algunos
             teóricos hablan de innovación social, conoce el concepto de innovación social con el
             siguiente recurso gráfico:
@@ -51,6 +53,10 @@ const CustomPage = (props) => (
             quieres hacer sostenible en el ámbito económico, te invitamos a evaluar cómo la
             innovación puede permitirte lograrlo.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

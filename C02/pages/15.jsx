@@ -1,8 +1,29 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCollapse } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const panels = [
+  {
+    title: '¿Sabes qué es innovación? Cuéntanos como la definirías.',
+    content: (
+      <textarea id='TA_1_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
+    )
+  },
+  {
+    title: '¿Sabes en qué aspectos se pueden innovar en un negocio?. Cuéntanos cuáles crees que son.',
+    content: (
+      <textarea id='TA_1_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
+    )
+  },
+  {
+    title: '¿Conoces casos de negocio del sector creativo y cultural en los que la innovación haya posibilitado su sostenibilidad?. Cuéntanos cuáles conoces.',
+    content: (
+      <textarea id='TA_1_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
@@ -23,62 +44,8 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_2' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_2One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_2' href='#Collapse_2One'
-                      aria-expanded='true' aria-controls='Collapse_2One'>
-                      ¿Sabes qué es innovación? Cuéntanos como la definirías.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='Heading_2One'>
-                  <div className='panel-body'>
-                    <textarea id='TA_1_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_2Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_2'
-                      href='#Collapse_2Two' aria-expanded='false' aria-controls='Collapse_2Two'>
-                      ¿Sabes en qué aspectos se pueden innovar en un negocio?. Cuéntanos cuáles crees que son.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_2Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <textarea id='TA_2_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_2Three'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_2'
-                      href='#Collapse_2Three' aria-expanded='false' aria-controls='Collapse_2Three'>
-                      ¿Conoces casos de negocio del sector creativo y cultural en los que la innovación haya posibilitado su
-                      sostenibilidad?. Cuéntanos cuáles conoces.
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_2Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='Heading_2Three'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <textarea id='TA_3_after' cols='30' rows='10' placeholder='Ingresa tu respuesta'></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* eslint-enable */}
-            </div>
+            <UDCollapse summaryClassName='unc-summary modulo01' panels={panels} />
+
             <div className='text-center'>
               <button className='unc-button button-form' type='button' data-content-id='Collapse_2'
                 data-module='unc-modulo03'>
@@ -99,6 +66,10 @@ const CustomPage = (props) => (
               </div>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

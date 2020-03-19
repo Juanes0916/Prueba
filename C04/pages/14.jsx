@@ -1,9 +1,161 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDCarousel,
+  UDCollapse,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+
+const panels = [
+  {
+    title: '¿Qué es el Derecho de la Propiedad Intelectual?',
+    content: (
+      <div className='unc-padding-1'>
+        Es un sistema jurídico compuesto por leyes y decisiones que tienen como fin
+        regular (protegiendo o poniendo límites) las relaciones resultantes entre
+        autores, creadores, sus obras y creaciones y la sociedad que accede a las
+        mismas.
+      </div>
+    )
+  },
+  {
+    title: '¿Qué protege la propiedad intelectual?',
+    content: (
+      <div className='unc-padding-1'>
+        Los bienes producto del intelecto humano, es decir, son producto de la mente,
+        tales como invenciones, obras literarias, artísticas, símbolos, nombres… El
+        Derecho de la Propiedad Intelectual NO protege las IDEAS, porque afirmar lo
+        contrario sería admitir que existen límites al pensamiento. Este derecho
+        protege la forma en la que expresamos estas ideas. Por ejemplo, una idea
+        podría ser el amor, como concepto, no protegido por dicha legislación, pero
+        escribir un libro de poemas desarrollando el amor como concepto, sí es objeto
+        de protección.
+      </div>
+    )
+  },
+  {
+    title: '¿Para qué sirve la propiedad intelectual?',
+    content: (
+      <div className='unc-padding-1'>
+        Para un creador es indispensable entender cómo funciona la protección de sus
+        creaciones, pues puede decidir con claridad al momento de sacar un beneficio
+        de estas. Ya sea para un provecho económico, para ceder o para entender cómo
+        se mueve dentro de la sociedad la creación como capital.
+      </div>
+    )
+  }
+];
+
+const panels1 = [
+  {
+    title: '¿Qué categorías comprende el Derecho de la Propiedad Intelectual?',
+    content: (
+      <div className='unc-padding-1'>
+        Protege dos tipos de categorías. La primera, los derechos de autor, que son
+        una subcategoría dedicada a la protección de obras artísticas, literarias o
+        científicas y que se relacionan con aquellos reconocimientos que se hacen al
+        autor original de una obra o al titular de los derechos patrimoniales de la
+        misma. La segunda, los derechos conexos, que hacen referencia a los derechos
+        reconocidos a quienes interaccionan con estas obras originales, al sumarle su
+        toque personal por medio de la interpretación,  ejecución, creación
+        fonográfica o de radiodifusión.
+      </div>
+    )
+  },
+  {
+    title: '¿Qué tipos de obra protege el Derecho de Autor?',
+    content: (
+      <div className='unc-padding-1'>
+        <div className='unc-row row unc-row-icon-title'>
+          <div className='col-md-6 unc-padding-1'>
+            <span className='pecc-928 unc-fill'></span>
+            <h5>Obras artísticas</h5>
+            <div className='unc-text'>
+              Según el glosario de la Organización Mundial de la Propiedad
+              Intelectual OMPI, obra de arte es “aquella creación cuya finalidad es
+              la de apelar al sentido estético de las personas que las contemplan”.
+              Dentro de esta categoría están los dibujos, los grabados, las pinturas,
+              las esculturas, las obras de arquitectura y las obras fotográficas,
+              entre otras. Pero dentro de este concepto también deben entenderse las
+              obras artísticas musicales (Martínez y Robayo 2006, p. 16)
+            </div>
+          </div>
+          <div className='col-md-6 unc-padding-1'>
+            <span className='pecc-102 unc-fill'></span>
+            <h5>Obras Audiovisuales</h5>
+            <div className='unc-text'>
+              Toda creación expresada mediante una serie de imágenes asociadas, con o
+              sin sonorización incorporada, que esté destinada esencialmente a ser
+              mostrada a través de aparatos de proyección o cualquier otro medio de
+              comunicación de la imagen y de sonido, independientemente de las
+              características del soporte material que la contiene.
+            </div>
+          </div>
+        </div>
+
+        <div className='unc-row row unc-row-icon-title'>
+          <div className='col-md-6 unc-padding-1'>
+            <span className='pecc-103 unc-fill'></span>
+            <h5>Obra Plástica o de Bellas Artes</h5>
+            <div className='unc-text'>
+              Creación artística cuya finalidad apela al sentido estético de la
+              persona que la contempla, como las pinturas, dibujos, grabados y
+              litografías. No quedan comprendidas en la definición, a los
+              efectos de la Decisión 351 de 1993, las fotografías, las obras
+              arquitectónicas y las audiovisuales.
+            </div>
+          </div>
+
+          <div className='col-md-6 unc-padding-1'>
+            <span className='pecc-100 unc-fill'></span>
+            <h5>Obra de Arte aplicado</h5>
+            <div className='unc-text'>
+              Creación artística con funciones utilitarias o incorporada en un
+              artículo útil, ya sea una obra de artesanía o producida en escala
+              industrial.
+            </div>
+          </div>
+        </div>
+
+        <div className='unc-row row unc-equal-cols'>
+          <div className='col-md-6 unc-padding-1'>
+            <div className='unc-row-icon-title'>
+              <span className='pecc-104 unc-fill'></span>
+              <h5>Obras Literarias o científicas</h5>
+              <div className='unc-text'>
+                La OMPI la define como “un escrito de gran valor desde la perspectiva
+                de la belleza y efecto emocional”. En términos generales, es todo
+                escrito original, bien sea de carácter literario, científico, técnico
+                o meramente práctico, sin importar su valor y finalidad. Es decir
+                que, además de las obras tradicionales o clásicas como los poemas,
+                las obras teatrales o escénicas, las novelas, las obras científicas,
+                didácticas o técnicas, también merecen protección obras como:
+                anuarios, folletos, catálogos y compilaciones de recetas culinarias,
+                entre otras, que por su disposición y ordenamiento especial suponen
+                un esfuerzo de índole intelectual. Los programas de computación,
+                aunque no son obras literarias, para efectos del derecho de autor,
+                son asimilados como tales. (Martínez y Robayo 2006 p. 16)
+              </div>
+            </div>
+          </div>
+          <div className='col-md-6 unc-padding-1'>
+            <div className='unc-row-border unc-flex-center'>
+              <div className='unc-padding-1'>
+                <h4>Artículo 4 de la decisión 351 de 1993 y al artículo 2 de la ley
+                  23 de 1982, adicionada por la ley 44 de 1993.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -52,76 +204,7 @@ const CustomPage = (props) => (
           <Video videoId={318926762} />
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_5' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_5One'>
-                  <h5 className='panel-title'>
-                    <a role='button' data-toggle='collapse' data-parent='#Collapse_5' href='#Collapse_5One'
-                      aria-expanded='true' aria-controls='Collapse_5One'>
-                      ¿Qué es el Derecho de la Propiedad Intelectual?
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_5One' className='panel-collapse collapse in' role='tabpanel' aria-labelledby='Heading_5One'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Es un sistema jurídico compuesto por leyes y decisiones que tienen como fin
-                      regular (protegiendo o poniendo límites) las relaciones resultantes entre
-                      autores, creadores, sus obras y creaciones y la sociedad que accede a las
-                      mismas.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_5Two'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_5'
-                      href='#Collapse_5Two' aria-expanded='false' aria-controls='Collapse_5Two'>
-                      ¿Qué protege la propiedad intelectual?
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_5Two' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_5Two'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Los bienes producto del intelecto humano, es decir, son producto de la mente,
-                      tales como invenciones, obras literarias, artísticas, símbolos, nombres… El
-                      Derecho de la Propiedad Intelectual NO protege las IDEAS, porque afirmar lo
-                      contrario sería admitir que existen límites al pensamiento. Este derecho
-                      protege la forma en la que expresamos estas ideas. Por ejemplo, una idea
-                      podría ser el amor, como concepto, no protegido por dicha legislación, pero
-                      escribir un libro de poemas desarrollando el amor como concepto, sí es objeto
-                      de protección.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_5Three'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_5'
-                      href='#Collapse_5Three' aria-expanded='false' aria-controls='Collapse_5Three'>
-                      ¿Para qué sirve la propiedad intelectual?
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_5Three' className='panel-collapse collapse' role='tabpanel'
-                  aria-labelledby='Heading_5Three'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Para un creador es indispensable entender cómo funciona la protección de sus
-                      creaciones, pues puede decidir con claridad al momento de sacar un beneficio
-                      de estas. Ya sea para un provecho económico, para ceder o para entender cómo
-                      se mueve dentro de la sociedad la creación como capital.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary module03' panels={panels} />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -129,132 +212,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Collapse */}
-            <div id='Collapse_5a' className='panel-group' role='tablist' aria-multiselectable='true'>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_5Four'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_5a'
-                      href='#Collapse_5aFour' aria-expanded='false' aria-controls='Collapse_5aFour'>
-                      ¿Qué categorías comprende el Derecho de la Propiedad Intelectual?
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_5aFour' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_5Four'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      Protege dos tipos de categorías. La primera, los derechos de autor, que son
-                      una subcategoría dedicada a la protección de obras artísticas, literarias o
-                      científicas y que se relacionan con aquellos reconocimientos que se hacen al
-                      autor original de una obra o al titular de los derechos patrimoniales de la
-                      misma. La segunda, los derechos conexos, que hacen referencia a los derechos
-                      reconocidos a quienes interaccionan con estas obras originales, al sumarle su
-                      toque personal por medio de la interpretación,  ejecución, creación
-                      fonográfica o de radiodifusión.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='panel panel-default'>
-                <div className='panel-heading' role='tab' id='Heading_5Five'>
-                  <h5 className='panel-title'>
-                    <a className='collapsed' role='button' data-toggle='collapse' data-parent='#Collapse_5a'
-                      href='#Collapse_5aFive' aria-expanded='false' aria-controls='Collapse_5aFive'>
-                      ¿Qué tipos de obra protege el Derecho de Autor?
-                    </a>
-                  </h5>
-                </div>
-                <div id='Collapse_5aFive' className='panel-collapse collapse' role='tabpanel' aria-labelledby='Heading_5Five'>
-                  <div className='panel-body'>
-                    <div className='unc-padding-1'>
-                      <div className='unc-row row unc-row-icon-title'>
-                        <div className='col-md-6 unc-padding-1'>
-                          <span className='pecc-928 unc-fill'></span>
-                          <h5>Obras artísticas</h5>
-                          <div className='unc-text'>
-                            Según el glosario de la Organización Mundial de la Propiedad
-                            Intelectual OMPI, obra de arte es “aquella creación cuya finalidad es
-                            la de apelar al sentido estético de las personas que las contemplan”.
-                            Dentro de esta categoría están los dibujos, los grabados, las pinturas,
-                            las esculturas, las obras de arquitectura y las obras fotográficas,
-                            entre otras. Pero dentro de este concepto también deben entenderse las
-                            obras artísticas musicales (Martínez y Robayo 2006, p. 16)
-                          </div>
-                        </div>
-                        <div className='col-md-6 unc-padding-1'>
-                          <span className='pecc-102 unc-fill'></span>
-                          <h5>Obras Audiovisuales</h5>
-                          <div className='unc-text'>
-                            Toda creación expresada mediante una serie de imágenes asociadas, con o
-                            sin sonorización incorporada, que esté destinada esencialmente a ser
-                            mostrada a través de aparatos de proyección o cualquier otro medio de
-                            comunicación de la imagen y de sonido, independientemente de las
-                            características del soporte material que la contiene.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className='unc-row row unc-row-icon-title'>
-                        <div className='col-md-6 unc-padding-1'>
-                          <span className='pecc-103 unc-fill'></span>
-                          <h5>Obra Plástica o de Bellas Artes</h5>
-                          <div className='unc-text'>
-                            Creación artística cuya finalidad apela al sentido estético de la
-                            persona que la contempla, como las pinturas, dibujos, grabados y
-                            litografías. No quedan comprendidas en la definición, a los
-                            efectos de la Decisión 351 de 1993, las fotografías, las obras
-                            arquitectónicas y las audiovisuales.
-                          </div>
-                        </div>
-
-                        <div className='col-md-6 unc-padding-1'>
-                          <span className='pecc-100 unc-fill'></span>
-                          <h5>Obra de Arte aplicado</h5>
-                          <div className='unc-text'>
-                            Creación artística con funciones utilitarias o incorporada en un
-                            artículo útil, ya sea una obra de artesanía o producida en escala
-                            industrial.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className='unc-row row unc-equal-cols'>
-                        <div className='col-md-6 unc-padding-1'>
-                          <div className='unc-row-icon-title'>
-                            <span className='pecc-104 unc-fill'></span>
-                            <h5>Obras Literarias o científicas</h5>
-                            <div className='unc-text'>
-                              La OMPI la define como “un escrito de gran valor desde la perspectiva
-                              de la belleza y efecto emocional”. En términos generales, es todo
-                              escrito original, bien sea de carácter literario, científico, técnico
-                              o meramente práctico, sin importar su valor y finalidad. Es decir
-                              que, además de las obras tradicionales o clásicas como los poemas,
-                              las obras teatrales o escénicas, las novelas, las obras científicas,
-                              didácticas o técnicas, también merecen protección obras como:
-                              anuarios, folletos, catálogos y compilaciones de recetas culinarias,
-                              entre otras, que por su disposición y ordenamiento especial suponen
-                              un esfuerzo de índole intelectual. Los programas de computación,
-                              aunque no son obras literarias, para efectos del derecho de autor,
-                              son asimilados como tales. (Martínez y Robayo 2006 p. 16)
-                            </div>
-                          </div>
-                        </div>
-                        <div className='col-md-6 unc-padding-1'>
-                          <div className='unc-row-border unc-flex-center'>
-                            <div className='unc-padding-1'>
-                              <h4>Artículo 4 de la decisión 351 de 1993 y al artículo 2 de la ley
-                                23 de 1982, adicionada por la ley 44 de 1993.</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* eslint-enable */}
+            <UDCollapse summaryClassName='unc-summary module03' panels={panels1} />
           </div>
 
           <DegrantImage url='./assets/img/M01_IMG44.jpg' inverse>
@@ -269,60 +227,38 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_5' className='carousel slide filter' data-ride='carousel'>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M01_IMG23.jpg',
+                label: (
+                  <div>
+                    <h3>¿Qué tipo de creaciones protege la Propiedad Industrial?</h3>
 
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_5' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_5' data-slide-to='1'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M01_IMG23.jpg'>
-                    <div>
-                      <h3>¿Qué tipo de creaciones protege la Propiedad Industrial?</h3>
-
-                      Comprende dos tipos de categorías. La primera de ellas se denomina Signos
-                      Distintivos, que protege todo lo relacionado con bienes que permiten
-                      establecer identidad en el mercado, como marcas, nombres comerciales, enseñas
-                      comerciales, lemas e indicaciones geográficas. La segunda se llama Nuevas
-                      Creaciones, que protege toda creación inventiva con aplicación en la
-                      industria como diseños industriales, patentes de invención, modelos de
-                      utilidad, esquemas de circuitos integrados y obtenciones vegetales.
-                    </div>
+                    Comprende dos tipos de categorías. La primera de ellas se denomina Signos
+                    Distintivos, que protege todo lo relacionado con bienes que permiten
+                    establecer identidad en el mercado, como marcas, nombres comerciales, enseñas
+                    comerciales, lemas e indicaciones geográficas. La segunda se llama Nuevas
+                    Creaciones, que protege toda creación inventiva con aplicación en la
+                    industria como diseños industriales, patentes de invención, modelos de
+                    utilidad, esquemas de circuitos integrados y obtenciones vegetales.
                   </div>
-                </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG47.jpg',
+                label: (
+                  <div>
+                    <h3>¿Qué bienes de la Propiedad Industrial pueden tener incidencia en la
+                      gestión cultural?</h3>
 
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M01_IMG47.jpg'>
-                    <div>
-                      <h3>¿Qué bienes de la Propiedad Industrial pueden tener incidencia en la
-                        gestión cultural?</h3>
-
-                      Esta pregunta no puede responderse de una forma definitiva, pues la gestión
-                      cultural puede abarcar millones de posibilidades, pero te podemos decir que
-                      existen algunos elementos que pueden resultar comunes
-                    </div>
+                    Esta pregunta no puede responderse de una forma definitiva, pues la gestión
+                    cultural puede abarcar millones de posibilidades, pero te podemos decir que
+                    existen algunos elementos que pueden resultar comunes
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_5' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_5' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -364,13 +300,13 @@ const CustomPage = (props) => (
             <div className='unc-padding-1'>
               <ul>
                 <li>También se pueden registrar como marca el nombre o seudónimo de un artista o el
-                  título de una obra.
+                título de una obra.
                 </li>
                 <li>Aquí lo importante es recordar que el registro excluye a terceros del uso de
-                  dicha marca para los mismos efectos en que ella es usada.
+                dicha marca para los mismos efectos en que ella es usada.
                 </li>
                 <li>La marca además, puede ser usada con un slogan o lema, para profundizar la
-                  recordación.
+                recordación.
                 </li>
               </ul>
             </div>
@@ -429,10 +365,14 @@ const CustomPage = (props) => (
           </div>
 
           <Video videoId={318934297} />
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
-  </Page>
+  </Page >
 );
 
 export default CustomPage;

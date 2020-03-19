@@ -17,8 +17,8 @@ const CustomPage = (props) => (
             de Luciolé, una tienda virtual de lámparas, en la que la innovación permite que el
             cliente encuentre su lámpara y, para ello, ofrece una gran variedad de productos para
             que el comprador no solo cree su propia unidad sino que elija el cable, el soporte
-            y la bombilla.
-        </div>
+              y la bombilla.
+          </div>
 
           <Video videoId={315232174} />
 
@@ -27,25 +27,30 @@ const CustomPage = (props) => (
             opciones por considerar en tu emprendimiento. Muestran que al innovar una opción es
             partir de identificar una necesidad no resuelta en el mercado, como es el caso
           de <i>Mowies</i>, o acude a una tendencia, como <i>Luciolé</i>.
-        </div>
+          </div>
 
           <div className='unc-row unc-row-border unc-padding-2'>
             Para conocer más sobre cómo lograr innovación puedes explorar el material sugerido en la
-          sección de <a href='#'><strong>Recursos de profundización</strong></a>; los módulos de
-              Innovación Para Todos allí sugeridos.
-          <br /><br />
+            sección de <a href='#'><strong>Recursos de profundización</strong></a>; los módulos de
+            Innovación Para Todos allí sugeridos.
+            <br /><br />
+
             Para conocer más de tendencias puedes explorar el material sugerido en la sección
-          de <a href='#'><strong>Recursos de profundización</strong></a>; los módulos de vigilancia
-              tecnológica de Innovación Para Todos y los módulos ELPAUER que allí son referidos
-        </div>
+            de <a href='#'><strong>Recursos de profundización</strong></a>; los módulos de vigilancia
+            tecnológica de Innovación Para Todos y los módulos ELPAUER que allí son referidos
+          </div>
 
           <div className='unc-row unc-padding-1'>
             Con ejemplos como este, subsectores y emprendimientos de la economía creativa han
             logrado ser reconocidos no solo por generar valor económico y simbólico sino por
             impulsar la generación y uso de nuevas ideas, herramientas y tecnologías que
             representan soluciones para necesidades del mercado o del entorno social.
-        </div>
+          </div>
 
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

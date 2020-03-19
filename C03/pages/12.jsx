@@ -1,9 +1,40 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  Popup,
+  AudioList,
+  ListSection,
+  ListItem
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+
+const popup = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?'
+        >
+          <ListItem
+            title='Historia de AIRBNB'
+            start={0}
+            end={73}
+          />
+          <ListItem
+            title=''
+            start={0}
+            end={0}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -56,9 +87,9 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-padding-1'>
-            {/* TODO: Audio */}
+
             <div className='text-center'>
-              <button className='unc-button' data-target='#modal31' data-toggle='modal' type='button'>
+              <button className='unc-button' onClick={() => popup('./assets/media/m02_07.mp3')}>
                 <span className='btn-label'><i className='icon-volume-2'></i></span>
                 ¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?
               </button>
@@ -70,6 +101,10 @@ const CustomPage = (props) => (
             una decena de <i>growth hackers</i>, sino de conseguir gente inteligente con
             habilidades, creativas y una gran capacidad de superar el miedo a fallar.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

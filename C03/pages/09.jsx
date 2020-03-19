@@ -1,8 +1,40 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  Video,
+  Popup,
+  AudioList,
+  ListSection,
+  ListItem
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const popup = (file) => {
+  Popup.open({
+    content: (
+      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
+        <ListSection
+          file={file}
+          title='¿Big data y House of Cards?'
+        >
+          <ListItem
+            title='House of Cards'
+            start={0}
+            end={30}
+          />
+          <ListItem
+            title=''
+            start={0}
+            end={0}
+          />
+        </ListSection>
+      </AudioList>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -80,8 +112,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='text-center'>
-            {/* TODO: Audio */}
-            <button className='unc-button' data-target='#modal29' data-toggle='modal' type='button'>
+            <button className='unc-button' onClick={() => popup('./assets/media/m02_05.mp3')}>
               <span className='btn-label'><i className='icon-volume-2'></i></span>
               ¿Big data y House of Cards?
             </button>
@@ -94,6 +125,9 @@ const CustomPage = (props) => (
 
           <Video videoId={315164778} />
 
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

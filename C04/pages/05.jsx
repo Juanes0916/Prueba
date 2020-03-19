@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -24,57 +24,36 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_3' className='carousel slide filter' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_3' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_3' data-slide-to='1' className=''></li>
-                <li data-target='#Carousel_3' data-slide-to='2' className=''></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M01_IMG08.jpg'>
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px' }}>
-                    <div>
-                      Su realización implica un ejercicio de creación intelectual, es decir, son
-                      la materialización de una propuesta conceptual.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M01_IMG08.jpg',
+                label: (
+                  <div>
+                    Su realización implica un ejercicio de creación intelectual, es decir, son
+                    la materialización de una propuesta conceptual.
                   </div>
-                </div>
-
-                <div className='item col- active'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px' }}>
-                    <div>
-                      Responden a un proceso de realización intencionada y en la medida de lo
-                      posible susceptible de ser documentada.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG08.jpg',
+                label: (
+                  <div>
+                    Responden a un proceso de realización intencionada y en la medida de lo
+                    posible susceptible de ser documentada.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center' style={{ height: '372px' }}>
-                    <div>
-                      Logran concretar y materializar procesos conceptuales de intangibles en
-                      productos con formatos claramente definidos.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M01_IMG08.jpg',
+                label: (
+                  <div>
+                    Logran concretar y materializar procesos conceptuales de intangibles en
+                    productos con formatos claramente definidos.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_3' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_3' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
           <br /><br />
 
@@ -84,6 +63,10 @@ const CustomPage = (props) => (
             conocimiento y los activos económicos, pero los dos primeros son los que determinan,
             en buena medida, la capacidad de cada organización de mantenerse a lo largo del tiempo.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

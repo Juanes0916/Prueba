@@ -72,6 +72,10 @@ const CustomPage = (props) => (
             </div>
             {/* eslint-enable */}
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
