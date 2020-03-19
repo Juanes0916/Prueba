@@ -59,6 +59,10 @@ const CustomPage = (props) => (
             los usuarios completen esos vacíos de las otras historias (se conviertan en
             prosumidores) y participen creando nuevos relatos.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

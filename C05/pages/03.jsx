@@ -68,6 +68,10 @@ const CustomPage = (props) => (
             parte de los consumidores asume un rol activo en ese proceso de expansión o en ese
             universo de posibilidades de conexión.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

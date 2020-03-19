@@ -36,10 +36,14 @@ const CustomPage = (props) => (
             <div className='col-sm-4 unc-padding-1'>
               <span className='pecc-927 unc-fill'></span>
               <h5>Permitir la participación y alimentación del relato por parte de los
-                consumidores.
+              consumidores.
               </h5>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
