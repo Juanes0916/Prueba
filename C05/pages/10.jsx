@@ -50,12 +50,17 @@ const CustomPage = (props) => (
                   border: '2px dashed #999',
                   margin: '2em auto',
                   maxwidth: '700px',
-                  minheight: '300px',
-                  display: 'none'
+                  minheight: '300px'
                 }}>
-                <img src='./assets/img/M05_IMG37.jpg' id='img37' />
-                <img src='./assets/img/M05_IMG38.jpg' id='img38' />
-                <img src='./assets/img/M05_IMG39.jpg' id='img39' />
+                <div style={{ display: 'none' }}>
+                  <img src='./assets/img/M05_IMG37.jpg' id='img37' />
+                </div>
+                <div style={{ display: 'none' }}>
+                  <img src='./assets/img/M05_IMG38.jpg' id='img38' />
+                </div>
+                <div style={{ display: 'none' }}>
+                  <img src='./assets/img/M05_IMG39.jpg' id='img39' />
+                </div>
               </div>
             </div>
           </div>

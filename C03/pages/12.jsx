@@ -12,25 +12,43 @@ import classNames from 'classnames';
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
 
-const popup = (file) => {
+const audios = [
+  {
+    headerImageSrc: './assets/img/M03_IMG26.jpg',
+    sections: [
+      {
+        title: '¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?',
+        file: './assets/media/m02_07.mp3',
+        items: [
+          {
+            title: 'Historia de AIRBNB',
+            start: 0,
+            end: 73
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const popup = (audio) => {
   Popup.open({
     content: (
-      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
-        <ListSection
-          file={file}
-          title='¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?'
-        >
-          <ListItem
-            title='Historia de AIRBNB'
-            start={0}
-            end={73}
-          />
-          <ListItem
-            title=''
-            start={0}
-            end={0}
-          />
-        </ListSection>
+      <AudioList headerImageSrc={audio.headerImageSrc}>
+        {audio.sections.map((section) => (
+          <ListSection
+            file={section.file}
+            title={section.title}
+          >
+            {section.items.map((item) => (
+              <ListItem
+                title={item.title}
+                start={item.start}
+                end={item.end}
+              />
+            ))}
+          </ListSection>
+        ))}
       </AudioList>
     )
   });
@@ -89,7 +107,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1'>
 
             <div className='text-center'>
-              <button className='unc-button' onClick={() => popup('./assets/media/m02_07.mp3')}>
+              <button className='unc-button' onClick={() => popup(audios[0])}>
                 <span className='btn-label'><i className='icon-volume-2'></i></span>
                 ¿Quién ha utilizado Growth hacking para crear o mejorar su oferta?
               </button>

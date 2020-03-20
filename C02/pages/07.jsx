@@ -12,93 +12,110 @@ import classNames from 'classnames';
 
 import Header from '../components/Header';
 
-const popup1 = (file) => {
-  Popup.open({
-    content: (
-      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
-        <ListSection
-          file={file}
-          title='En dónde innovar'
-        >
-          <ListItem
-            title='El Modelo de Ingresos'
-            start={0}
-            end={51}
-          />
-          <ListItem
-            title='Las Redes'
-            start={52}
-            end={96}
-          />
-          <ListItem
-            title='La Estructura Interna de la Empresa'
-            start={97}
-            end={119}
-          />
-          <ListItem
-            title='Los Procesos'
-            start={120}
-            end={136}
-          />
-        </ListSection>
-      </AudioList>
-    )
-  });
-};
+const audios = [
+  {
+    headerImageSrc: './assets/img/M03_IMG26.jpg',
+    sections: [
+      {
+        title: 'En dónde innovar',
+        file: './assets/media/m03_01.mp3',
+        items: [
+          {
+            title: 'El Modelo de Ingresos',
+            start: 0,
+            end: 51
+          },
+          {
+            title: 'Las Redes',
+            start: 52,
+            end: 96
+          },
+          {
+            title: 'La Estructura Interna de la Empresa',
+            start: 97,
+            end: 119
+          },
+          {
+            title: 'Los Procesos',
+            start: 120,
+            end: 136
+          }
+        ]
+      }
+    ]
+  },
+  {
+    headerImageSrc: './assets/img/M03_IMG26.jpg',
+    sections: [
+      {
+        title: 'En dónde innovar',
+        file: './assets/media/m03_02.mp3',
+        items: [
+          {
+            title: 'Desempeño de Producto o Servicio',
+            start: 0,
+            end: 21
+          },
+          {
+            title: 'El Sistema que acompaña el  Producto o Servicio',
+            start: 22,
+            end: 44
+          }
+        ]
+      }
+    ]
+  },
+  {
+    headerImageSrc: './assets/img/M03_IMG26.jpg',
+    sections: [
+      {
+        title: 'En dónde innovar',
+        file: './assets/media/m03_03.mp3',
+        items: [
+          {
+            title: 'El Servicio',
+            start: 0,
+            end: 23
+          },
+          {
+            title: 'Los Canales',
+            start: 24,
+            end: 82
+          },
+          {
+            title: 'Estrategia de Marca',
+            start: 83,
+            end: 117
+          },
+          {
+            title: 'La Participación',
+            start: 118,
+            end: 147
+          }
+        ]
+      }
+    ]
+  }
+];
 
-const popup2 = (file) => {
+const popup = (audio) => {
   Popup.open({
     content: (
-      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
-        <ListSection
-          file={file}
-          title='En dónde innovar'
-        >
-          <ListItem
-            title='Desempeño de Producto o Servicio'
-            start={0}
-            end={21}
-          />
-          <ListItem
-            title='El Sistema que acompaña el  Producto o Servicio'
-            start={22}
-            end={44}
-          />
-        </ListSection>
-      </AudioList>
-    )
-  });
-};
-
-const popup3 = (file) => {
-  Popup.open({
-    content: (
-      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
-        <ListSection
-          file={file}
-          title='En dónde innovar'
-        >
-          <ListItem
-            title='El Servicio'
-            start={0}
-            end={23}
-          />
-          <ListItem
-            title='Los Canales'
-            start={24}
-            end={82}
-          />
-          <ListItem
-            title='Estrategia de Marca'
-            start={83}
-            end={117}
-          />
-          <ListItem
-            title='La Participación'
-            start={118}
-            end={147}
-          />
-        </ListSection>
+      <AudioList headerImageSrc={audio.headerImageSrc}>
+        {audio.sections.map((section) => (
+          <ListSection
+            file={section.file}
+            title={section.title}
+          >
+            {section.items.map((item) => (
+              <ListItem
+                title={item.title}
+                start={item.start}
+                end={item.end}
+              />
+            ))}
+          </ListSection>
+        ))}
       </AudioList>
     )
   });
@@ -149,7 +166,7 @@ const CustomPage = (props) => (
             <div id='obj-innovar' className='unc-scalable'>
               <div className='unc-line configuracion'>
                 <span>Configuración</span>
-                <div className='unc-clickeable' onClick={() => popup1('./assets/media/m03_01.mp3')}>
+                <div className='unc-clickeable' onClick={() => popup(audios[0])}>
                   <span className='unc-title'>Modelo de ingresos</span>
                   <span className='unc-number'>1</span>
                 </div>
@@ -172,7 +189,7 @@ const CustomPage = (props) => (
               </div>
               <div className='unc-line oferta'>
                 <span>Oferta</span>
-                <div className='unc-clickeable' onClick={() => popup2('./assets/media/m03_02.mp3')}>
+                <div className='unc-clickeable' onClick={() => popup(audios[1])}>
                   <span className='unc-title'>Desempeño del producto</span>
                   <span className='unc-number'>5</span>
                 </div>
@@ -185,7 +202,7 @@ const CustomPage = (props) => (
               </div>
               <div className='unc-line experiencia'>
                 <span>Experiencia</span>
-                <div className='unc-clickeable' onClick={() => popup3('./assets/media/m03_03.mp3')}>
+                <div className='unc-clickeable' onClick={() => popup(audios[2])}>
                   <span className='unc-title'>Servicio</span>
                   <span className='unc-number'>7</span>
                 </div>

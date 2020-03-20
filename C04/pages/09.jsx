@@ -1,8 +1,95 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, Popup, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const items = [
+  {
+    title: (<h3>¿Quién?</h3>),
+    section: (
+      <div>
+        La Fundación Casa Tres Patios
+        (<a href=' http://www.casatrespatios.org' target='_blank'> www.casatrespatios.org</a>),
+        un centro de arte contemporáneo ubicado en Medellín.
+      </div>
+    )
+  },
+  {
+    title: (<h3>¿Qué hace?</h3>),
+    section: (
+      <div>
+        Realiza publicaciones de sus memorias y documentaciones impresas y digitales de sus
+        programas y proyectos, con el fin de divulgar sus metodologías pedagógicas y una marca y
+        forma de hacer que le imprimen un valor en el sector creativo y cultural de la ciudad
+      </div>
+    )
+  },
+  {
+    title: (<h3>¿Cómo lo hace?</h3>),
+    section: (
+      <div>
+        A continuación, podrás ver algunas publicaciones relacionadas con el tema que venimos
+        tratando: <a href=' https://www.casatrespatios.org/publicaciones-c3p' target='_blank'>
+          https://www.casatrespatios.org/publicaciones-c3p</a>
+      </div>
+    )
+  },
+  {
+    title: (<h3>¿Quién?</h3>),
+    section: (
+      <div>
+        Nuestro Tesoro Escondido
+      </div>
+    )
+  },
+  {
+    title: (<h3>¿Qué hace?</h3>),
+    section: (
+      <div>
+        Por medio de la investigación-acción participativa, explora las ideas y visiones de
+        las organizaciones juveniles en Medellín y recogen su proceso vivido en el video Plata,
+        Cultura y Cambio, que permite la difusión y transferencia de ese conocimiento adquirido
+        en el hacer.
+      </div>
+    )
+  },
+  {
+    title: '¿Cómo lo hace? Ambos ejemplos se pueden ver en los siguientes enlaces:',
+    section: (
+      <div className=' unc-row row'>
+        <div className='col-sm-6 unc-padding-1'>
+          <div className='unc-row-prompt' style={{ height: '66px' }}>
+            <a href='https://www.youtube.com/watch?v=tVZNaaB_YfM' target='_blank'
+              className='pecc-108 unc-fill unc-clickeable'>Video recomendado</a>
+            <div className='unc-prompt-description'>Planta, cultura y cambio</div>
+            <div className='unc-prompt-autor'>Recrear International</div>
+          </div>
+        </div>
+        <div className='col-sm-6 unc-padding-1'>
+          <div className='unc-row-prompt' style={{ height: '66px' }}>
+            <a href='https://www.youtube.com/watch?v=bALi7L4mf-U' target='_blank'
+              className='pecc-108 unc-fill unc-clickeable'>Video recomendado</a>
+            <div className='unc-prompt-description'>Llamas grises y espacio especial</div>
+            <div className='unc-prompt-autor'>Juan Velez</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+];
+
+const popup = (item) => {
+  Popup.open({
+    content: (
+      <div className='unc-title'>
+        <div className='unc-title' style={{ color: '#330069', textAlign: 'center' }}>{item.title}</div>
+        <br />
+        <div>{item.section}</div>
+      </div>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
@@ -22,8 +109,6 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row'>
-            {/* eslint-disable */}
-            {/* TODO: D3 */}
             <div className='col-sm-6'>
               <h4>Centro de arte contemporáneo</h4>
             </div>
@@ -31,19 +116,19 @@ const CustomPage = (props) => (
               <h4>Audiovisual recrea práctica cultural pedagógica</h4>
             </div>
             <div className='col-sm-6 unc-padding-1'>
-              <div className='unc-row unc-row-list unc-row-bgfull row' data-url='./assets/img/M01_IMG40.jpg'>
+              <div className='unc-row unc-row-list unc-row-bgfull row' style={{ backgroundImage: 'url(./assets/img/M01_IMG40.jpg)' }}>
                 <div className='unc-list-border'>
                   <div className='row'>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal4'>
-                      <span>1</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[0])}>1</span>
                       <h5>¿Quién?</h5>
                     </div>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal5'>
-                      <span>2</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[1])}>2</span>
                       <h5>¿Qué hace?</h5>
                     </div>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal6'>
-                      <span>3</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[2])}>3</span>
                       <h5>¿Cómo lo hace?</h5>
                     </div>
                   </div>
@@ -51,26 +136,25 @@ const CustomPage = (props) => (
               </div>
             </div>
             <div className='col-sm-6 unc-padding-1'>
-              <div className='unc-row unc-row-list unc-row-bgfull row' data-url='./assets/img/M01_IMG29.jpg'>
+              <div className='unc-row unc-row-list unc-row-bgfull row' style={{ backgroundImage: 'url(./assets/img/M01_IMG29.jpg)' }}>
                 <div className='unc-list-border'>
                   <div className='row'>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal7'>
-                      <span>1</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[3])}>1</span>
                       <h5>¿Quién?</h5>
                     </div>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal8'>
-                      <span>2</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[4])}>2</span>
                       <h5>¿Qué hace?</h5>
                     </div>
-                    <div className='col-sm-4' data-toggle='modal' data-target='#modal9'>
-                      <span>3</span>
+                    <div className='col-sm-4'>
+                      <span onClick={() => popup(items[5])}>3</span>
                       <h5>¿Cómo lo hace?</h5>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* eslint-enable */}
           </div>
 
           <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>

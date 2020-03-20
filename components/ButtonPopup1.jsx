@@ -11,7 +11,7 @@ const ButtonPopup = (props) => (
       <div className='unc-content-middle'>
         <span>
           <div className='unc-title'>
-            <i className={props.icon} />{props.inTitle}
+            <i className={props.icon} />{props.title}
           </div>
         </span>
       </div>

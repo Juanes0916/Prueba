@@ -1,8 +1,70 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Video } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  Popup,
+  Video
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+
+const items = [
+  {
+    title: (<h5>Ser originales</h5>),
+    section: (
+      <div>
+        En el sector creativo y cultural hay un factor importante de originalidad y
+        creatividad y este es un elemento fuerte del que los emprendedores suelen hacer
+        uso para que su producto o servicio resulte atractivo, de modo que una persona
+        esté dispuesta a pagar por ellos.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Adoptar innovaciones: Ser constantes</h5>),
+    section: (
+      <div>
+        La innovación es innovación cuando se innova. Esto suena redundante, pero la innovación
+        dejará de serlo en algún punto cuando muchas personas la adopten. Siempre hay que seguir
+        en el camino de innovar para generar valor y fidelidad. No se innova por una sola vez.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Saber comunicar: Conocer el negocio</h5>),
+    section: (
+      <div>
+        El producto o servicio es solo el comienzo. Innovar en toda la cadena de valor es posible
+        y da más posibilidades y valor competitivo. La idea es hacer la cadena de valor, conocerla
+        y saber comunicar los factores diferenciadores.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Conocer al usuario</h5>),
+    section: (
+      <div>
+        Se debe saber en qué parte de la empresa vale la pena y para qué se hacen las
+        innovaciones. Conocer al usuario, cliente o consumidor es fundamental, igual que
+        conocer a las personas que hacen parte de la cadena. Eso da claridades para saber
+        cómo, cuándo y con qué innovar.
+      </div>
+    )
+  }
+];
+
+const popup = (item) => {
+  Popup.open({
+    content: (
+      <div className='unc-title'>
+        <div className='unc-title' style={{ color: '#9d1844', textAlign: 'center' }}>{item.title}</div>
+        <br />
+        <div>{item.section}</div>
+      </div>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -25,30 +87,27 @@ const CustomPage = (props) => (
 
           <div
             className='unc-row unc-row-bgfull unc-row-list unc-padding-1'
-            data-url='./assets/img/M03_IMG06.png'>
-            {/* eslint-disable */}
-            {/* TODO: D3 */}
+            style={{ backgroundImage: 'url(./assets/img/M03_IMG06.png)' }}>
             <div className='unc-list-border'>
               <div className='row'>
-                <div className='col-sm-3' data-toggle='modal' data-target='#modal4'>
-                  <span>1</span>
+                <div className='col-sm-3'>
+                  <span onClick={() => popup(items[0])}>1</span>
                   <h5>Ser originales</h5>
                 </div>
-                <div className='col-sm-3' data-toggle='modal' data-target='#modal5'>
-                  <span>2</span>
+                <div className='col-sm-3'>
+                  <span onClick={() => popup(items[1])}>2</span>
                   <h5>Adopatar innovaciones</h5>
                 </div>
-                <div className='col-sm-3' data-toggle='modal' data-target='#modal6'>
-                  <span>3</span>
+                <div className='col-sm-3'>
+                  <span onClick={() => popup(items[2])}>3</span>
                   <h5>Saber comunicar</h5>
                 </div>
-                <div className='col-sm-3' data-toggle='modal' data-target='#modal7'>
-                  <span>4</span>
+                <div className='col-sm-3'>
+                  <span onClick={() => popup(items[3])}>4</span>
                   <h5>Conocer al usuario</h5>
                 </div>
               </div>
             </div>
-            {/* eslint-enable */}
           </div>
 
           <div className='unc-row unc-padding-1'>

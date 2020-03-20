@@ -1,9 +1,98 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
+import {
+  Page,
+  Popup,
+  UDScrollbars,
+  UDCarousel
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import ButtonPopup from '../../components/ButtonPopup1';
+
+const items = [
+  {
+    title: (<h5>Absorción</h5>),
+    section: (
+      <div>
+        La absorción se relaciona con lo que mantiene la atención consciente de las personas.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Participación activa</h5>),
+    section: (
+      <div>
+        La participación activa involucra a un cliente que lo afecta en lo personal un evento
+        cualquiera.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Inmersión</h5>),
+    section: (
+      <div>
+        La inmersión involucra a ese individuo en la experiencia, en el plano físico o virtual.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Participación pasiva</h5>),
+    section: (
+      <div>
+        La participación pasiva afecta a los clientes que no influyen de forma directa en las
+        actuaciones.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Entretenimiento</h5>),
+    section: (
+      <div>
+        El entretenimiento involucra a un cliente que absorbe de manera pasiva la experiencia
+        por medio de sus sentidos.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Educación</h5>),
+    section: (
+      <div>
+        La experiencia educativa incluye de forma activa esa experiencia en la mente de ese
+        cliente, porque aumenta sus conocimientos o habilidades.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Escapista</h5>),
+    section: (
+      <div>
+        La experiencia escapista involucra encuentros memorables que sumergen e involucran
+        de forma activa a ese cliente.
+      </div>
+    )
+  },
+  {
+    title: (<h5>Estética</h5>),
+    section: (
+      <div>
+        La experiencia estética lo sumerge en un ambiente.
+      </div>
+    )
+  }
+];
+
+const popup = (item) => {
+  Popup.open({
+    content: (
+      <div className='unc-title'>
+        <div className='unc-title' style={{ color: '#9a10b2', textAlign: 'center' }}>{item.title}</div>
+        <br />
+        <div>{item.section}</div>
+      </div>
+    )
+  });
+};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -124,7 +213,7 @@ const CustomPage = (props) => (
               downTitle='Del pensamiento'
             />
             <ButtonPopup
-              className='col-md-7 col-sm-offset-2 unc-padding-1'
+              className='col-md-7 col-sm-2 unc-padding-1'
               buttonClassName='pecc-94c unc-fill unc-clickeable'
               popup={{
                 title: (<h5>De actuaciones</h5>),
@@ -181,18 +270,89 @@ const CustomPage = (props) => (
             <small>Haz clic a cada texto en el mapa interactivo para ver la definición</small>
           </div>
 
-          <div id='obj-arrow' className='unc-row-scalable' data-width='500'>
-            {/* TODO: D3 */}
+          <div id='obj-arrow' className='unc-row-scalable'>
             <div className='unc-scalable'>
-              <img src='./assets/img/M02_IMG29.png' width='100%' />
-              <div className='unc-rect unc-c1' data-toggle='modal' data-target='#modal6'></div>
-              <div className='unc-rect unc-c2' data-toggle='modal' data-target='#modal7'></div>
-              <div className='unc-rect unc-c3' data-toggle='modal' data-target='#modal8'></div>
-              <div className='unc-rect unc-c4' data-toggle='modal' data-target='#modal9'></div>
-              <div className='unc-rect unc-c5' data-toggle='modal' data-target='#modal10'></div>
-              <div className='unc-rect unc-c6' data-toggle='modal' data-target='#modal11'></div>
-              <div className='unc-rect unc-c7' data-toggle='modal' data-target='#modal12'></div>
-              <div className='unc-rect unc-c8' data-toggle='modal' data-target='#modal13'></div>
+              <img src='./assets/img/M02_IMG29.png' width='50%' />
+              <div
+                className='unc-rect unc-c1'
+                onClick={() => popup(items[0])}
+                style={{
+                  left: '46%',
+                  top: '1%',
+                  width: '8%',
+                  height: '8%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c2'
+                onClick={() => popup(items[1])}
+                style={{
+                  left: '65.5%',
+                  top: '44%',
+                  width: '10%',
+                  height: '13%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c3'
+                onClick={() => popup(items[2])}
+                style={{
+                  left: '46%',
+                  top: '94%',
+                  width: '8%',
+                  height: '8%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c4'
+                onClick={() => popup(items[3])}
+                style={{
+                  left: '24.5%',
+                  top: '45%',
+                  width: '10%',
+                  height: '13%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c5'
+                onClick={() => popup(items[4])}
+                style={{
+                  left: '36%',
+                  top: '28.5%',
+                  width: '13.5%',
+                  height: '8%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c6'
+                onClick={() => popup(items[5])}
+                style={{
+                  left: '53%',
+                  top: '28.5%',
+                  width: '9%',
+                  height: '8%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c7'
+                onClick={() => popup(items[6])}
+                style={{
+                  left: '53%',
+                  top: '65%',
+                  width: '9%',
+                  height: '8%'
+                }}>
+              </div>
+              <div
+                className='unc-rect unc-c8'
+                onClick={() => popup(items[7])}
+                style={{
+                  left: '39%',
+                  top: '65%',
+                  width: '8%',
+                  height: '8%'
+                }}>
+              </div>
             </div>
           </div>
 

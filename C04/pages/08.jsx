@@ -13,103 +13,120 @@ import classNames from 'classnames';
 import Header from '../components/Header';
 import ButtonPopup from '../../components/ButtonPopup1';
 
-const popupA = (file) => {
-  Popup.open({
-    content: (
-      <AudioList headerImageSrc='./assets/img/M01_IMG27.jpg'>
-        <ListSection
-          file={file}
-          title='Antes de sistematizar'
-        >
-          <ListItem
-            title='Antes de sistematizar'
-            start={0}
-            end={5}
-          />
-          <ListItem
-            title='Preguntarnos el porqué'
-            start={6}
-            end={15}
-          />
-          <ListItem
-            title='Preguntas bien realizadas'
-            start={16}
-            end={37}
-          />
-          <ListItem
-            title='Delimitación temporal'
-            start={38}
-            end={49}
-          />
-          <ListItem
-            title='Formatos comunicativos'
-            start={50}
-            end={59}
-          />
-          <ListItem
-            title='Alcance de sistematización'
-            start={60}
-            end={81}
-          />
-          <ListItem
-            title='Recuperar conocimiento en el hacer'
-            start={82}
-            end={105}
-          />
-        </ListSection>
-      </AudioList>
-    )
-  });
-};
+const audios = [
+  {
+    headerImageSrc: './assets/img/M01_IMG27.jpg',
+    sections: [
+      {
+        title: 'Antes de sistematizar',
+        file: './assets/media/m01_11.mp3',
+        items: [
+          {
+            title: 'Antes de sistematizar',
+            start: 0,
+            end: 5
+          },
+          {
+            title: 'Preguntarnos el porqué',
+            start: 6,
+            end: 15
+          },
+          {
+            title: 'Preguntas bien realizadas',
+            start: 16,
+            end: 37
+          },
+          {
+            title: 'Delimitación temporal',
+            start: 38,
+            end: 49
+          },
+          {
+            title: 'Formatos comunicativos',
+            start: 50,
+            end: 59
+          },
+          {
+            title: 'Alcance de sistematización',
+            start: 60,
+            end: 81
+          },
+          {
+            title: 'Recuperar conocimiento en el hacer',
+            start: 82,
+            end: 105
+          }
+        ]
+      }
+    ]
+  },
+  {
+    headerImageSrc: './assets/img/M01_IMG28.jpg',
+    sections: [
+      {
+        title: 'Durante la sistematización',
+        file: './assets/media/m01_12.mp3',
+        items: [
+          {
+            title: 'Durante la sistematización',
+            start: 0,
+            end: 5
+          },
+          {
+            title: 'Fuentes secundarias',
+            start: 6,
+            end: 20
+          },
+          {
+            title: 'Analizar y depurar información',
+            start: 21,
+            end: 43
+          }
+        ]
+      }
+    ]
+  },
+  {
+    headerImageSrc: './assets/img/M01_IMG29.jpg',
+    sections: [
+      {
+        title: 'Después de la sistematización',
+        file: './assets/media/m01_13.mp3',
+        items: [
+          {
+            title: 'Después de la sistematización',
+            start: 0,
+            end: 17
+          },
+          {
+            title: 'Preguntas de evaluación',
+            start: 18,
+            end: 33
+          }
+        ]
+      }
+    ]
+  }
+];
 
-const popupB = (file) => {
+const popup = (audio) => {
   Popup.open({
     content: (
-      <AudioList headerImageSrc='./assets/img/M01_IMG28.jpg'>
-        <ListSection
-          file={file}
-          title='Durante la sistematización'
-        >
-          <ListItem
-            title='Durante la sistematización'
-            start={0}
-            end={5}
-          />
-          <ListItem
-            title='Fuentes secundarias'
-            start={6}
-            end={20}
-          />
-          <ListItem
-            title='Analizar y depurar información'
-            start={21}
-            end={43}
-          />
-        </ListSection>
-      </AudioList>
-    )
-  });
-};
-
-const popupC = (file) => {
-  Popup.open({
-    content: (
-      <AudioList headerImageSrc='./assets/img/M01_IMG29.jpg'>
-        <ListSection
-          file={file}
-          title='Después de la sistematización'
-        >
-          <ListItem
-            title='Después de la sistematización'
-            start={0}
-            end={17}
-          />
-          <ListItem
-            title='Preguntas de evaluación'
-            start={18}
-            end={33}
-          />
-        </ListSection>
+      <AudioList headerImageSrc={audio.headerImageSrc}>
+        {audio.sections.map((section) => (
+          <ListSection
+            file={section.file}
+            title={section.title}
+          >
+            {section.items.map((item) => (
+              <ListItem
+                title={item.title}
+                start={item.start}
+                end={item.end}
+              />
+            ))}
+          </ListSection>
+        ))}
       </AudioList>
     )
   });
@@ -154,7 +171,7 @@ const CustomPage = (props) => (
                     Marcar una ruta de inicio que debemos planear para darle un propósito o
                     un norte al proceso.
                   </div>
-                  <button className='unc-button' onClick={() => popupA('./assets/media/m01_11.mp3')}>
+                  <button className='unc-button' onClick={() => popup(audios[0])}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
@@ -173,7 +190,7 @@ const CustomPage = (props) => (
                     implicar varias fases en su interior
                   </div>
 
-                  <button className='unc-button' onClick={() => popupB('./assets/media/m01_12.mp3')}>
+                  <button className='unc-button' onClick={() => popup(audios[1])}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
@@ -182,7 +199,7 @@ const CustomPage = (props) => (
                     <ButtonPopup
                       buttonClassName='unc-button'
                       icon='icon-speech'
-                      inTitle='Trabajo de campo'
+                      title='Trabajo de campo'
                       popup={{
                         title: <h5>Trabajo de campo</h5>,
                         content: (
@@ -209,7 +226,7 @@ const CustomPage = (props) => (
                     <ButtonPopup
                       buttonClassName='unc-button'
                       icon='icon-speech'
-                      inTitle='Análisis de resultados'
+                      title='Análisis de resultados'
                       popup={{
                         title: <h5>Análisis de resultados</h5>,
                         content: (
@@ -228,7 +245,7 @@ const CustomPage = (props) => (
                     <ButtonPopup
                       buttonClassName='unc-button'
                       icon='icon-speech'
-                      inTitle='Conclusiones'
+                      title='Conclusiones'
                       popup={{
                         title: <h5>Conclusiones</h5>,
                         content: (
@@ -259,7 +276,7 @@ const CustomPage = (props) => (
                     diferentes formatos, como publicaciones, videos, multimedias,
                     plataformas web, espacios de interlocución o difusión, entre otros.
                   </div>
-                  <button className='unc-button' onClick={() => popupC('./assets/media/m01_13.mp3')}>
+                  <button className='unc-button' onClick={() => popup(audios[2])}>
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>

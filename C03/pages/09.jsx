@@ -12,29 +12,48 @@ import classNames from 'classnames';
 
 import Header from '../components/Header';
 
-const popup = (file) => {
+const audios = [
+  {
+    headerImageSrc: './assets/img/M03_IMG26.jpg',
+    sections: [
+      {
+        title: '¿Big data y House of Cards?',
+        file: './assets/media/m02_05.mp3',
+        items: [
+          {
+            title: 'House of Cards',
+            start: 0,
+            end: 30
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const popup = (audio) => {
   Popup.open({
     content: (
-      <AudioList headerImageSrc='./assets/img/M03_IMG26.jpg'>
-        <ListSection
-          file={file}
-          title='¿Big data y House of Cards?'
-        >
-          <ListItem
-            title='House of Cards'
-            start={0}
-            end={30}
-          />
-          <ListItem
-            title=''
-            start={0}
-            end={0}
-          />
-        </ListSection>
+      <AudioList headerImageSrc={audio.headerImageSrc}>
+        {audio.sections.map((section) => (
+          <ListSection
+            file={section.file}
+            title={section.title}
+          >
+            {section.items.map((item) => (
+              <ListItem
+                title={item.title}
+                start={item.start}
+                end={item.end}
+              />
+            ))}
+          </ListSection>
+        ))}
       </AudioList>
     )
   });
 };
+
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -112,7 +131,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='text-center'>
-            <button className='unc-button' onClick={() => popup('./assets/media/m02_05.mp3')}>
+            <button className='unc-button' onClick={() => popup(audios[0])}>
               <span className='btn-label'><i className='icon-volume-2'></i></span>
               ¿Big data y House of Cards?
             </button>
