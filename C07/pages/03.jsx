@@ -92,6 +92,10 @@ const CustomPage = (props) => (
             definir cómo crear y entregar al público tu oferta creativa y cultural. Este fue el
             primer grupo de tendencias que queremos compartirte.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

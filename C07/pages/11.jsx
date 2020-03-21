@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -28,62 +28,38 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_6' className='carousel slide' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_6' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_6' data-slide-to='1'></li>
-                <li data-target='#Carousel_6' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG09.jpg'>
-                    <div>
-                      <h3>A mayor competencia mayor énfasis en los clientes actuales.</h3>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG21.jpg'>
-                    <div>
-                      <h3>Mantener un balance entre las estrategias para adquirir nuevos clientes
-                        y retener los existentes.
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG35.jpg'>
-                    <div>
-                      <h3>El cuidado del cliente es el nuevo marketing: Pensar en retener los
-                        clientes existentes más que en ganar nuevos.
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_6' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_6' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M06_IMG09.jpg',
+                label: (
+                  <h3>A mayor competencia mayor énfasis en los clientes actuales.</h3>
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <h3>
+                    Mantener un balance entre las estrategias para adquirir nuevos clientes
+                    y retener los existentes.
+                  </h3>
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG35.jpg',
+                label: (
+                  <h3>
+                    El cuidado del cliente es el nuevo marketing: Pensar en retener los
+                    clientes existentes más que en ganar nuevos.
+                  </h3>
+                )
+              }
+            ]}
+            />
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

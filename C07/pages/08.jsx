@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -43,7 +43,7 @@ const CustomPage = (props) => (
 
           <div className='unc-row row unc-row-icon-title'>
             <ButtonPopup
-              className='col-sm-1 col-sm-offset-2 unc-padding-1'
+              className='col-sm-1 offset-sm-2 unc-padding-1'
               buttonClassName='pecc-973 unc-fill unc-clickeable'
               popup={{
                 title: <h4></h4>,
@@ -135,72 +135,50 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_4' className='carousel slide' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_4' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_4' data-slide-to='1'></li>
-                <li data-target='#Carousel_4' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M06_IMG21.jpg'
-                style={{ minheight: '250px' }}>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Volver al origen es des-industrializar, volver a la esencia del marketing, a lo
-                      fundamental y a entender las necesidades del consumidor y resolverlas de manera
-                      funcional.
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    Volver al origen es des-industrializar, volver a la esencia del marketing, a lo
+                    fundamental y a entender las necesidades del consumidor y resolverlas de manera
+                    funcional.
                   </div>
-                  </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Por lo tanto, se sugiere establecer para estos públicos:
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    Por lo tanto, se sugiere establecer para estos públicos:
                     <br /><br />
 
-                      <div className='text-left'>
-                        - Primero persuasión y luego promoción. <br />
-                        - Promover el re-uso, la re-venta y el cuidado ambiental. <br />
-                      </div>
+                    <div className='text-left'>
+                      - Primero persuasión y luego promoción. <br />
+                      - Promover el re-uso, la re-venta y el cuidado ambiental. <br />
                     </div>
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Y para que el producto dure:
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    Y para que el producto dure:
                     <br /><br />
 
-                      <div className='text-left'>
-                        - Compromiso por el post-consumo. <br />
-                        - Crecimiento de marcas locales y artesanales. <br />
-                        - Marcas con causas. Mercadeo emocional sin olvidar lo funcional. <br />
-                        - Adaptarse a los cambios del consumidor. <br />
-                      </div>
-
+                    <div className='text-left'>
+                      - Compromiso por el post-consumo. <br />
+                      - Crecimiento de marcas locales y artesanales. <br />
+                      - Marcas con causas. Mercadeo emocional sin olvidar lo funcional. <br />
+                      - Adaptarse a los cambios del consumidor. <br />
                     </div>
+
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_4' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_4' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <br /><br />
@@ -209,6 +187,10 @@ const CustomPage = (props) => (
             Si aún no has explorado el módulo “Conocimiento del consumidor”, allí encontrarás
             información que está alineada a la lógica de esta tendencia.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

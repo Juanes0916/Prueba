@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 import DegrantImage from '../../components/DegrantImage';
 
@@ -58,67 +58,46 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_3' className='carousel slide' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_3' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_3' data-slide-to='1'></li>
-                <li data-target='#Carousel_3' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols unc-row-bgfull' data-url='./assets/img/M06_IMG21.jpg'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      Construir modelos de negocios sostenibles que potencien estas u otras
-                      prácticas de consumo no solo tienen potencial económico, pues hay
-                      audiencia, sino que nos brinda la posibilidad de alinearnos con
-                      esta importante tendencia/lineamiento.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    Construir modelos de negocios sostenibles que potencien estas u otras
+                    prácticas de consumo no solo tienen potencial económico, pues hay
+                    audiencia, sino que nos brinda la posibilidad de alinearnos con
+                    esta importante tendencia/lineamiento.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      En diseño, emprendimientos como
-                      <a href='https://packagefreeshop.com/' target='_blank'> Package Free</a>
-                      buscan proveer alternativas para el uso desechable del plástico, vendiendo
-                      objetos de marcas que quieran disminuir el impacto ambiental al innovar
-                      en el ciclo de vida de sus productos. El envío de las compras se hace en
-                      cajas reutilizadas del barrio, de donaciones de amigos, etc.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    En diseño, emprendimientos como
+                    <a href='https://packagefreeshop.com/' target='_blank'> Package Free</a>
+                    buscan proveer alternativas para el uso desechable del plástico, vendiendo
+                    objetos de marcas que quieran disminuir el impacto ambiental al innovar
+                    en el ciclo de vida de sus productos. El envío de las compras se hace en
+                    cajas reutilizadas del barrio, de donaciones de amigos, etc.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center'>
-                    <div>
-                      En el cine, la reciente producción francesa
-                      <a href='https://www.demain-lefilm.com/en/solutions'
-                        target='_blank'>Mañana</a> de Mélanie Laurent y Cyril Dion, aborda
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG21.jpg',
+                label: (
+                  <div>
+                    En el cine, la reciente producción francesa
+                    <a href='https://www.demain-lefilm.com/en/solutions'
+                      target='_blank'>Mañana</a> de Mélanie Laurent y Cyril Dion, aborda
                     temas cruciales relacionados con este tema. Si una persona quiere proyectar
                     la película en su comunidad, puede contactar a la producción
                     para organizar el evento.
-                    </div>
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_3' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_3' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -132,6 +111,10 @@ const CustomPage = (props) => (
             Esta es pues, una tendencia llena de retos y oportunidades en la que las propuestas
             desde el sector creativo y cultural no se pueden hacer esperar.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

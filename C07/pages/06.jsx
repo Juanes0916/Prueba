@@ -1,5 +1,5 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -72,71 +72,47 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            {/* eslint-disable */}
-            {/* TODO: Carousel */}
-            <div id='Carousel_2' className='carousel slide filter' data-ride='carousel'>
-
-              <ol className='carousel-indicators'>
-                <li data-target='#Carousel_2' data-slide-to='0' className='active'></li>
-                <li data-target='#Carousel_2' data-slide-to='1'></li>
-                <li data-target='#Carousel_2' data-slide-to='2'></li>
-              </ol>
-
-
-              <div className='carousel-inner unc-equal-cols'>
-                <div className='item active col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG28.jpg'>
-                    <div>
-                      Estos espacios se conocen como laboratorios de innovación ciudadana,
-                      laboratorios que pueden representar, en sí mismos, emprendimientos
-                      culturales, y los hay en muchas escalas: desde pequeños colectivos, hasta
-                      grandes espacios que hacen parte de programas del sector público.
-                    </div>
+            <UDCarousel steps={[
+              {
+                bgImage: './assets/img/M06_IMG28.jpg',
+                label: (
+                  <div>
+                    Estos espacios se conocen como laboratorios de innovación ciudadana,
+                    laboratorios que pueden representar, en sí mismos, emprendimientos
+                    culturales, y los hay en muchas escalas: desde pequeños colectivos, hasta
+                    grandes espacios que hacen parte de programas del sector público.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG29.jpg'>
-                    <div>
-                      Esos laboratorios deben comprenderse como una fábrica de
-                      futuro, pues se trata del encuentro de personas de diversos
-                      entornos y con distintos conocimientos que discuten y prueban
-                      ideas que tienen sentido en contextos específicos, pero que se
-                      pueden desarrollar, implementar y replicar gracias a la variedad de
-                      disciplinas, experiencias y formas de entender el mundo de quienes se
-                      reúnen allí y comparten sus conocimientos de forma abierta.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG29.jpg',
+                label: (
+                  <div>
+                    Esos laboratorios deben comprenderse como una fábrica de
+                    futuro, pues se trata del encuentro de personas de diversos
+                    entornos y con distintos conocimientos que discuten y prueban
+                    ideas que tienen sentido en contextos específicos, pero que se
+                    pueden desarrollar, implementar y replicar gracias a la variedad de
+                    disciplinas, experiencias y formas de entender el mundo de quienes se
+                    reúnen allí y comparten sus conocimientos de forma abierta.
                   </div>
-                </div>
-
-                <div className='item col-'>
-                  <div className='unc-row-carousel unc-flex-center unc-row-bgfull'
-                    data-url='./assets/img/M06_IMG33.jpg'>
-                    <div>
-                      Se convierten en centros de experimentación, formación e intercambio para
-                      los emprendedores culturales y creativos, y es importante reconocer que
-                      existen y que allí pueden encontrarse múltiples recursos físicos y de
-                      posibilidad de generación de redes. Además, son reconocidos por su rol
-                      como nodos creativos que conectan iniciativas y procesos donde la cultura
-                      local está jugando un papel de formación y cohesión ciudadana importante.
-                    </div>
+                )
+              },
+              {
+                bgImage: './assets/img/M06_IMG33.jpg',
+                label: (
+                  <div>
+                    Se convierten en centros de experimentación, formación e intercambio para
+                    los emprendedores culturales y creativos, y es importante reconocer que
+                    existen y que allí pueden encontrarse múltiples recursos físicos y de
+                    posibilidad de generación de redes. Además, son reconocidos por su rol
+                    como nodos creativos que conectan iniciativas y procesos donde la cultura
+                    local está jugando un papel de formación y cohesión ciudadana importante.
                   </div>
-                </div>
-              </div>
-
-
-              <a className='left carousel-control' href='#Carousel_2' data-slide='prev'>
-                <span className='ti-angle-left'></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a className='right carousel-control' href='#Carousel_2' data-slide='next'>
-                <span className='ti-angle-right'></span>
-                <span className='sr-only'>Next</span>
-              </a>
-            </div>
-            {/* eslint-enable */}
+                )
+              }
+            ]}
+            />
           </div>
 
           <br /><br />
@@ -159,6 +135,10 @@ const CustomPage = (props) => (
             la experimentación y desarrollo de ideas de todo tipo, al hacer accesible la
             información y las metodologías empleadas, y tejiendo una red de hacedores.
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

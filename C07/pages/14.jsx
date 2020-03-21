@@ -30,6 +30,10 @@ const CustomPage = (props) => (
             encontrarás en Innovación Para Todos, visita la sección de “Recursos de profundización
             de este módulo”, allí los encontrarás referidos.
           </DegrantImage>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

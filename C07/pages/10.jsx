@@ -33,10 +33,14 @@ const CustomPage = (props) => (
                 hacen).
             </li>
               <li>No hacer bulk mail (envíos masivos), hay que enviar los e-mails basados en las
-                interacciones de cada grupo de usuarios
+              interacciones de cada grupo de usuarios
             </li>
             </ul>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

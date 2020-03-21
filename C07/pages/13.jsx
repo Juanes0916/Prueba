@@ -32,7 +32,7 @@ const CustomPage = (props) => (
                 className='text-center'
                 buttonClassName='unc-button'
                 icon='fa fa-eye'
-                inTitle='¿Cómo vivimos estas tendencias en el sector creativo y cultural?'
+                title='¿Cómo vivimos estas tendencias en el sector creativo y cultural?'
                 popup={{
                   title: <h4>¿Cómo vivimos estas tendencias en el sector creativo y cultural?</h4>,
                   content: (
@@ -46,7 +46,7 @@ const CustomPage = (props) => (
                 className='text-center'
                 buttonClassName='unc-button'
                 icon='fa fa-eye'
-                inTitle='¿Cómo podemos utilizar estas tendencias en el sector?'
+                title='¿Cómo podemos utilizar estas tendencias en el sector?'
                 popup={{
                   title: <h4>¿Cómo podemos utilizar estas tendencias en el sector?</h4>,
                   content: (
@@ -60,7 +60,7 @@ const CustomPage = (props) => (
                 className='text-center'
                 buttonClassName='unc-button'
                 icon='fa fa-eye'
-                inTitle='¿Cuáles son los tiempos de adaptación de estas tendencias?'
+                title='¿Cuáles son los tiempos de adaptación de estas tendencias?'
                 popup={{
                   title: <h4>¿Cuáles son los tiempos de adaptación de estas tendencias?</h4>,
                   content: (
@@ -74,7 +74,7 @@ const CustomPage = (props) => (
                 className='text-center'
                 buttonClassName='unc-button'
                 icon='fa fa-eye'
-                inTitle='¿Cuál es el panorama de tendencias a nivel local?'
+                title='¿Cuál es el panorama de tendencias a nivel local?'
                 popup={{
                   title: <h4>¿Cuál es el panorama de tendencias a nivel local?</h4>,
                   content: (
@@ -84,6 +84,10 @@ const CustomPage = (props) => (
               />
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>

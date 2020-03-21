@@ -35,7 +35,7 @@ const CustomPage = (props) => (
                   <li>¿Qué es una tendencia?</li>
                   <li>¿Cuáles macrotendencias pueden ser aplicadas en mi negocio?</li>
                   <li>¿Cuáles tendencias asociadas al relacionamiento de las marcas con los
-                    usuarios puedo implementar?
+                  usuarios puedo implementar?
                   </li>
                   <li>¿Cómo aplicar tendencias en el sector creativo y cultural?</li>
                 </ul>
@@ -63,6 +63,10 @@ const CustomPage = (props) => (
               </div>
             </div>
           </div>
+
+          <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
+            Siguiente
+          </button>
         </div>
       </UDScrollbars>
     </div>
