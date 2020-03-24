@@ -11,8 +11,8 @@ import Header from '../components/Header';
 
 const items = [
   {
-    title: (<h5>Ser originales</h5>),
-    section: (
+    title: (<h4>Ser originales</h4>),
+    content: (
       <div>
         En el sector creativo y cultural hay un factor importante de originalidad y
         creatividad y este es un elemento fuerte del que los emprendedores suelen hacer
@@ -22,8 +22,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Adoptar innovaciones: Ser constantes</h5>),
-    section: (
+    title: (<h4>Adoptar innovaciones: Ser constantes</h4>),
+    content: (
       <div>
         La innovación es innovación cuando se innova. Esto suena redundante, pero la innovación
         dejará de serlo en algún punto cuando muchas personas la adopten. Siempre hay que seguir
@@ -32,8 +32,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Saber comunicar: Conocer el negocio</h5>),
-    section: (
+    title: (<h4>Saber comunicar: Conocer el negocio</h4>),
+    content: (
       <div>
         El producto o servicio es solo el comienzo. Innovar en toda la cadena de valor es posible
         y da más posibilidades y valor competitivo. La idea es hacer la cadena de valor, conocerla
@@ -42,8 +42,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Conocer al usuario</h5>),
-    section: (
+    title: (<h4>Conocer al usuario</h4>),
+    content: (
       <div>
         Se debe saber en qué parte de la empresa vale la pena y para qué se hacen las
         innovaciones. Conocer al usuario, cliente o consumidor es fundamental, igual que
@@ -53,18 +53,6 @@ const items = [
     )
   }
 ];
-
-const popup = (item) => {
-  Popup.open({
-    content: (
-      <div className='unc-title'>
-        <div className='unc-title' style={{ color: '#9d1844', textAlign: 'center' }}>{item.title}</div>
-        <br />
-        <div>{item.section}</div>
-      </div>
-    )
-  });
-};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -91,19 +79,19 @@ const CustomPage = (props) => (
             <div className='unc-list-border'>
               <div className='row'>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[0])}>1</span>
+                  <span onClick={() => Popup.open(items[0])}>1</span>
                   <h5>Ser originales</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[1])}>2</span>
+                  <span onClick={() => Popup.open(items[1])}>2</span>
                   <h5>Adopatar innovaciones</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[2])}>3</span>
+                  <span onClick={() => Popup.open(items[2])}>3</span>
                   <h5>Saber comunicar</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[3])}>4</span>
+                  <span onClick={() => Popup.open(items[3])}>4</span>
                   <h5>Conocer al usuario</h5>
                 </div>
               </div>
