@@ -110,6 +110,8 @@ const CustomPage = (props) => (
             <UDCollapse summaryClassName='unc-summary module04' panels={panels} />
           </div>
 
+          <br />
+
           <div className='unc-row unc-padding-1'>
             Con la irrupción de las nuevas tecnologías y la proliferación de los nuevos modelos de
             negocio que utilizan economías colaborativas, han nacido también nuevas formas de

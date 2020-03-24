@@ -54,7 +54,7 @@ const CustomPage = (props) => (
                 margin: '0 auto'
               }}>
                 Ten presente que las respuestas no
-                son almacenadas por el sistema. Por lo tanto deberás llenar las áreas <br />
+                son almacenadas por el sistema. Por lo tanto deberás llenar las áreas
                 de texto y a continuación hacer clic en <i>Descargar tus respuestas</i>.
               </small>
 

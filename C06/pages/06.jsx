@@ -6,8 +6,8 @@ import Header from '../components/Header';
 
 const items = [
   {
-    title: (<h5>Fase 1 y 2. Preparación</h5>),
-    section: (
+    title: (<h4>Fase 1 y 2. Preparación</h4>),
+    content: (
       <div>
         Es el comienzo de la Experiencia total, pues representa el
         momento en el que alguien del público toma la decisión de
@@ -21,8 +21,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Fase 3. Intercambio artístico</h5>),
-    section: (
+    title: (<h4>Fase 3. Intercambio artístico</h4>),
+    content: (
       <div>
         Es la cúspide del arco, corresponde a la transferencia de
         emoción y significado entre el creador y el público y, en muchos
@@ -43,8 +43,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Fase 4. Tratamiento posterior</h5>),
-    section: (
+    title: (<h4>Fase 4. Tratamiento posterior</h4>),
+    content: (
       <div>
         Justo después de que se produce el intercambio artístico llega
         el período de procesar lo que acabas de experimentar y de
@@ -60,8 +60,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Fase 5. Eco del impacto</h5>),
-    section: (
+    title: (<h4>Fase 5. Eco del impacto</h4>),
+    content: (
       <div>
         Cuando el intercambio cultural o creativo alcanza repercusión en
         las personas, el impacto prolongado puede extenderse durante
@@ -70,19 +70,6 @@ const items = [
     )
   }
 ];
-
-const popup = (item) => {
-  Popup.open({
-    content: (
-      <div className='unc-title'>
-        <div className='unc-title' style={{ color: 'color:#7272f5', textAlign: 'center' }}>{item.title}</div>
-        <br />
-        <div>{item.section}</div>
-      </div>
-    )
-  });
-};
-
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo04')}>
@@ -112,16 +99,14 @@ const CustomPage = (props) => (
               Arco de implicación.</small>
           </div>
 
-          <div className='unc-row unc-padding-1'>
-            {/* TODO: D3 */}
-            <h4 className='text-center'>El arco de la implicación</h4>
+          <div className='unc-row unc-padding-1'>content      <h4 className='text-center'>El arco de la implicación</h4>
             <div className='text-center'>
               <div id='obj-arco' className='unc-row-scalable' data-width='900' style={{ display: 'inline-block' }}>
                 <div className='unc-scalable'>
                   <img src='./assets/img/M04_IMG36.png' width='100%' />
                   <div
                     className='unc-circle unc-c1'
-                    onClick={() => popup(items[0])}
+                    onClick={() => Popup.open(items[0])}
                     style={{
                       left: '2%',
                       top: '80%',
@@ -129,7 +114,7 @@ const CustomPage = (props) => (
                     }}></div>
                   <div
                     className='unc-circle unc-c2'
-                    onClick={() => popup(items[1])}
+                    onClick={() => Popup.open(items[1])}
                     style={{
                       left: '41%',
                       top: '80%',
@@ -138,7 +123,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c3'
-                    onClick={() => popup(items[2])}
+                    onClick={() => Popup.open(items[2])}
                     style={{
                       left: '61%',
                       top: '80%',
@@ -147,7 +132,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c4'
-                    onClick={() => popup(items[3])}
+                    onClick={() => Popup.open(items[3])}
                     style={{
                       left: '81%',
                       top: '80%',

@@ -54,7 +54,7 @@ const CustomPage = (props) => (
           <Video videoId={315027846} />
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M04_IMG25.jpg',
                 label: (
@@ -113,7 +113,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M04_IMG09.jpg',
                 label: (

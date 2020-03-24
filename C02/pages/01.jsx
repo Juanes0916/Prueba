@@ -98,7 +98,7 @@ const CustomPage = (props) => (
               }}>
 
                 Ten presente que las respuestas no son almacenadas por el sistema.
-                Por lo tanto deberás llenar las áreas<br /> de texto y a continuación
+                Por lo tanto deberás llenar las áreas de texto y a continuación
                 hacer clic en <i>Descargar tus respuestas</i>.
               </small>
 

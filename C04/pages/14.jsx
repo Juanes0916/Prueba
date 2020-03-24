@@ -207,6 +207,8 @@ const CustomPage = (props) => (
             <UDCollapse summaryClassName='unc-summary module01' panels={panels} />
           </div>
 
+          <br />
+
           <div className='unc-row unc-padding-1'>
             <i>La primera subcategoría de la Propiedad Intelectual es el Derecho de Autor:</i>
           </div>
@@ -296,7 +298,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row unc-row-bgfull unc-bgfull-contain unc-padding-2'
-            data-url='./assets/img/M03_IMG_BG_FULL_V.png'>
+            style={{ backgroundImage: 'url(./assets/img/IMG_BG_FULL_V.png)' }}>
             <div className='unc-padding-1'>
               <ul>
                 <li>También se pueden registrar como marca el nombre o seudónimo de un artista o el

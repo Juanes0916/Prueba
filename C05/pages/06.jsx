@@ -1,10 +1,45 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars } from 'unc-react-creator';
+import { Page, Popup, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
-import ButtonPopup from '../../components/ButtonPopup1';
+
+const items = [
+  {
+    title: <h4>Prosumidores</h4>,
+    content: (
+      <div>
+        Aquellos que hacen una devolución con nuevos contenidos y expanden el universo
+        (la historia).
+      </div>
+    )
+  },
+  {
+    title: <h4>Los Fans</h4>,
+    content: (
+      <div>
+        Comparten contenidos de forma activa y participan online en conversaciones.
+      </div>
+    )
+  },
+  {
+    title: <h4>Consumidores de diferentes medios</h4>,
+    content: (
+      <div>
+        Los consumidores del universo narrativo en diferentes soportes.
+      </div>
+    )
+  },
+  {
+    title: <h4>Consumidores de un solo medio</h4>,
+    content: (
+      <div>
+        Audiencias de tv, oyentes de radio, lectores.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo05')}>
@@ -48,59 +83,22 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row unc-row-icon-title'>
-            <ButtonPopup
-              className='col-sm-3 unc-padding-1'
-              buttonClassName='pecc-913 unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Prosumidores</h5>,
-                content: (
-                  <div>
-                    Aquellos que hacen una devolución con nuevos contenidos y expanden el universo
-                    (la historia).
-                  </div>
-                )
-              }}
-              downTitle='Los prosumidores'
-            />
-            <ButtonPopup
-              className='col-sm-3 unc-padding-1'
-              buttonClassName='pecc-94d unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Los Fans</h5>,
-                content: (
-                  <div>
-                    Comparten contenidos de forma activa y participan online en conversaciones.
-                  </div>
-                )
-              }}
-              downTitle='Los fans'
-            />
-            <ButtonPopup
-              className='col-sm-3 unc-padding-1'
-              buttonClassName='pecc-996 unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Consumidores de diferentes medios</h5>,
-                content: (
-                  <div>
-                    Los consumidores del universo narrativo en diferentes soportes.
-                  </div>
-                )
-              }}
-              downTitle='Los consumidores de diferentes medios'
-            />
-            <ButtonPopup
-              className='col-sm-3 unc-padding-1'
-              buttonClassName='pecc-97a unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Consumidores de un solo medio</h5>,
-                content: (
-                  <div>
-
-                  </div>
-                )
-              }}
-              downTitle='Audiencias de tv, oyentes de radio, lectores.'
-            />
+            <div className='col-sm-3 unc-padding-1'>
+              <span className='pecc-913 unc-fill unc-clickeable' onClick={() => Popup.open(items[0])}></span>
+              <h5>Los prosumidores</h5>
+            </div>
+            <div className='col-sm-3 unc-padding-1'>
+              <span className='pecc-94d unc-fill unc-clickeable' onClick={() => Popup.open(items[1])}></span>
+              <h5>Los fans</h5>
+            </div>
+            <div className='col-sm-3 unc-padding-1'>
+              <span className='pecc-996 unc-fill unc-clickeable' onClick={() => Popup.open(items[2])}></span>
+              <h5>Los consumidores de diferentes medios</h5>
+            </div>
+            <div className='col-sm-3 unc-padding-1'>
+              <span className='pecc-97a unc-fill unc-clickeable' onClick={() => Popup.open(items[3])}></span>
+              <h5>Consumidores de un solo medio</h5>
+            </div>
           </div>
 
           <div className='unc-row unc-padding-1'>

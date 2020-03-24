@@ -22,7 +22,7 @@ const CustomPage = (props) => (
             producto creativo o el evento, nos sugiere seis tipologías generales de público:
           </div>
 
-          <UDCarousel steps={[
+          <UDCarousel className='unc-filter' steps={[
             {
               bgImage: './assets/img/M04_IMG07.jpg',
               label: (

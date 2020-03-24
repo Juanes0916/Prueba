@@ -83,6 +83,7 @@ const CustomPage = (props) => (
           <div className='unc-row'>
             <UDCollapse summaryClassName='unc-summary module06' panels={panels} />
           </div>
+          <br />
 
           <div className='unc-row unc-padding-1'>
             Por lo tanto, sugiere establecer:

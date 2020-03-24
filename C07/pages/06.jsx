@@ -72,7 +72,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M06_IMG28.jpg',
                 label: (

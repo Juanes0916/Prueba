@@ -1,9 +1,55 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
+import * as d3 from 'd3';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+import PieButtons from '../../components/PieButtons';
+
+const popups = [
+  {
+    title: (<h4>Público</h4>),
+    content: (
+      <div>
+        Persona que <strong>asiste</strong> a un espectáculo o evento.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Usuario</h4>),
+    content: (
+      <div>
+        Persona que <strong>usa tu producto</strong> o servicio para un bien propio.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Cliente</h4>),
+    content: (
+      <div>
+        Persona que <strong>paga por los productos</strong> o servicios que le puedes ofrecer.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Audiencia</h4>),
+    content: (
+      <div>
+        Persona que <strong>interactua</strong> con tu empresa a través de cualquier medio
+        de comunicación.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Consumidor</h4>),
+    content: (
+      <div>
+        Persona que <strong>consume</strong> tu producto o servicio.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo04')}>
@@ -28,6 +74,19 @@ const CustomPage = (props) => (
             </div>
 
             <div className='text-center'>
+              <div className='unc-row text-center'>
+                <PieButtons
+                  textData={[
+                    ['1. Publico'],
+                    ['2. Usuario'],
+                    ['3. Cliente'],
+                    ['4. Audiencia'],
+                    ['5. Consumidor']
+                  ]}
+                  color={d3.scaleOrdinal(['#35387f', '#666db1', '#9a9bcb'])}
+                  popups={popups}
+                />
+              </div>
               {/* TODO: D3 */}
               <svg id='unc-mercado6-pie'></svg>
             </div>

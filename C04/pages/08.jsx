@@ -11,7 +11,6 @@ import {
 import classNames from 'classnames';
 
 import Header from '../components/Header';
-import ButtonPopup from '../../components/ButtonPopup1';
 
 const audios = [
   {
@@ -109,6 +108,53 @@ const audios = [
   }
 ];
 
+const items = [
+  {
+    title: <h4>Trabajo de campo</h4>,
+    content: (
+      <div>
+        Implica la realización de estrategias, técnicas y herramientas que
+        permitan el diálogo y la construcción colectiva entre los actores
+        involucrados. Este momento invita a poner las percepciones,
+        aprendizajes y conocimientos individuales en un mismo plano para
+        conectarlos y generar un nuevo relato, basado en la evidencia, según
+        la experiencia individual de cada persona, experiencias todas que serán
+        las fuentes primarias.
+        <br /><br />
+
+        Algunas estrategias pueden ser entrevistas, grupos focales, talleres
+        participativos, diarios de campo, líneas del tiempo y conversatorios,
+        todos con herramientas y preguntas sobre qué se hizo, cómo se hizo y
+        qué se aprendió, o con momentos, hitos o aprendizajes significativos.
+      </div>
+    )
+  },
+  {
+    title: <h4>Análisis de resultados</h4>,
+    content: (
+      <div>
+        Fase dedicada a la interpretación de los resultados, para proceder a
+        las conclusiones acerca de nuestro proyecto, proceso o práctica. Este
+        análisis triangula toda la información recopilada desde la fase
+        documental para encontrar similitudes y diferencias y categorizar los
+        elementos comunes que responda a las preguntas eje.
+      </div>
+    )
+  },
+  {
+    title: <h4>Conclusiones</h4>,
+    content: (
+      <div>
+        Surgen de la interpretación que realizamos en la fase anterior. En
+        este punto la información se convierte conocimiento; es decir, en un
+        resultado tangible que puede ser divulgado, compartido y posible de
+        transferir a otras experiencias o contextos, a partir de varias
+        estrategias de comunicación.
+      </div>
+    )
+  }
+];
+
 const popup = (audio) => {
   Popup.open({
     content: (
@@ -194,72 +240,18 @@ const CustomPage = (props) => (
                     <span className='btn-label'><i className='icon-volume-2'></i></span>
                     Escuchar audios
                   </button>
-
-                  <div>
-                    <ButtonPopup
-                      buttonClassName='unc-button'
-                      icon='icon-speech'
-                      title='Trabajo de campo'
-                      popup={{
-                        title: <h5>Trabajo de campo</h5>,
-                        content: (
-                          <div>
-                            Implica la realización de estrategias, técnicas y herramientas que
-                            permitan el diálogo y la construcción colectiva entre los actores
-                            involucrados. Este momento invita a poner las percepciones,
-                            aprendizajes y conocimientos individuales en un mismo plano para
-                            conectarlos y generar un nuevo relato, basado en la evidencia, según
-                            la experiencia individual de cada persona, experiencias todas que serán
-                            las fuentes primarias.
-                            <br /><br />
-
-                            Algunas estrategias pueden ser entrevistas, grupos focales, talleres
-                            participativos, diarios de campo, líneas del tiempo y conversatorios,
-                            todos con herramientas y preguntas sobre qué se hizo, cómo se hizo y
-                            qué se aprendió, o con momentos, hitos o aprendizajes significativos.
-                          </div>
-                        )
-                      }}
-                    />
-                  </div>
-                  <div style={{ marginTop: '-1.5em' }}>
-                    <ButtonPopup
-                      buttonClassName='unc-button'
-                      icon='icon-speech'
-                      title='Análisis de resultados'
-                      popup={{
-                        title: <h5>Análisis de resultados</h5>,
-                        content: (
-                          <div>
-                            Fase dedicada a la interpretación de los resultados, para proceder a
-                            las conclusiones acerca de nuestro proyecto, proceso o práctica. Este
-                            análisis triangula toda la información recopilada desde la fase
-                            documental para encontrar similitudes y diferencias y categorizar los
-                            elementos comunes que responda a las preguntas eje.
-                          </div>
-                        )
-                      }}
-                    />
-                  </div>
-                  <div style={{ marginTop: '-1.5em' }}>
-                    <ButtonPopup
-                      buttonClassName='unc-button'
-                      icon='icon-speech'
-                      title='Conclusiones'
-                      popup={{
-                        title: <h5>Conclusiones</h5>,
-                        content: (
-                          <div>
-                            Surgen de la interpretación que realizamos en la fase anterior. En
-                            este punto la información se convierte conocimiento; es decir, en un
-                            resultado tangible que puede ser divulgado, compartido y posible de
-                            transferir a otras experiencias o contextos, a partir de varias
-                            estrategias de comunicación.
-                          </div>
-                        )
-                      }}
-                    />
-                  </div>
+                  <button className='unc-button' onClick={() => Popup.open(items[0])}>
+                    <span className='btn-label'><i className='icon-speech'></i></span>
+                    Trabajo de campo
+                  </button>
+                  <button className='unc-button' onClick={() => Popup.open(items[1])}>
+                    <span className='btn-label'><i className='icon-speech'></i></span>
+                    Análisis de resultados
+                  </button>
+                  <button className='unc-button' onClick={() => Popup.open(items[2])}>
+                    <span className='btn-label'><i className='icon-speech'></i></span>
+                    Conclusiones
+                  </button>
                 </div>
               </div>
             </div>

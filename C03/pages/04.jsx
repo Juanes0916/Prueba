@@ -8,20 +8,59 @@ import {
 import classNames from 'classnames';
 
 import Header from '../components/Header';
-import ButtonPopup from '../../components/ButtonPopup1';
 
 const items = [
   {
-    title: (<h5>Absorción</h5>),
-    section: (
+    title: (<h4>Sensoriales</h4>),
+    content: (
+      <div>
+        Implican percepciones sensoriales: olfato, vista, tacto, oído, gusto.
+      </div>
+    )
+  },
+  {
+    title: (<h4>De los sentimientos</h4>),
+    content: (
+      <div>
+        Implican los sentimientos y las emociones.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Del pensamiento</h4>),
+    content: (
+      <div>
+        Apelan al intelecto con el propósito de crear experiencias cognitivas que
+        resuelvan problemas y que atraigan a los clientes.
+      </div>
+    )
+  },
+  {
+    title: (<h4>De actuaciones</h4>),
+    content: (
+      <div>
+        Implican cuestiones físicas y se proponen afectar experiencias corporales,
+        estilos de vida e interacciones.
+      </div>
+    )
+  },
+  {
+    title: (<h4>De relaciones</h4>),
+    content: (
+      <div>Experiencias que son el resultado de relaciones con un grupo.</div>
+    )
+  },
+  {
+    title: (<h4>Absorción</h4>),
+    content: (
       <div>
         La absorción se relaciona con lo que mantiene la atención consciente de las personas.
       </div>
     )
   },
   {
-    title: (<h5>Participación activa</h5>),
-    section: (
+    title: (<h4>Participación activa</h4>),
+    content: (
       <div>
         La participación activa involucra a un cliente que lo afecta en lo personal un evento
         cualquiera.
@@ -29,16 +68,16 @@ const items = [
     )
   },
   {
-    title: (<h5>Inmersión</h5>),
-    section: (
+    title: (<h4>Inmersión</h4>),
+    content: (
       <div>
         La inmersión involucra a ese individuo en la experiencia, en el plano físico o virtual.
       </div>
     )
   },
   {
-    title: (<h5>Participación pasiva</h5>),
-    section: (
+    title: (<h4>Participación pasiva</h4>),
+    content: (
       <div>
         La participación pasiva afecta a los clientes que no influyen de forma directa en las
         actuaciones.
@@ -46,8 +85,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Entretenimiento</h5>),
-    section: (
+    title: (<h4>Entretenimiento</h4>),
+    content: (
       <div>
         El entretenimiento involucra a un cliente que absorbe de manera pasiva la experiencia
         por medio de sus sentidos.
@@ -55,8 +94,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Educación</h5>),
-    section: (
+    title: (<h4>Educación</h4>),
+    content: (
       <div>
         La experiencia educativa incluye de forma activa esa experiencia en la mente de ese
         cliente, porque aumenta sus conocimientos o habilidades.
@@ -64,8 +103,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Escapista</h5>),
-    section: (
+    title: (<h4>Escapista</h4>),
+    content: (
       <div>
         La experiencia escapista involucra encuentros memorables que sumergen e involucran
         de forma activa a ese cliente.
@@ -73,26 +112,14 @@ const items = [
     )
   },
   {
-    title: (<h5>Estética</h5>),
-    section: (
+    title: (<h4>Estética</h4>),
+    content: (
       <div>
         La experiencia estética lo sumerge en un ambiente.
       </div>
     )
   }
 ];
-
-const popup = (item) => {
-  Popup.open({
-    content: (
-      <div className='unc-title'>
-        <div className='unc-title' style={{ color: '#9a10b2', textAlign: 'center' }}>{item.title}</div>
-        <br />
-        <div>{item.section}</div>
-      </div>
-    )
-  });
-};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -110,7 +137,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M02_IMG04.jpg',
                 label: (
@@ -174,69 +201,26 @@ const CustomPage = (props) => (
           </div>
 
           <div className='row unc-row-icon-title'>
-            <ButtonPopup
-              className='col-md-4 unc-padding-1'
-              buttonClassName='pecc-927 unc-fill unc-clickeable'
-              popup={{
-                title: (
-                  <h5>Sensoriales</h5>
-                ),
-                content: (
-                  <div>Implican percepciones sensoriales: olfato, vista, tacto, oído, gusto.</div>
-                )
-              }}
-              downTitle='Sensorial'
-            />
-            <ButtonPopup
-              className='col-md-4 unc-padding-1'
-              buttonClassName='pecc-916 unc-fill unc-clickeable'
-              popup={{
-                title: (<h5>De los sentimientos</h5>),
-                content: (
-                  <div>Implican los sentimientos y las emociones.</div>
-                )
-              }}
-              downTitle='De los sentimientos'
-            />
-            <ButtonPopup
-              className='col-md-4 unc-padding-1'
-              buttonClassName='pecc-973 unc-fill unc-clickeable'
-              popup={{
-                title: (<h5>Del pensamiento</h5>),
-                content: (
-                  <div>
-                    Apelan al intelecto con el propósito de crear experiencias cognitivas que
-                    resuelvan problemas y que atraigan a los clientes.
-                  </div>
-                )
-              }}
-              downTitle='Del pensamiento'
-            />
-            <ButtonPopup
-              className='col-md-7 col-sm-2 unc-padding-1'
-              buttonClassName='pecc-94c unc-fill unc-clickeable'
-              popup={{
-                title: (<h5>De actuaciones</h5>),
-                content: (
-                  <div>
-                    Implican cuestiones físicas y se proponen afectar experiencias corporales,
-                    estilos de vida e interacciones.
-                  </div>
-                )
-              }}
-              downTitle='De actuaciones'
-            />
-            <ButtonPopup
-              className='col-md-2 unc-padding-1'
-              buttonClassName='pecc-902 unc-fill unc-clickeable'
-              popup={{
-                title: (<h5>De relaciones</h5>),
-                content: (
-                  <div>Experiencias que son el resultado de relaciones con un grupo.</div>
-                )
-              }}
-              downTitle='De relaciones'
-            />
+            <div className='col-md-4 unc-padding-1'>
+              <span className='pecc-927 unc-fill unc-clickeable' onClick={() => Popup.open(items[0])}></span>
+              <h5>Sensorial</h5>
+            </div>
+            <div className='col-md-4 unc-padding-1'>
+              <span className='pecc-916 unc-fill unc-clickeable' onClick={() => Popup.open(items[1])}></span>
+              <h5>De los sentimientos</h5>
+            </div>
+            <div className='col-md-4 unc-padding-1'>
+              <span className='pecc-973 unc-fill unc-clickeable' onClick={() => Popup.open(items[2])}></span>
+              <h5>Del pensamiento</h5>
+            </div>
+            <div className='col-md-4 offset-sm-2 unc-padding-1'>
+              <span className='pecc-94c unc-fill unc-clickeable' onClick={() => Popup.open(items[3])}></span>
+              <h5>De actuaciones</h5>
+            </div>
+            <div className='col-md-4 unc-padding-1'>
+              <span className='pecc-902 unc-fill unc-clickeable' onClick={() => Popup.open(items[4])}></span>
+              <h5>De relaciones</h5>
+            </div>
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -275,7 +259,7 @@ const CustomPage = (props) => (
               <img src='./assets/img/M02_IMG29.png' width='50%' />
               <div
                 className='unc-rect unc-c1'
-                onClick={() => popup(items[0])}
+                onClick={() => Popup.open(items[5])}
                 style={{
                   left: '46%',
                   top: '1%',
@@ -285,7 +269,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c2'
-                onClick={() => popup(items[1])}
+                onClick={() => Popup.open(items[6])}
                 style={{
                   left: '65.5%',
                   top: '44%',
@@ -295,7 +279,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c3'
-                onClick={() => popup(items[2])}
+                onClick={() => Popup.open(items[7])}
                 style={{
                   left: '46%',
                   top: '94%',
@@ -305,7 +289,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c4'
-                onClick={() => popup(items[3])}
+                onClick={() => Popup.open(items[8])}
                 style={{
                   left: '24.5%',
                   top: '45%',
@@ -315,7 +299,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c5'
-                onClick={() => popup(items[4])}
+                onClick={() => Popup.open(items[9])}
                 style={{
                   left: '36%',
                   top: '28.5%',
@@ -325,7 +309,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c6'
-                onClick={() => popup(items[5])}
+                onClick={() => Popup.open(items[10])}
                 style={{
                   left: '53%',
                   top: '28.5%',
@@ -335,7 +319,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c7'
-                onClick={() => popup(items[6])}
+                onClick={() => Popup.open(items[11])}
                 style={{
                   left: '53%',
                   top: '65%',
@@ -345,7 +329,7 @@ const CustomPage = (props) => (
               </div>
               <div
                 className='unc-rect unc-c8'
-                onClick={() => popup(items[7])}
+                onClick={() => Popup.open(items[12])}
                 style={{
                   left: '39%',
                   top: '65%',

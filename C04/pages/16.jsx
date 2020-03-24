@@ -1,6 +1,7 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import {
   Page,
+  Popup,
   UDScrollbars,
   UDCarousel,
   Video
@@ -9,7 +10,40 @@ import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
-import ButtonPopup from '../../components/ButtonPopup1';
+
+const items = [
+  {
+    title: <h4>Leyes</h4>,
+    content: (
+      <div>
+        Las emite el poder legislativo.
+      </div>
+    )
+  },
+  {
+    title: <h4>Decretos</h4>,
+    content: (
+      <div>
+        Los emite el poder ejecutivo. Los decretos reglamentan el hacer cultural.
+      </div>
+    )
+  },
+  {
+    title: <h4>Políticas</h4>,
+    content: (
+      <div>
+        Son consideradas cajas de herramientas para la gestión cultural. En ellas
+        se encuentran consignados las ideas, sueños, proyecciones y lineamientos
+        a través de los cuales se ha querido proyectar este país multiétnico y
+        pluricultural. Las políticas culturales son intervenciones realizadas por
+        el Gobierno, las instituciones civiles y los grupos humanos organizados
+        para promover, fomentar y orientar el desarrollo artístico y cultural;
+        satisfacer las necesidades culturales de la población y obtener consenso
+        para un tipo de orden o transformación social.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo01')}>
@@ -128,52 +162,18 @@ const CustomPage = (props) => (
           </div>
 
           <div className='row unc-row-icon-title'>
-            <ButtonPopup
-              className='col-sm-4 unc-padding-1'
-              buttonClassName='pecc-107 unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Leyes</h5>,
-                content: (
-                  <div>
-                    Las emite el poder legislativo.
-                  </div>
-                )
-              }}
-              downTitle='Leyes'
-            />
-            <ButtonPopup
-              className='col-sm-4 unc-padding-1'
-              buttonClassName='pecc-107 unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Decretos</h5>,
-                content: (
-                  <div>
-                    Los emite el poder ejecutivo. Los decretos reglamentan el hacer cultural.
-                  </div>
-                )
-              }}
-              downTitle='Decretos'
-            />
-            <ButtonPopup
-              className='col-sm-4 unc-padding-1'
-              buttonClassName='pecc-107 unc-fill unc-clickeable'
-              popup={{
-                title: <h5>Políticas</h5>,
-                content: (
-                  <div>
-                    Son consideradas cajas de herramientas para la gestión cultural. En ellas
-                    se encuentran consignados las ideas, sueños, proyecciones y lineamientos
-                    a través de los cuales se ha querido proyectar este país multiétnico y
-                    pluricultural. Las políticas culturales son intervenciones realizadas por
-                    el Gobierno, las instituciones civiles y los grupos humanos organizados
-                    para promover, fomentar y orientar el desarrollo artístico y cultural;
-                    satisfacer las necesidades culturales de la población y obtener consenso
-                    para un tipo de orden o transformación social.
-                  </div>
-                )
-              }}
-              downTitle='Políticas'
-            />
+            <div className='col-sm-4 unc-padding-1'>
+              <span className='pecc-107 unc-fill unc-clickeable' onClick={() => Popup.open(items[0])}></span>
+              <h5>Leyes</h5>
+            </div>
+            <div className='col-sm-4 unc-padding-1'>
+              <span className='pecc-104 unc-fill unc-clickeable' onClick={() => Popup.open(items[1])}></span>
+              <h5>Decretos</h5>
+            </div>
+            <div className='col-sm-4 unc-padding-1'>
+              <span className='pecc-109 unc-fill unc-clickeable' onClick={() => Popup.open(items[2])}></span>
+              <h5>Políticas</h5>
+            </div>
           </div>
 
           <div className='unc-row unc-padding-1'>
@@ -248,6 +248,9 @@ const CustomPage = (props) => (
             Esa línea te permitirá ser exitoso, diferente y sostenible, pero teniendo en cuenta o
             sabiendo en qué marco normativo de mueves, porque es el que te da la posibilidad de
             fomentar tu quehacer, cumplir con tus objetivos de impacto y proteger tus creaciones.
+            <br /><br />
+
+            Mira lo que en este sentido nos cuenta el <strong>Grupo Crea</strong>:
           </div>
 
           <Video videoId={318951978} />

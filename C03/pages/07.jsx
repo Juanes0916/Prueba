@@ -1,9 +1,96 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
+import * as d3 from 'd3';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
+import PieButtons from '../../components/PieButtons';
+
+const popups = [
+  {
+    title: (<h4>Público</h4>),
+    content: (
+      <div>Persona que <strong>asiste</strong> a un espectáculo o evento.</div>
+    )
+  },
+  {
+    title: (<h4>Usuario</h4>),
+    content: (
+      <div>
+        Persona que <strong>usa tu producto</strong> o servicio para un bien propio.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Cliente</h4>),
+    content: (
+      <div>
+        Persona que <strong>paga por los productos</strong> o servicios que le puedes ofrecer.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Audiencia</h4>),
+    content: (
+      <div>
+        Persona que <strong>interactua</strong> con tu empresa a través de cualquier medio de
+        comunicación.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Consumidor</h4>),
+    content: (
+      <div>Persona que <strong>consume</strong> tu producto o servicio</div>
+    )
+  }
+];
+
+const popups1 = [
+  {
+    title: (<h4>Público</h4>),
+    content: (
+      <div>
+        En el caso del Cirque Du Soleil generalmente son niños con sus familias.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Usuario</h4>),
+    content: (
+      <div>
+        En el caso del Cirque Du Soleil generalmente son niños.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Cliente</h4>),
+    content: (
+      <div>
+        En el caso del Cirque Du Soleil es el padre.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Audiencia</h4>),
+    content: (
+      <div>
+        En el caso del Cirque Du Soleil es el padre.
+      </div>
+    )
+  },
+  {
+    title: (<h4>Consumidor</h4>),
+    content: (
+      <div>
+        En el caso del Cirque Du Soleil quiénes consumen las películas o las bandas sonoras
+        son adultos, otros clientes (que paguen por sus servicios) pueden ser empresas privadas
+        o marcas de gran consumo.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo02')}>
@@ -29,9 +116,18 @@ const CustomPage = (props) => (
                 los roles</small>
             </div>
 
-            {/* TODO: D3 */}
-            <div className='text-center'>
-              <svg id='unc-mercado-pie'></svg>
+            <div className='unc-row text-center'>
+              <PieButtons
+                textData={[
+                  ['1. Publico'],
+                  ['2. Usuario'],
+                  ['3. Cliente'],
+                  ['4. Audiencia'],
+                  ['5. Consumidor']
+                ]}
+                color={d3.scaleOrdinal(['#9a10b2', '#c936e2', '#9c37ad'])}
+                popups={popups}
+              />
             </div>
 
             Para ilustrar estas diferencias te hablaremos del caso del <strong><i>Cirque Du
@@ -69,9 +165,18 @@ const CustomPage = (props) => (
                 roles</small>
             </div>
 
-            {/* TODO: D3 */}
-            <div className='text-center'>
-              <svg id='unc-mercado-pie-2'></svg>
+            <div className='unc-row text-center'>
+              <PieButtons
+                textData={[
+                  ['1. Publico'],
+                  ['2. Usuario'],
+                  ['3. Cliente'],
+                  ['4. Audiencia'],
+                  ['5. Consumidor']
+                ]}
+                color={d3.scaleOrdinal(['#9a10b2', '#c936e2', '#9c37ad'])}
+                popups={popups1}
+              />
             </div>
 
             Una vez tienes bien identificados tus públicos podrás:

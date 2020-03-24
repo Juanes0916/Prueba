@@ -1,10 +1,68 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, UDCarousel } from 'unc-react-creator';
+import {
+  Page,
+  Popup,
+  UDScrollbars,
+  UDCarousel
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
 import DegrantImage from '../../components/DegrantImage';
-import ButtonPopup from '../../components/ButtonPopup1';
+
+const items = [
+  {
+    title: '',
+    content: (
+      <div>Ser más conscientes: respeto a las culturas y al impacto social ambiental.</div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>Hacer un consumo diferente: reducirlo como acción sostenible.</div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>Poseer más información en línea: webs, redes sociales y comunidades.</div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>
+        Ser más desprendidos: preferirán la economía colaborativa y serán más
+        conscientes del consumo.
+      </div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>
+        Ser más exigente: con conceptos que influyen en la determinación de la
+        compra.
+      </div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>
+        Ser más transparentes en la compra: buscan la verdad sobre lo que
+        consumirán.
+      </div>
+    )
+  },
+  {
+    title: '',
+    content: (
+      <div>Obrar de forma correcta.</div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo06')}>
@@ -42,82 +100,27 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row row unc-row-icon-title'>
-            <ButtonPopup
-              className='col-sm-1 offset-sm-2 unc-padding-1'
-              buttonClassName='pecc-973 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Ser más conscientes: respeto a las culturas y al impacto social ambiental.</p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-920 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Hacer un consumo diferente: reducirlo como acción sostenible.</p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-969 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Poseer más información en línea: webs, redes sociales y comunidades.</p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-947 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Ser más desprendidos: preferirán la economía colaborativa y serán más
-                  conscientes del consumo.
-                  </p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-907 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Ser más exigente: con conceptos que influyen en la determinación de la
-                  compra.
-                  </p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-90c unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Ser más transparentes en la compra: buscan la verdad sobre lo que
-                  consumirán.
-                  </p>
-                )
-              }}
-            />
-            <ButtonPopup
-              className='col-sm-1 unc-padding-1'
-              buttonClassName='pecc-977 unc-fill unc-clickeable'
-              popup={{
-                title: <h4></h4>,
-                content: (
-                  <p>Obrar de forma correcta.</p>
-                )
-              }}
-            />
+            <div className='col-sm-1 offset-sm-2 unc-padding-1'>
+              <span className='pecc-973 unc-fill unc-clickeable' onClick={() => Popup.open(items[0])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-920 unc-fill unc-clickeable' onClick={() => Popup.open(items[1])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-969 unc-fill unc-clickeable' onClick={() => Popup.open(items[2])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-947 unc-fill unc-clickeable' onClick={() => Popup.open(items[3])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-907 unc-fill unc-clickeable' onClick={() => Popup.open(items[4])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-90c unc-fill unc-clickeable' onClick={() => Popup.open(items[5])}></span>
+            </div>
+            <div className='col-sm-1 unc-padding-1'>
+              <span className='pecc-977 unc-fill unc-clickeable' onClick={() => Popup.open(items[6])}></span>
+            </div>
           </div>
 
           <div className='unc-row unc-padding-1'>

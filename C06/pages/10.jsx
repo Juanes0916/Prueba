@@ -30,7 +30,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M04_IMG20.jpg',
                 label: (
@@ -99,7 +99,7 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row'>
-            <UDCarousel steps={[
+            <UDCarousel className='unc-filter' steps={[
               {
                 bgImage: './assets/img/M04_IMG21.jpg',
                 label: (
@@ -118,13 +118,13 @@ const CustomPage = (props) => (
                 bgImage: './assets/img/M04_IMG21.jpg',
                 label: (
                   <div>
-                    En el museo se construyó el Área Focal, Daniel Sprick, un reconocido artista
-                    estadounidense, en una zona con un entorno estético-interactivo, diseñado
-                    para atraer a aquellos visitantes que quieran adquirir un conocimiento y una
-                    perspectiva contextual profunda mediante la lectura y visionado materiales
-                    relacionados con las pinturas. Estas se muestran colgadas en una alcoba
-                    junto a un sofá, en el que se dispone de un cuadernillo, dividido en
-                    apartados que abordan cuatro áreas distintas de la pintura.
+                    Cada apartado puede desplegarse para mostrar una serie de fotos que ilustran
+                    la pintura en diferentes fases del proceso de Sprick, y que van acompañadas
+                    de citas del artista y de leyendas explicativas. También junto al sofá aparecen
+                    dos juegos de seis tarjetas con una lista de preguntas frecuentes, colgadas
+                    para permitir consultarlas con facilidad. Cada tarjeta contiene una pregunta,
+                    formulada en principio por algún visitante, con una respuesta en palabras del
+                    propio artista en el reverso.
                   </div>
                 )
               },

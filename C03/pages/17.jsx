@@ -61,7 +61,7 @@ const CustomPage = (props) => (
           <div className='unc-row unc-padding-1 row'>
             <div className='col-sm-6 unc-padding-1'>
               <div className='unc-row-prompt'>
-                <a href='http://innovacionparatodos.com/content/pecc/docs/Anexo_5_Comunicaci%c3%b3n_cultural.pdf'
+                <a href='./assets/files/Anexo_5_Comunicaci%c3%b3n_cultural.pdf'
                   target='_blank' className='pecc-112 unc-fill unc-clickeable'></a>
                 <div className='unc-prompt-title'>Documentos en biblioteca</div>
                 <div className='unc-prompt-description'>Información sobre comunicación estratégica y canales de comunicación.

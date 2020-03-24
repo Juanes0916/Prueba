@@ -6,8 +6,8 @@ import Header from '../components/Header';
 
 const items = [
   {
-    title: (<h3>Generar confianza</h3>),
-    section: (
+    title: (<h4>Generar confianza</h4>),
+    content: (
       <div>
         Una historia no sólo cuenta una realidad de manera diferente sino que muestra su
         lado diferente. Da a conocer aspectos desconocidos y genera confianza.
@@ -15,8 +15,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Son fáciles de recordar</h3>),
-    section: (
+    title: (<h4>Son fáciles de recordar</h4>),
+    content: (
       <div>
         Una historia logra plasmar una secuencia y un flujo de hechos, que hacen que se
         recuerden con facilidad.
@@ -24,8 +24,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Son fáciles de contar</h3>),
-    section: (
+    title: (<h4>Son fáciles de contar</h4>),
+    content: (
       <div>
         Al ser fáciles de recordar también son fáciles de transmitir. Las historias se
         comparten, generando el voz a voz.
@@ -33,8 +33,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Brinda contexto a los datos</h3>),
-    section: (
+    title: (<h4>Brinda contexto a los datos</h4>),
+    content: (
       <div>
         Una buena historia ayuda a influir en cómo la gente interpreta los datos. Da un
         contexto sobre el que los datos tienen sentido y se relacionan.
@@ -42,8 +42,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Las historias se aman</h3>),
-    section: (
+    title: (<h4>Las historias se aman</h4>),
+    content: (
       <div>
         Nos encanta una buena historia y no nos cansamos de escucharla una y otra vez.
         Hacen lo complejo simple y dan una dimensión diferente a la cotidianidad.
@@ -51,8 +51,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Crean mayor conexión</h3>),
-    section: (
+    title: (<h4>Crean mayor conexión</h4>),
+    content: (
       <div>
         Crean una conexión profunda y emocional, diferente a todos los demás argumentos
         funcionales y de desempeño que pueda estar dando a su cliente potencial.
@@ -60,8 +60,8 @@ const items = [
     )
   },
   {
-    title: (<h3>Apelan al lado emocional</h3>),
-    section: (
+    title: (<h4>Apelan al lado emocional</h4>),
+    content: (
       <div>
         Todos tenemos un corazón. Una historia nos hace humanos y cercanos y convierte
         la imagen fría de una empresa anónima en personas en las cuales se puede confiar.
@@ -69,18 +69,6 @@ const items = [
     )
   }
 ];
-
-const popup = (item) => {
-  Popup.open({
-    content: (
-      <div className='unc-title'>
-        <div className='unc-title' style={{ color: '#00607c', textAlign: 'center' }}>{item.title}</div>
-        <br />
-        <div>{item.section}</div>
-      </div>
-    )
-  });
-};
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo05')}>
@@ -121,7 +109,7 @@ const CustomPage = (props) => (
                   <img src='./assets/img/M05_IMG40.jpg' width='50%' />
                   <div
                     className='unc-circle unc-c1'
-                    onClick={() => popup(items[0])}
+                    onClick={() => Popup.open(items[0])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -132,7 +120,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c2'
-                    onClick={() => popup(items[1])}
+                    onClick={() => Popup.open(items[1])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -143,7 +131,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c3'
-                    onClick={() => popup(items[2])}
+                    onClick={() => Popup.open(items[2])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -154,7 +142,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c4'
-                    onClick={() => popup(items[3])}
+                    onClick={() => Popup.open(items[3])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -165,7 +153,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c5'
-                    onClick={() => popup(items[4])}
+                    onClick={() => Popup.open(items[4])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -176,7 +164,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c6'
-                    onClick={() => popup(items[5])}
+                    onClick={() => Popup.open(items[5])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
@@ -187,7 +175,7 @@ const CustomPage = (props) => (
                   </div>
                   <div
                     className='unc-circle unc-c7'
-                    onClick={() => popup(items[6])}
+                    onClick={() => Popup.open(items[6])}
                     style={{
                       borderRadius: '50%',
                       height: '25%',
