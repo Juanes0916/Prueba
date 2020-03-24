@@ -453,6 +453,11 @@ text = rgb(71,74,76)
 		content "\e999"
 
 ModuleStyle(module, color, mod, CA)
+	.unc-popup-container
+		.unc-popup-header
+			h4
+				color color
+
 	.unc-pecc-wrapper
 		&.{module},
 		.{module}
@@ -668,13 +673,19 @@ ModuleStyle(module, color, mod, CA)
 			.unc-collapse
 				.unc-summary
 						background-color color
-							
-// ModuleStyle('unc-modulo01', m01, 'M01', m01c)
-// ModuleStyle('unc-modulo02', m02, 'M02', m02c)
-// ModuleStyle('unc-modulo03', m03, 'M03', m03c)
-// ModuleStyle('unc-modulo04', m04, 'M04', m04c)
-// ModuleStyle('unc-modulo05', m05, 'M05', m05c)
-// ModuleStyle('unc-modulo06', m06, 'M06', m06c)
+			
+			.unc-carousel
+				&.unc-filter
+					.unc-background
+						&:before
+							background-color: rgba(color, .7)
+							content ''
+							height 100%
+							left 0
+							position absolute
+							top 0
+							width 100%
+							z-index 1
 
 ColorCircle(class, color)
 	#unc-wrapper

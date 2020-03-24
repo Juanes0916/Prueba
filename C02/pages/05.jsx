@@ -1,8 +1,49 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { Page, UDScrollbars } from 'unc-react-creator';
 import classNames from 'classnames';
+import * as d3 from 'd3';
 
 import Header from '../components/Header';
+import PieButtons from '../../components/PieButtons';
+
+const popups = [
+  {
+    title: (<h4>¿A qué se refiere?</h4>),
+    content: (
+      <div>
+        La innovación social se refiere a una acción endógena o intervención exógena de
+        desarrollo social, por medio de un cambio original/novedoso, en la prestación
+        de un servicio o en la producción de un bien, que logra resultados positivos
+        frente a una o más situaciones de pobreza, marginalidad, discriminación, exclusión
+        o riesgo social y que tiene potencial de ser replicable o reproducible, según
+        describe el filósofo chileno Martín Hopenhayn, exdirector de la División de
+        Desarrollo Social de la Comisión Económica para América Latina y el Caribe (CEPAL).
+      </div>
+    )
+  },
+  {
+    title: (<h4>¿Se puede escalar?</h4>),
+    content: (
+      <div>
+        A veces, la innovación social puede ser escalada e introducida a un mercado o adoptada
+        por el estado para ser replicable en otros contextos. Esto último está estrechamente
+        relacionado con la doble naturaleza de los emprendimientos creativos y culturales
+        antes mencionada.
+      </div>
+    )
+  },
+  {
+    title: (<h4>¿Cuándo se da la innovación social?</h4>),
+    content: (
+      <div>
+          La innovación social se da cuando las necesidades de una comunidad no pueden ser
+          resueltas ni por el estado ni por el mercado y emergen así soluciones que solventan
+          dicha necesidad, apropiadas por la comunidad y que tienen la
+          posibilidad de ser replicables.
+      </div>
+    )
+  }
+];
 
 const CustomPage = (props) => (
   <Page {...props} className={classNames(props.className, 'unc-pecc-wrapper', 'unc-modulo03')}>
@@ -39,8 +80,17 @@ const CustomPage = (props) => (
           </div>
 
           <div className='unc-row text-center'>
-            { /* TODO: D3 */}
-            <svg id='unc-innovacion-social-pie'></svg>
+            <PieButtons
+              textData={[
+                ['¿A qué se refiere?'],
+                ['¿Se puede escalar?'],
+                ['¿Cuándo se da la?', 'innovación social'],
+                ['Innovación Social']
+              ]}
+              color={d3.scaleOrdinal(['#9d1844', '#7c1236', '#c85c80'])}
+              lastCenter={true}
+              popups={popups}
+            />
           </div>
 
           <div className='unc-row unc-padding-1'>

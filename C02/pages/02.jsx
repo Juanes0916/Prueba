@@ -18,10 +18,11 @@ const CustomPage = (props) => (
 
           <div className='unc-row unc-padding-1'>
             De una obsesión y una necesidad de contar historias nació Mowies
-            (<a href='http://www.mowies.com'>www.mowies.com</a>), hoy una plataforma virtual en la
-            que cualquier realizador y productor puede ofrecer su trabajo audiovisual, con pocos
-            intermediarios y con un contacto casi directo con el consumidor. Además, con la
-            posibilidad de que otros la difundan y todos perciban valor a través de ello.
+            (<a href='http://www.mowies.com' target='_blank'>www.mowies.com</a>), hoy una
+            plataforma virtual en la que cualquier realizador y productor puede ofrecer su
+            trabajo audiovisual, con pocos intermediarios y con un contacto casi directo
+            con el consumidor. Además, con la posibilidad de que otros la difundan y todos
+            perciban valor a través de ello.
             <br /><br />
             Alejandro Arango, su creador, dice que el esfuerzo por grabar una película lo dejó
             arruinado y, ante la negativa y las pocas o escasas posibilidades de comercializarla,
