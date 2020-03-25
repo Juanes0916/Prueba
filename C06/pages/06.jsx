@@ -1,5 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, UDScrollbars, Popup } from 'unc-react-creator';
+import {
+  Page,
+  UDScrollbars,
+  UDScalable,
+  Popup
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -99,49 +104,59 @@ const CustomPage = (props) => (
               Arco de implicación.</small>
           </div>
 
-          <div className='unc-row unc-padding-1'>content      <h4 className='text-center'>El arco de la implicación</h4>
-            <div className='text-center'>
-              <div id='obj-arco' className='unc-row-scalable' data-width='900' style={{ display: 'inline-block' }}>
-                <div className='unc-scalable'>
-                  <img src='./assets/img/M04_IMG36.png' width='100%' />
-                  <div
-                    className='unc-circle unc-c1'
-                    onClick={() => Popup.open(items[0])}
-                    style={{
-                      left: '2%',
-                      top: '80%',
-                      width: '35%'
-                    }}></div>
-                  <div
-                    className='unc-circle unc-c2'
-                    onClick={() => Popup.open(items[1])}
-                    style={{
-                      left: '41%',
-                      top: '80%',
-                      width: '18%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c3'
-                    onClick={() => Popup.open(items[2])}
-                    style={{
-                      left: '61%',
-                      top: '80%',
-                      width: '18%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c4'
-                    onClick={() => Popup.open(items[3])}
-                    style={{
-                      left: '81%',
-                      top: '80%',
-                      width: '18%'
-                    }}>
+
+          <div className='unc-row unc-padding-1'>
+            <h4 className='text-center'>El arco de la implicación</h4>
+            <UDScalable>
+              <div className='text-center'>
+                <div id='obj-arco' className='unc-row-scalable' data-width='900' style={{
+                  display: 'inline-block',
+                  height: '240.3px',
+                  width: '900px',
+                  margin: '25px 180px'
+                }}>
+                  <div className='unc-scalable'>
+                    <img src='./assets/img/M04_IMG36.png' width='100%' />
+                    <div
+                      className='unc-circle unc-c1'
+                      onClick={() => Popup.open(items[0])}
+                      style={{
+                        left: '28px',
+                        top: '217px',
+                        width: '300px'
+                      }}></div>
+                    <div
+                      className='unc-circle unc-c2'
+                      onClick={() => Popup.open(items[1])}
+                      style={{
+                        left: '368px',
+                        top: '217px',
+                        width: '150px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c3'
+                      onClick={() => Popup.open(items[2])}
+                      style={{
+                        left: '558px',
+                        top: '217px',
+                        width: '150px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c4'
+                      onClick={() => Popup.open(items[3])}
+                      style={{
+                        left: '738px',
+                        top: '217px',
+                        width: '150px'
+                      }}>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </UDScalable>
+
             <br />
             Fuente: Brow, Alan & Ratzkin, Rebeca (2011). Implica a tu público (p.
             8). The San Francisco Foundation.

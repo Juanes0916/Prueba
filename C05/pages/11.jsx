@@ -1,5 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { Page, Popup, UDScrollbars } from 'unc-react-creator';
+import {
+  Page,
+  Popup,
+  UDScalable,
+  UDScrollbars
+} from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
@@ -102,92 +107,94 @@ const CustomPage = (props) => (
             narrativa transmedia.</small>
           </div>
 
-          <div className='unc-row unc-padding-1'>
-            <div className='text-center'>
-              <div id='obj-historias' className='unc-row-scalable' data-width='500'>
-                <div className='unc-scalable'>
-                  <img src='./assets/img/M05_IMG40.jpg' width='50%' />
-                  <div
-                    className='unc-circle unc-c1'
-                    onClick={() => Popup.open(items[0])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '58%',
-                      top: '1%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c2'
-                    onClick={() => Popup.open(items[1])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '63%',
-                      top: '32%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c3'
-                    onClick={() => Popup.open(items[2])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '57%',
-                      top: '61%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c4'
-                    onClick={() => Popup.open(items[3])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '44%',
-                      top: '73%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c5'
-                    onClick={() => Popup.open(items[4])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '31%',
-                      top: '61%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c6'
-                    onClick={() => Popup.open(items[5])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '25%',
-                      top: '32%',
-                      width: '12%'
-                    }}>
-                  </div>
-                  <div
-                    className='unc-circle unc-c7'
-                    onClick={() => Popup.open(items[6])}
-                    style={{
-                      borderRadius: '50%',
-                      height: '25%',
-                      left: '31%',
-                      top: '1%',
-                      width: '12%'
-                    }}>
+          <UDScalable>
+            <div className='unc-row unc-padding-1' style={{ height: '445px', margin: 'auto 330px', width: '500px' }}>
+              <div className='text-center'>
+                <div id='obj-historias' className='unc-row-scalable' data-width='500'>
+                  <div className='unc-scalable'>
+                    <img src='./assets/img/M05_IMG40.jpg' width='100%' />
+                    <div
+                      className='unc-circle unc-c1'
+                      onClick={() => Popup.open(items[0])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '304px',
+                        top: '3px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c2'
+                      onClick={() => Popup.open(items[1])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '355px',
+                        top: '128px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c3'
+                      onClick={() => Popup.open(items[2])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '304px',
+                        top: '252px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c4'
+                      onClick={() => Popup.open(items[3])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '179px',
+                        top: '304px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c5'
+                      onClick={() => Popup.open(items[4])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '55px',
+                        top: '252px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c6'
+                      onClick={() => Popup.open(items[5])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '4px',
+                        top: '128px',
+                        width: '110px'
+                      }}>
+                    </div>
+                    <div
+                      className='unc-circle unc-c7'
+                      onClick={() => Popup.open(items[6])}
+                      style={{
+                        borderRadius: '50%',
+                        height: '110px',
+                        left: '55px',
+                        top: '3px',
+                        width: '110px'
+                      }}>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </UDScalable>
 
           <div className='unc-row unc-padding-1'>
             Todos estos aspectos nos demuestran, entonces, que la narrativa transmedia propicia que

@@ -3,6 +3,7 @@ import {
   Page,
   Popup,
   UDScrollbars,
+  UDScalable,
   UDCarousel
 } from 'unc-react-creator';
 import classNames from 'classnames';
@@ -254,91 +255,93 @@ const CustomPage = (props) => (
             <small>Haz clic a cada texto en el mapa interactivo para ver la definición</small>
           </div>
 
-          <div id='obj-arrow' className='unc-row-scalable'>
-            <div className='unc-scalable'>
-              <img src='./assets/img/M02_IMG29.png' width='50%' />
-              <div
-                className='unc-rect unc-c1'
-                onClick={() => Popup.open(items[5])}
-                style={{
-                  left: '46%',
-                  top: '1%',
-                  width: '8%',
-                  height: '8%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c2'
-                onClick={() => Popup.open(items[6])}
-                style={{
-                  left: '65.5%',
-                  top: '44%',
-                  width: '10%',
-                  height: '13%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c3'
-                onClick={() => Popup.open(items[7])}
-                style={{
-                  left: '46%',
-                  top: '94%',
-                  width: '8%',
-                  height: '8%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c4'
-                onClick={() => Popup.open(items[8])}
-                style={{
-                  left: '24.5%',
-                  top: '45%',
-                  width: '10%',
-                  height: '13%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c5'
-                onClick={() => Popup.open(items[9])}
-                style={{
-                  left: '36%',
-                  top: '28.5%',
-                  width: '13.5%',
-                  height: '8%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c6'
-                onClick={() => Popup.open(items[10])}
-                style={{
-                  left: '53%',
-                  top: '28.5%',
-                  width: '9%',
-                  height: '8%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c7'
-                onClick={() => Popup.open(items[11])}
-                style={{
-                  left: '53%',
-                  top: '65%',
-                  width: '9%',
-                  height: '8%'
-                }}>
-              </div>
-              <div
-                className='unc-rect unc-c8'
-                onClick={() => Popup.open(items[12])}
-                style={{
-                  left: '39%',
-                  top: '65%',
-                  width: '8%',
-                  height: '8%'
-                }}>
+          <UDScalable>
+            <div id='obj-arrow' className='unc-row-scalable' style={{ height: '354px', margin: 'auto 300px', width: '500px' }}>
+              <div className='unc-scalable'>
+                <img src='./assets/img/M02_IMG29.png' width='100%' />
+                <div
+                  className='unc-rect unc-c1'
+                  onClick={() => Popup.open(items[5])}
+                  style={{
+                    height: '25px',
+                    left: '210px',
+                    top: '5px',
+                    width: '85px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c2'
+                  onClick={() => Popup.open(items[6])}
+                  style={{
+                    height: '45px',
+                    left: '405px',
+                    top: '155px',
+                    width: '100px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c3'
+                  onClick={() => Popup.open(items[7])}
+                  style={{
+                    height: '25px',
+                    left: '210px',
+                    top: '330px',
+                    width: '85px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c4'
+                  onClick={() => Popup.open(items[8])}
+                  style={{
+                    height: '45px',
+                    left: '-5px',
+                    top: '160px',
+                    width: '100px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c5'
+                  onClick={() => Popup.open(items[9])}
+                  style={{
+                    height: '25px',
+                    left: '110px',
+                    top: '100px%',
+                    width: '130px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c6'
+                  onClick={() => Popup.open(items[10])}
+                  style={{
+                    height: '25px',
+                    left: '280px',
+                    top: '100px',
+                    width: '85px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c7'
+                  onClick={() => Popup.open(items[11])}
+                  style={{
+                    height: '25px',
+                    left: '280px',
+                    top: '230px',
+                    width: '85px'
+                  }}>
+                </div>
+                <div
+                  className='unc-rect unc-c8'
+                  onClick={() => Popup.open(items[12])}
+                  style={{
+                    height: '25px',
+                    left: '130px',
+                    top: '230px',
+                    width: '85px'
+                  }}>
+                </div>
               </div>
             </div>
-          </div>
+          </UDScalable>
 
           <div className='unc-row unc-padding-1'>
             La propuesta de las experiencias te puede servir para reflexionar sobre las
