@@ -6,8 +6,8 @@ import Header from '../components/Header';
 
 const items = [
   {
-    title: (<h5>Corporación Cultural Nuestra Gente</h5>),
-    section: (
+    title: (<h4>Corporación Cultural Nuestra Gente</h4>),
+    content: (
       <div>
         <i>Una marca Española de moda sostenible</i>
         <br />
@@ -31,8 +31,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Corporación Cultural Nuestra Gente</h5>),
-    section: (
+    title: (<h4>Corporación Cultural Nuestra Gente</h4>),
+    content: (
       <div>
         <i>Lleva 30 años ejecutando de forma permanente procesos que contribuyen al desarrollo
         local de la comuna 2 (Santa Cruz), es ejemplo de trabajo comunitario, humano y social,
@@ -61,8 +61,8 @@ const items = [
     )
   },
   {
-    title: (<h5>4YOU2</h5>),
-    section: (
+    title: (<h4>4YOU2</h4>),
+    content: (
       <div>
         <i>Escuela de inglés que actúa en asociación con organizaciones no gubernamentales en
         regiones periféricas de Brasil y utiliza una estrategia sencilla: paga un alquiler a las
@@ -87,8 +87,8 @@ const items = [
     )
   },
   {
-    title: (<h5>Pasolini</h5>),
-    section: (
+    title: (<h4>Pasolini</h4>),
+    content: (
       <div>
         <i>Organización que combina la antropología compartida, la etnografía visual, el cine
         de poesía y la comunicación para el cambio social, con el propósito de promover el uso
@@ -114,18 +114,6 @@ const items = [
     )
   }
 ];
-
-const popup = (item) => {
-  Popup.open({
-    content: (
-      <div className='unc-title'>
-        <div className='unc-title' style={{ color: '#044db5', textAlign: 'center' }}>{item.title}</div>
-        <br />
-        <div>{item.section}</div>
-      </div>
-    )
-  });
-};
 
 
 const CustomPage = (props) => (
@@ -157,19 +145,19 @@ const CustomPage = (props) => (
             <div className='unc-list-border'>
               <div className='row'>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[0])}>1</span>
+                  <span onClick={() => Popup.open(items[0])}>1</span>
                   <h5>Ecoalf</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[1])}>2</span>
+                  <span onClick={() => Popup.open(items[1])}>2</span>
                   <h5>Corporación Cultural Nuestra Gente</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[2])}>3</span>
+                  <span onClick={() => Popup.open(items[2])}>3</span>
                   <h5>4YOU2</h5>
                 </div>
                 <div className='col-sm-3'>
-                  <span onClick={() => popup(items[3])}>4</span>
+                  <span onClick={() => Popup.open(items[3])}>4</span>
                   <h5>Pasolini</h5>
                 </div>
               </div>
