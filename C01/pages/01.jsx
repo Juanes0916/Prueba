@@ -2,12 +2,12 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import {
   Page,
   UDScrollbars,
-  UDCarousel,
-  UDCollapse
+  UDCarousel
 } from 'unc-react-creator';
 import classNames from 'classnames';
 
 import Header from '../components/Header';
+import FormActivity from '../../components/FormActivity';
 
 const panels = [
   {
@@ -74,29 +74,7 @@ const CustomPage = (props) => (
             siguientes preguntas:
           </div>
 
-          <UDCollapse
-            summaryClassName='unc-summary modulo00' panels={panels} />
-          <div className='text-center'>
-            <button
-              className='unc-button button-form'
-              type='button'
-              data-content-id='Collapse_1'
-              data-module='unc-modulo00'
-            >
-              <span className='btn-label'><i className='icon-speech'></i></span>
-              Descarga tus respuestas
-            </button>
-            <small style={{
-              display: 'block',
-              color: '#773939',
-              maxWidth: 600,
-              margin: '0 auto'
-            }}>
-              Ten presente que las respuestas no son almacenadas por el sistema.
-              Por lo tanto deberás llenar las áreas de texto y a continuación
-              hacer clic en <i>Descargar tus respuestas</i>.
-            </small>
-          </div>
+          <FormActivity panels={panels} />
 
           <button className='unc-button unc-next mt-5' onClick={() => { props.nextPage(); }}>
             Siguiente
