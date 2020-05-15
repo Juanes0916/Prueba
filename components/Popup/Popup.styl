@@ -1,0 +1,96 @@
+/* POPUP */
+.unc-popup-container
+	animation popupShow .5s linear forwards
+	align-content center
+	box-sizing border-box
+	display flex
+	flex-direction column
+	justify-content center
+	height 100%
+	left 0
+	overflow hidden
+	padding 2em
+	position fixed
+	top 0
+	width 100%
+	z-index 1000
+	
+	.unc-popup-btn-close
+		align-items center
+		background-color transparent
+		border none
+		cursor pointer
+		display flex
+		font-weight normal
+		height 40px
+		justify-content center
+		margin 1em
+		outline none
+		padding 0
+		position absolute
+		transition .2s all linear
+		right 0
+		top 0
+		width 40px
+		
+		&:hover
+			color white
+			transform rotate(45deg)
+			
+		&:after
+			content '\f057'
+			font-family 'Font Awesome 5 Free'
+			font-size 36px
+			line-height 0
+			margin 0
+	
+	.unc-popup-wrapper
+		background-color white
+		border-radius 5px
+		margin 0 auto
+		max-width 90%
+		position relative
+		overflow auto
+		
+		.unc-popup-header
+			border-bottom thin solid #ccc
+			box-sizing border-box
+			font-size 1.2em
+			font-weight bold
+			padding 1em
+			
+		.unc-popup-content
+			box-sizing border-box
+			padding 2em 1em
+			
+			&.no-padding
+				padding 0
+			
+		.unc-popup-footer
+			align-items center
+			border-top thin solid #ccc
+			box-sizing border-box
+			display flex
+			justify-content flex-end
+			padding 1em
+			width 100%
+			
+			.unc-popup-btn-accept,
+			.unc-popup-btn-cancel
+				background-color #6c757d
+				border thin solid #777
+				border-radius 5px
+				color white
+				cursor pointer
+				margin-right .25em
+				padding .8em 1em
+				
+				&:hover
+					background-color #5a6268
+			
+
+@keyframes popupShow
+	from
+		background-color transparent
+	to
+		background-color rgba(0,0,0,0.9)

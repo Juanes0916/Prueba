@@ -6,8 +6,8 @@ import classNames from 'classnames';
 /* eslint-disable import/no-extraneous-dependencies */
 import Modernizr from 'modernizr';
 /* eslint-enable import/no-extraneous-dependencies */
+// import io from 'socket.io-client';
 
-import io from 'socket.io-client';
 import animations from './animations';
 
 const styles = {
@@ -40,7 +40,8 @@ class Page extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.socket = io('http://localhost:4000');
+    // this.socket = io('http://localhost:4000');
+    // console.log(this.socket);
     this.page = React.createRef();
 
     // Timouts for this page
@@ -74,9 +75,9 @@ class Page extends React.PureComponent {
    * Executes the loadedPageTriggers functions when the component is mounted.
    */
   componentDidMount() {
-    this.socket.emit('input', {
+    this.props.socket.emit('input', {
       // Insert var for MongodDB
-      eventName: `\\${this.component}\\event\\${this.target}_${this.action}`,
+      eventName: '`\\mod_scorm\\event\\transition_viewed',
       component: 'mod_scorm',
       action: 'viewed',
       target: 'page_transition',

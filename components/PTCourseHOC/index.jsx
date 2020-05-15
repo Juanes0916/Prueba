@@ -5,8 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import classNames from 'classnames';
 
+import io from 'socket.io-client';
 import { PageTransitions } from '../PageTransitions';
-import Popup from '../../Containers/Popup';
+import Popup from '../Popup';
 
 import './PTCourseHOC.css';
 
@@ -21,6 +22,8 @@ const PTCourseHOC = (PTMenu, PTNav, settings = {}) => (
   class Course extends React.PureComponent {
     constructor(props) {
       super(props);
+
+      this.socket = io('http://localhost:4000');
 
       // Using hash TODO: general pages are less than 100
       const basePage = Number(document.location.hash.split('/')[1]) || 0;
@@ -48,6 +51,7 @@ const PTCourseHOC = (PTMenu, PTNav, settings = {}) => (
         menuIsVisible: settings && settings.PTMenu && settings.PTMenu.showMenu
       };
     }
+
 
     /**
      * Calls the next page from PageTransitions component and updates the course state.
@@ -190,7 +194,8 @@ const PTCourseHOC = (PTMenu, PTNav, settings = {}) => (
                 visitedPages: this.state.visitedPages,
                 addVisitedPage: this.addVisitedPage,
                 nextPage: this.nextPage,
-                className: classNames(page.props.className, { 'menu-is-visible': this.state.menuIsVisible })
+                className: classNames(page.props.className, { 'menu-is-visible': this.state.menuIsVisible }),
+                socket: this.socket
               })
             ))}
 

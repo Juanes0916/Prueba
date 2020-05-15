@@ -1,9 +1,9 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { render } from 'react-dom';
 import {
-  PTCourseHOC,
   MenuSlideIn as PTMenu
 } from 'unc-react-creator';
+import PTCourseHOC from '../components/PTCourseHOC';
 
 import './assets/css/styles.css';
 import dataMenu from './assets/js/dataMenu';
